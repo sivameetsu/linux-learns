@@ -83,6 +83,40 @@ Backup the original config file
 ```bash
 cp /etc/samba/smb.conf /etc/samba/smb.conf_backup
 ```
+**Enable the log file for samba**
+
+ add the some parameters in under the global section
+ 
+   [global]
+        workgroup = SAMBA
+        security = user
+        passdb backend = tdbsam
+        printing = cups
+        printcap name = cups
+        load printers = yes
+        cups options = raw
+        
+        vfs objects = full_audit
+        full_audit:prefix = %u|%I|%m|%S
+        full_audit:success = mkdir rename unlink rmdir pwrite
+        full_audit:failure = none
+        full_audit:facility = local7
+        full_audit:priority = NOTICE
+        
+        
+ **modifying in resolve.conf file**
+ 
+ add this parameter in resolve.conf file  
+  #local7.*                                           /var/log/samba/log.audit
+  local7.*  /var/log/samba.log
+  
+ **Restart the rsyslog service**
+ 
+ ```bash
+ 
+    systemctl restart rsyslog
+    
+    ```  
 
 Remove the unwanted section like homes, printers, Prints.
   
