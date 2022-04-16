@@ -28,6 +28,14 @@ If aleady is not installed, we must install the sambea packages on server machin
 sudo yum update -y
 sudo yum install samba samba-client -y
 ```
+**Process flow**
+
+I have two user to authenticate and upload file to samba folder. these two users added n single group to maintain the previleges easily.
+
+| user | group |
+| --------------- | --------------- | 
+| smbuser | dod0 | 
+| linuxes | dodo | 
 
 **Modification of the configuration based on customization**
 
@@ -40,18 +48,21 @@ File location `/etc/samba/smb.conf`
 **create group**
  
  ```bash
-   groupadd dodo
+groupadd dodo
  ```
    
 **create user and userpassword**
    
-    useradd smbuser
-    passwd  smbuser
+useradd smbuser
+passwd  smbuser
+useradd linuxes
+passwd  linuxes
     
 **The user is added to the dodo-foundation group**
 
 ```bash    
 usermod -aG dodo smbuser
+usermod -aG dodo linuxes
 ```     
      
 **Create a diectory and assign it to 0770 authorizations**
@@ -104,13 +115,15 @@ Remove the unwanted section like homes, printers, Prints.
  **Add the user into samba authendication**
  
 ```bash        
-smb -a dodo    dodo is a username
+smb -a smbuser
+smb -a linuxes
 ```
      
 **Access the samba server from local machine*
 
 ```bash
-smbclient -L localhost -U dodo
+smbclient -L localhost -U smbuser
+smbclient -L localhost -U linuxes
 ```
     
 
