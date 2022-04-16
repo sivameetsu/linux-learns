@@ -35,7 +35,85 @@ Once the Samba packages have been installed, you can use this location to determ
 
 File location `/etc/samba/smb.conf`
 
+
+ 
+**create group**
+ 
+ ```bash
+   groupadd dodo
+ ```
+   
+**create user and userpassword**
+   
+    useradd smbuser
+    passwd  smbuser
+    
+**The user is added to the dodo-foundation group**
+
+```bash    
+usermod -aG dodo smbuser
+```     
+     
+**Create a diectory and assign it to 0770 authorizations**
+
+```bash   
+mkdir /dodo-foundation
+chmod 0770 /dodo-foundation
+```
+      
+**modify the directory's groupname**
+
+```bash    
+chgrp dodo /dodo-foundation
+```
+
 **Unwanted global parameters remove process**
+
+Backup the original config file 
+
+```bash
+cp /etc/samba/smb.conf /etc/samba/smb.conf_backup
+```
+
+Remove the unwanted section like homes, printers, Prints.
+  
+ **modifying the smb.conf file with some options**
+ 
+ update the configuration based on what you need.
+ 
+ ```txt
+ [dodo-foundation]
+ comment=Directory for collaboration of the company's finance team
+ browsable=yes
+ path=/dodo-foundation
+ public=no
+ valid users=@dodo
+ write list=@dodo
+ writeable=yes
+ create mask=0770
+ Force create mode=0770
+ force group=dodo
+ ```
+  
+ **Restart the service**
+ 
+ ```bash
+ sudo systemctl start smbd nmbd
+ ```
+ 
+ **Add the user into samba authendication**
+ 
+```bash        
+smb -a dodo    dodo is a username
+```
+     
+**Access the samba server from local machine*
+
+```bash
+smbclient -L localhost -U dodo
+```
+    
+
 
 
 
