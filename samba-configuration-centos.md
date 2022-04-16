@@ -124,7 +124,7 @@ smbclient -L localhost -U smbuser1
 smbclient -L localhost -U linuxes
 ```
 **Output**
-![image](https://user-images.githubusercontent.com/98270930/163676971-a142896c-0a34-49fa-987e-eba761d7d9e3.png)
+![centos](https://user-images.githubusercontent.com/98270930/163677237-e71152c5-c74e-43ee-9974-a863ed54ebb5.png)
 
 
 **Access the samba server from ubuntu machine*
