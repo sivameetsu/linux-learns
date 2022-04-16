@@ -25,8 +25,8 @@ This daemon manages all TCP/IP-based connection services for file- and print-bas
 If aleady is not installed, we must install the sambeapackages.
 
 ```bash
-yum update -y
-yum install samba samba-client -y
+sudo yum update -y
+sudo yum install samba samba-client -y
 ```
 
 **Modification of the configuration based on customization**
