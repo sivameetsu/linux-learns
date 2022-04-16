@@ -30,7 +30,7 @@ sudo yum install samba samba-client -y
 ```
 **Process flow**
 
-I have two user to authenticate and upload file to samba folder. these two users added n single group to maintain the previleges easily.
+I have two users who must authenticate and upload files to the Samba folder. These two users created a single group in order to easily maintain their privileges.
 
 | user | group |
 | --------------- | --------------- | 
@@ -43,8 +43,6 @@ Once the Samba packages have been installed, you can use this location to determ
 
 File location `/etc/samba/smb.conf`
 
-
- 
 **create group**
  
  ```bash
@@ -53,15 +51,15 @@ groupadd dodo
    
 **create user and userpassword**
    
-useradd smbuser
-passwd  smbuser
+useradd smbuser1
+passwd  smbuser1
 useradd linuxes
 passwd  linuxes
     
 **The user is added to the dodo-foundation group**
 
 ```bash    
-usermod -aG dodo smbuser
+usermod -aG dodo smbuser1
 usermod -aG dodo linuxes
 ```     
      
@@ -115,18 +113,33 @@ Remove the unwanted section like homes, printers, Prints.
  **Add the user into samba authendication**
  
 ```bash        
-smb -a smbuser
+smb -a smbuser1
 smb -a linuxes
 ```
      
 **Access the samba server from local machine*
 
 ```bash
-smbclient -L localhost -U smbuser
+smbclient -L localhost -U smbuser1
 smbclient -L localhost -U linuxes
 ```
-    
+**Output**
+![image](https://user-images.githubusercontent.com/98270930/163676971-a142896c-0a34-49fa-987e-eba761d7d9e3.png)
+
+
+**Access the samba server from ubuntu machine*
+
+commnd line
+
+```bash
+smbclient -L 192.168.0.2 -U smbuser1
+smbclient -L 192.168.0.2 -U linuxes
+```
+Graphical user interface
+
+![image](https://user-images.githubusercontent.com/98270930/163677093-46ff957a-3222-4d28-8c2d-27c76ddde53f.png)
 
 
 
 
+**Access the samba server from windows machine*
