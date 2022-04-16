@@ -137,7 +137,8 @@ smbclient -L 192.168.0.2 -U linuxes
 ```
 Graphical user interface
 
-![image](https://user-images.githubusercontent.com/98270930/163677093-46ff957a-3222-4d28-8c2d-27c76ddde53f.png)
+![ubuntu](https://user-images.githubusercontent.com/98270930/163677190-b59b90c3-87b4-4ab1-bc62-e95ac7eb6103.png)
+
 
 
 
