@@ -34,7 +34,7 @@ I have two users who must authenticate and upload files to the Samba folder. The
 
 | user | group |
 | --------------- | --------------- | 
-| smbuser | dod0 | 
+| smbuser | dodo | 
 | linuxes | dodo | 
 
 **Modification of the configuration based on customization**
@@ -88,7 +88,7 @@ Remove the unwanted section like homes, printers, Prints.
   
  **modifying the smb.conf file with some options**
  
- update the configuration based on what you need.
+ The configuration should be updated based on your requirements.
  
  ```txt
  [dodo-foundation]
