@@ -87,43 +87,43 @@ cp /etc/samba/smb.conf /etc/samba/smb.conf_backup
 
  add the some parameters in under the global section
  
-   [global]
-        workgroup = SAMBA
-        security = user
-        passdb backend = tdbsam
-        printing = cups
-        printcap name = cups
-        load printers = yes
-        cups options = raw
-        
-        vfs objects = full_audit
-        full_audit:prefix = %u|%I|%m|%S
-        full_audit:success = mkdir rename unlink rmdir pwrite
-        full_audit:failure = none
-        full_audit:facility = local7
-        full_audit:priority = NOTICE
-        
+ ```bash
+[global]
+     workgroup = SAMBA
+     security = user
+     passdb backend = tdbsam
+     printing = cups
+     printcap name = cups
+     load printers = yes
+     cups options = raw
+     # Logging confihuration
+     vfs objects = full_audit
+     full_audit:prefix = %u|%I|%m|%S
+     full_audit:success = mkdir rename unlink rmdir pwrite
+     full_audit:failure = none
+     full_audit:facility = local7
+     full_audit:priority = NOTICE
+```        
         
  **modifying in resolve.conf file**
  
+To capture the events and update the appropriate logs, this option required adapting the rsyslog service.
+ 
  add this parameter in resolve.conf file  
-  #local7.*                                           /var/log/samba/log.audit
-  local7.*  /var/log/samba.log
-  
+
+```bash
+local7.*  /var/log/samba.log
+```
  **Restart the rsyslog service**
  
- ```bash
- 
-    systemctl restart rsyslog
-    
-    ```  
+```bash
+systemctl restart rsyslog
+```  
 
-Remove the unwanted section like homes, printers, Prints.
-  
- **modifying the smb.conf file with some options**
- 
- The configuration should be updated based on your requirements.
- 
+**modifying the smb.conf file with some options**
+
+The configuration should be updated based on your requirements.
+  Remove the unwanted section like homes, printers, Prints. 
  ```txt
  [dodo-foundation]
  comment=Directory for collaboration of the company's finance team
