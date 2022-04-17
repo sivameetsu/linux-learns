@@ -180,3 +180,17 @@ Graphical user interface
 
 
 **Access the samba server from windows machine*
+
+
+
+
+**Logfile Output**
+
+When a user uploads, modifies, or deletes something in samba service, a log is created in /var/log/samba.log.
+
+Apr 16 02:10:49 localhost smbd_audit: smbuser1|192.168.0.102|rcmslap064|honey|rename|ok|/honeybee/jin.txt|/honeybee/demos.txt
+
+Apr 16 02:10:58 localhost smbd_audit: smbuser1|192.168.0.102|rcmslap064|honey|unlink|ok|/honeybee/51.txt
+
+Apr 16 02:10:58 localhost smbd_audit: smbuser1|192.168.0.102|rcmslap064|honey|rename|ok|/honeybee/~gvfKpwo.tmp|/honeybee/51.txt
+
