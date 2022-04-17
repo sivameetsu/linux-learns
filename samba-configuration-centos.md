@@ -22,7 +22,7 @@ This daemon manages all TCP/IP-based connection services for file- and print-bas
 
 **Server installation**
 
-If aleady is not installed, we must install the sambea packages on server machine
+If aleady is not installed, we must install the samba packages on server machine
 
 ```bash
 sudo yum update -y
