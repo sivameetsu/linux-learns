@@ -85,6 +85,8 @@ cp /etc/samba/smb.conf /etc/samba/smb.conf_backup
 ```
 **Enable the log file for samba**
 
+The more important one is logging. When a user performs an operation, we can track it for auditing purposes. You cannot obtain audit information unless you have a log.
+
  add the some parameters in under the global section
  
  ```bash
@@ -122,8 +124,8 @@ systemctl restart rsyslog
 
 **modifying the smb.conf file with some options**
 
-The configuration should be updated based on your requirements.
-  Remove the unwanted section like homes, printers, Prints. 
+The configuration should be updated based on your requirements. Remove the unwanted section like homes, printers, Prints. 
+
  ```txt
  [dodo-foundation]
  comment=Directory for collaboration of the company's finance team
