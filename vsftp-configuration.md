@@ -10,10 +10,10 @@ vsftpd stands for very secure FTP daemon. It is secure, stable and extremely fas
 
 **Examine the case requirements**
 
- | SERVER | 	ACT AS |	IP ADDRESS | OS |	PACKAGES |
-|--|--|--|--|--|
-| centos |	server |	192.168.0.2 | centos	| server and client |
-| ubuntu |	client | 192.168.0.3 |	ubuntu | client & Gui |
+|     SERVER      | 	   ACT AS  |	   IP ADDRESS    |   OS      |   PACKAGES    |
+|-----------------|-------------|------------------|-----------|----------------|
+|    centos       |	server      |	192.168.0.2      | centos	   |   server and client |
+|    ubuntu       |	client      | 192.168.0.3      |	ubuntu    |   client & Gui |
 
 **Server Installation**
 
