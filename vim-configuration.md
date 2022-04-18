@@ -22,11 +22,13 @@ sudo apt-get install vim
 ## Copy, Paste, Cut commands:
 |S.No|Commands|Description|
 |----|---------|-----------|
-|1.| yy| To copy an entire line, place the cursor at the beginning of the line and type|
-|2.|3yy|To copy three (3) lines, move the cursor from where you want to begin copying and type|
+|1.| yy| To copy an entire line, place the cursor at the beginning of the line and type.|
+|2.|3yy|To copy three (3) lines, move the cursor from where you want to begin copying and type.|
 |3.|dd|To cut the entire line in which the cursor is located type.|
 |4.|3dd|To cut three (3) lines, starting from the one where the cursor is located use.|
-|5.|d$|To cut everything right of the cursor to the end of the line use the command|
-|6.|p||To paste it|
-|7.|P|To add text before the cursor|
-|8.|d|d to delete (cut) the content|
+|5.|d$|To cut everything right of the cursor to the end of the line use the command.|
+|6.|p|To paste it.|
+|7.|P|To add text before the cursor.|
+|8.|d|d to delete (cut) the content.|
+|9.|V|V (uppercase) to select the entire line.|
+|10.|dd|delete the line.|
