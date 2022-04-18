@@ -55,6 +55,10 @@ Once the Ftp packages have been installed,you can use this location to determine
  ls_recurse_enable=YES                     # uncoment
  vsftpd_log_file=/var/log/vsftpd.log
  user_config_dir=/etc/vsftpd/users_list
+ allow_writeable_chroot=YES
+ userlist_deny=NO
+ use_localtime=YES
+ 
   ```
   
  **Enable log file for Ftp**
@@ -123,3 +127,5 @@ systemctl disable firewalld
  sudo apt update
  sudo apt install ftp -y
 ```
+**Log file audit**
+![image](https://user-images.githubusercontent.com/98270930/163797435-06f7e7e9-0baf-4714-818e-a7fdb77abaa1.png)
