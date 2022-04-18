@@ -96,15 +96,15 @@ user_config_dir=/etc/vsftpd/users_list
  sudo chmod 0755 dodo/
  ```
  
- **Firewall configuration**
+ ## **Firewall configuration**
  
- Firwall whitelist
+ **Firwall whitelist**
  
  ```bash
  firewall-cmd --permanent --add-service=samba
  firewall-cmd --reload
 ```
-stop and disable the firewall
+**stop and disable the firewall**
 
 ```bash  
 systemctl stop firewalld
