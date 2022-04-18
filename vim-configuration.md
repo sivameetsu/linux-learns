@@ -4,7 +4,7 @@
 
 Vim is an advanced and highly configurable text editor built to enable efficient text editing. Vim text editor is developed by Bram Moolenaar. It supports most file types and vim editor is also known as a programmer’s editor. We can use with its plugin based on our needs.
 
-**Vim Installation:**
+**Vim Installation on ubuntu:**
 
 ```bash
 sudo apt-get install vim
