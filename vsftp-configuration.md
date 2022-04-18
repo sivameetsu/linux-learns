@@ -123,4 +123,3 @@ systemctl disable firewalld
  sudo apt update
  sudo apt install ftp -y
 ```
-
