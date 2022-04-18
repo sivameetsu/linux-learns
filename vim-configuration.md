@@ -18,6 +18,7 @@ sudo apt-get install vim
 |4.|:x|will save the changes and exit.|
 |5.|:w [newfilename]| rename an existing file|
 |6.|u|undo|
+|7.|Ctrl + r|redo|
 
 ## Copy, Paste, Cut commands:
 |S.No|Commands|Description|
