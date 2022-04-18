@@ -1,4 +1,4 @@
-## vim configuration
+# Vim Configuration
 
 **What is Vim?**
 
