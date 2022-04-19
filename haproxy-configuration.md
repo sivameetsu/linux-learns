@@ -29,8 +29,9 @@ haproxy -v
 Configuring Load balancer on Layer 1
 
 ```bash
-sudo vi /etc/haproxy/haproxy.cfg
-update this below file to configuration
+# sudo vi /etc/haproxy/haproxy.cfg
+
+
 frontend http_front
    bind *:80
    stats uri /haproxy?stats
