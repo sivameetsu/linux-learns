@@ -99,5 +99,46 @@ sudo apt-get install vim
 |16.|Ctrl + ox|Temporarily enter normal mode to issue one normal-mode command x.|
 |17.|Esc|  exit insert mode|
 
-
-
+## Cursor movement
+|S.No|Commands|Description|
+|----|---------|-----------|
+|1.|k|  move cursor up|
+|2.|l | move cursor right|
+|3.|gj|  move cursor down (multi-line text)|
+|4.|gk|  move cursor up (multi-line text)|
+|5.|H | move to top of screen|
+|6.|M |move to middle of screen|
+|7.|L | move to bottom of screen|
+|8.|w | jump forwards to the start of a word|
+|9.|W | jump forwards to the start of a word (words can contain punctuation)|
+|10.|e | jump forwards to the end of a word|
+|11.|E | jump forwards to the end of a word (words can contain punctuation)|
+|12.|b | jump backwards to the start of a word|
+|13.|B | jump backwards to the start of a word (words can contain punctuation)|
+|14.|ge|  jump backwards to the end of a word|
+|15.|gE|  jump backwards to the end of a word (words can contain punctuation)|
+|16.|% | move to matching character (default supported pairs: '()', '{}', '[]' - use :h matchpairs in vim for more info)|
+|17.|0 | jump to the start of the line||
+|18.|^ | jump to the first non-blank character of the line||
+|19.|$ | jump to the end of the line||
+|20.|g_|  jump to the last non-blank character of the line||
+|21.|gg|  go to the first line of the document||
+|22.|G | go to the last line of the document||
+|23.|5gg| or 5G  go to line 5||
+|24.|gd|  move to local declaration||
+|25.|gD|  move to global declaration||
+|26.|fx|  jump to next occurrence of character x||
+|27.|tx|  jump to before next occurrence of character x||
+|28.|Fx|  jump to the previous occurrence of character x||
+|29.|Tx|  jump to after previous occurrence of character x||
+|30.|; | repeat previous f, t, F or T movement||
+|31.|, | repeat previous f, t, F or T movement, backwards||
+|32.|} | jump to next paragraph (or function/block, when editing code)|
+|33.|{ | jump to previous paragraph (or function/block, when editing code)|
+|34.|zz|  center cursor on screen|
+|35.|Ctrl + e|  move screen down one line (without moving cursor)|
+|36.|Ctrl + y|  move screen up one line (without moving cursor)|
+|37.|Ctrl + b|  move back one full screen|
+|38.|Ctrl + f|  move forward one full screen|
+|39.|Ctrl + d|  move forward 1/2 a screen|
+|40.|Ctrl + u|  move back 1/2 a screen|
