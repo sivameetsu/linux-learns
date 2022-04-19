@@ -9,7 +9,7 @@ Vim is an advanced and highly configurable text editor built to enable efficient
 ```bash
 sudo apt-get install vim
 ```
-## Create, save,exit Commands:
+## Create, Save, Exit:
 |S.No|Commands|Description|
 |----|---------|-----------|
 |1.| vim (filename)| To create vim a file and To open a existing vim file|
@@ -20,19 +20,32 @@ sudo apt-get install vim
 |6.|u|undo|
 |7.|Ctrl + r|redo|
 
-## Copy, Paste, Cut commands:
+## Cut, Copy, Paste, Delete  
 |S.No|Commands|Description|
 |----|---------|-----------|
 |1.| yy| To copy an entire line, place the cursor at the beginning of the line and type.|
 |2.|3yy|To copy three (3) lines, move the cursor from where you want to begin copying and type.|
 |3.|dd|To cut the entire line in which the cursor is located type.|
 |4.|3dd|To cut three (3) lines, starting from the one where the cursor is located use.|
-|5.|d$|To cut everything right of the cursor to the end of the line use the command.|
+|5.|d$ or D|delete (cut) to the end of the line|
 |6.|p|To paste it.|
 |7.|P|To add text before the cursor.|
 |8.|d|d to delete (cut) the content.|
 |9.|V|V (uppercase) to select the entire line.|
 |10.|dd|delete the line.|
+|11.|2yy|yank (copy) 2 lines|
+|12.|yw|yank (copy) the characters of the word from the cursor position to the start of the next word|
+|13.|gp| put (paste) the clipboard after cursor and leave cursor after the new text|
+|14.|gP|put (paste) before cursor and leave cursor after the new text|
+|15.|2dd|delete (cut) 2 lines|
+|16.|dw| delete (cut) the characters of the word from the cursor position to the start of the next word|
+|17.|diw|delete (cut) word under the cursor|
+|18.|daw| delete (cut) word under the cursor and the space after or before it|
+|19.|x|delete (cut) character|
+|20.|yiw|yank (copy) word under the cursor|
+|21.|yaw|yank (copy) word under the cursor and the space after or before it|
+|22.|y$ or Y|yank (copy) to end of line|
+ 
 
 ## Editing:
 |S.No|Commands|Description|
@@ -85,4 +98,6 @@ sudo apt-get install vim
 |15.|Ctrl + rx|insert the contents of register x|
 |16.|Ctrl + ox|Temporarily enter normal mode to issue one normal-mode command x.|
 |17.|Esc|  exit insert mode|
+
+
 
