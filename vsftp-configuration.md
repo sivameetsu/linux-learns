@@ -129,3 +129,5 @@ systemctl disable firewalld
 ```
 **Log file audit**
 ![image](https://user-images.githubusercontent.com/98270930/163797435-06f7e7e9-0baf-4714-818e-a7fdb77abaa1.png)
+![image](https://user-images.githubusercontent.com/98270930/163942089-555a236c-e48d-41fa-b2a3-ced97ade65c2.png)
+
