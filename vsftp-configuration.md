@@ -74,7 +74,11 @@ vsftpd_log_file=/var/log/vsftpd.log
 **Enable the user list file**
 
 ```bash
-user_config_dir=/etc/vsftpd/users_list
+touch /etc/vsftpd/users_list
+# add the userlist like this
+
+
+
 ```
 
 **Restart the service**
