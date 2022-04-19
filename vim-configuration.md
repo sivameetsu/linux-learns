@@ -20,6 +20,7 @@ sudo apt-get install vim
 |6.|u|undo|
 |7.|Ctrl + r|redo|
 
+
 ## Cut, Copy, Paste, Delete  
 |S.No|Commands|Description|
 |----|---------|-----------|
@@ -45,6 +46,7 @@ sudo apt-get install vim
 |20.|yiw|yank (copy) word under the cursor|
 |21.|yaw|yank (copy) word under the cursor and the space after or before it|
 |22.|y$ or Y|yank (copy) to end of line|
+|23.|ggvG|select all the line|
  
 
 ## Editing:
