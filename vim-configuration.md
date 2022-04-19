@@ -33,3 +33,56 @@ sudo apt-get install vim
 |8.|d|d to delete (cut) the content.|
 |9.|V|V (uppercase) to select the entire line.|
 |10.|dd|delete the line.|
+
+## Editing:
+|S.No|Commands|Description|
+|----|---------|-----------|
+|1.|r|Replace a single character. |
+|2.|R|Replace more than one character, until ESC is pressed. |
+|3.|J|join line below to the current one with one space in between |
+|4.|gJ|join line below to the current one without space in between |
+|5.|gwip|reflow paragraph |
+|6.|g~|switch to uppercase and lowercase |
+|7.|gu|change to lowercase |
+|8.|gU|change to uppercase |
+|9.|cc|change (replace) entire line|
+|10.|c$ or C| change (replace) to the end of the line |
+|11.|cw or ce|change (replace) to the end of the word |
+|12.|s|delete character and substitute text.|
+|13.|S|delete line and substitute text (same as cc)|
+|14.|xp|transpose two letters (delete and paste)|
+|15.|U|restore (undo) last changed line|
+|16.|.| repeat last command |
+
+## Visual commands
+|S.No|Commands|Description|
+|----|---------|-----------|
+|1.|>|shift text right|
+|2.|<|shift text left|
+|3.|y|yank (copy) marked text|
+|4.|d | delete marked text|
+|5.|~| switch case|
+|6.|u|change marked text to lowercase|
+|7.|U|change marked text to uppercase|
+
+## Insert mode - inserting/appending text
+|S.No|Commands|Description|
+|----|---------|-----------|
+|1.|i|insert before the cursor|
+|2.|I|insert at the beginning of the line|
+|3.|a|insert (append) after the cursor|
+|4.|A|insert (append) at the end of the line|
+|5.|o|append (open) a new line below the current line|
+|6.|O|append (open) a new line above the current line|
+|7.|ea|insert (append) at the end of the word|
+|8.|Ctrl + h|delete the character before the cursor during insert mode|
+|9.|Ctrl + w|delete word before the cursor during insert mode|
+|10.|Ctrl + j|begin new line during insert mode|
+|11.|Ctrl + t|indent (move right) line one shiftwidth during insert mode|
+|12.|Ctrl + d|de-indent (move left) line one shiftwidth during insert mode|
+|13.|Ctrl + n|insert (auto-complete) next match before the cursor during insert mode|
+|14.|Ctrl + p|insert (auto-complete) previous match before the cursor during insert mode|
+|15.|Ctrl + rx|insert the contents of register x|
+|16.|Ctrl + ox|Temporarily enter normal mode to issue one normal-mode command x.|
+|17.|Esc|  exit insert mode|
+
