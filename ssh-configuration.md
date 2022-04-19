@@ -1,10 +1,22 @@
-#### ssh configuration
+## ssh configuration
 
-WHAT IS SSH
-# SSH is a client program for logging into a remote Linux/Unix server.ssh port runs on TCP port 22 on Ubuntu Linux
+**what is ssh?**
 
-HOW TO INSTALL THE SSH ON UBUNTU
-# sudo apt install openssh-client
+SSH is a client program for logging into a remote Linux/Unix server.ssh port runs on TCP port 22 on Ubuntu Linux
+
+**Requirements**
+
+| SERVER | OPERATING SYSTEM | ADDRESS |
+|---|---| --- |
+| virtual machine | ubuntu | 192.168.0.2 |
+
+**how to install the ssh packages**
+
+```bash
+sudo apt update
+sudo apt install openssh-client -y
+```
+
 
 HOW TO ENABLE SSH SERVER ON UBUNTU 
 # sudo systemctl enable ssh
