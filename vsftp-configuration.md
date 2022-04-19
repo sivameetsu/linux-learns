@@ -38,28 +38,27 @@ Once the Ftp packages have been installed,you can use this location to determine
  File location `/etc/vsftpd/vsftpd.conf`
  
  ```bash
- anonymous_enable=NO
- local_enable=YES
- local_enable=YES
- local_umask=022
- dirmessage_enable=YES
- xferlog_enable=YES 
- connect_from_port_20=YES
- xferlog_std_format=YES
- ftpd_banner=Welcome to blah FTP service.  # uncomment
- ascii_upload_enable=YES                   # uncomment
- ascii_download_enable=YES
- chroot_list_file=/etc/vsftpd/chroot_list  # uncomment => create chroot_list file in /etc/vsftpd/chroot_list add your users
- chroot_local_user=YES                     # uncomment
- chroot_list_enable=YES
- ls_recurse_enable=YES                     # uncoment
- vsftpd_log_file=/var/log/vsftpd.log
- user_config_dir=/etc/vsftpd/users_list
- allow_writeable_chroot=YES
- userlist_deny=NO
- use_localtime=YES
- 
-  ```
+# Based on this value you can insert or update the config file
+
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+xferlog_std_format=YES
+ascii_upload_enable=YES
+ascii_download_enable=YES
+ftpd_banner=Welcome to Radiant FTP service.
+listen=YES
+listen_ipv6=NO
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+use_localtime=YES
+user_config_dir=/etc/vsftpd/users
+allow_writeable_chroot=YES
+```
   
  **Enable log file for Ftp**
  
@@ -71,14 +70,27 @@ add the some parameters in `vsftpd.conf` file
 vsftpd_log_file=/var/log/vsftpd.log
 ```
 
+ **Create user and userpassword**
+ 
+ ```bash
+ sudo useradd ftpuser1
+ sudo passwd ftpuser1
+ ```
+
+ **Create a directory and assign it to 755 authentications**
+ 
+ ```bash
+mkdir /etc/vsftpd/users_list
+mkdir /var/www/html/ftpuser1
+chown ftpuser1:ftpuser1 /var/www/html/ftpuser1
+ ```
+ 
 **Enable the user list file**
 
 ```bash
-touch /etc/vsftpd/users_list
-# add the userlist like this
-
-
-
+vim /etc/vsftpd/users_list/keypass 
+# add lines
+local_root=/var/www/html/ftpuser1
 ```
 
 **Restart the service**
@@ -88,21 +100,7 @@ touch /etc/vsftpd/users_list
  systemctl enable vsftpd 
  ```
  
- **Create user and userpassword**
- 
- ```bash
- sudo useradd ftpuser1
- sudo passwd ftpuser1
- sudo useradd ftpuser2
- sudo passwd ftpuser2
- ```
- 
- **Create a directory and assign it to 755 authentications**
- 
- ```bash
- sudo mkdir dodo
- sudo chmod 0755 dodo/
- ```
+
  
  ## **Firewall configuration**
  
