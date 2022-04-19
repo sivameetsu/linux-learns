@@ -1,4 +1,4 @@
-## VSFTPD CONFIGURATION
+## vsftpd configuration
 
  **What is Fftp?**
 
@@ -10,10 +10,10 @@ vsftpd stands for very secure FTP daemon. It is secure, stable and extremely fas
 
 **Examine the case requirements**
 
-|     SERVER      | 	   ACT AS  |	   IP ADDRESS    |   OS      |   PACKAGES    |
-|-----------------|-------------|------------------|-----------|----------------|
-|    centos       |	server      |	192.168.0.2      | centos	   |   server and client |
-|    ubuntu       |	client      | 192.168.0.3      |	ubuntu    |   client & Gui |
+|     SERVER      | 	   ACT AS  |	   IP ADDRESS   |   PACKAGES    |
+|-----------------|-------------|------------------|----------------|
+|    centos       |	server      |	192.168.0.2      |   server and client |
+|    ubuntu       |	client      | 192.168.0.3      |   client & Gui |
 
 **Server Installation**
 
@@ -127,7 +127,9 @@ systemctl disable firewalld
  sudo apt update
  sudo apt install ftp -y
 ```
+
+**commandline uploads**
+
+
 **Log file audit**
-![image](https://user-images.githubusercontent.com/98270930/163797435-06f7e7e9-0baf-4714-818e-a7fdb77abaa1.png)
-![image](https://user-images.githubusercontent.com/98270930/163942089-555a236c-e48d-41fa-b2a3-ced97ade65c2.png)
 
