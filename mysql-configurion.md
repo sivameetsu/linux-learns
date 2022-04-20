@@ -9,18 +9,6 @@ MySQL supports many Operating Systems like Windows
 
 ![image](https://user-images.githubusercontent.com/91359308/163947248-11d3d500-84d1-475a-9a53-d98fde11fd77.png)
 
-#### Reasons for popularity
-
-
-    MySQL is an open-source database, so you don't have to pay a single penny to use it.
-    MySQL is a very powerful program that can handle a large set of functionality of the most expensive and powerful database packages.
-    MySQL is customizable because it is an open-source database, and the open-source GPL license facilitates programmers to modify the SQL software according to their own specific environment.
-    MySQL is quicker than other databases, so it can work well even with the large data set.
-    MySQL supports many operating systems with many languages like PHP, PERL, C, C++, JAVA, etc.
-    MySQL uses a standard form of the well-known SQL data language.
-    MySQL is very friendly with PHP, the most popular language for web development.
-    MySQL supports large databases, up to 50 million rows or more in a table. The default file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB).
-
 #### MySQL Data Types
   Each column in a database table is required to have a name and a data type.
 
@@ -40,7 +28,119 @@ MySQL supports many Operating Systems like Windows
   
   ![image](https://user-images.githubusercontent.com/91359308/163949699-a87cfcad-dfd0-4f45-9176-8a7d0f9a0e07.png)
   
-  #### MySQL Server Connection Using command-line client
+  #### MySQL INSTALLATION
   
+    sudo apt update
+    sudo apt install mysql
   
+  #### MySQL Server Connection
+  
+    sudo mysql -u root -p
+   
+  #### How to exit the database
+  
+     exit (or) \q
+    
+    
+### How to Create New MySQL User
 
+|S.NO|SYNTAX|DESCRIPTION|
+|---|----|-----|
+|1.|CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; [or] CREATE USER 'username'@'ip_address' IDENTIFIED BY 'password';| Create a new user|
+|2.|GRANT permission_type ON database.table TO 'username'@'localhost';| to grant privileges to a user account |
+|3.|GRANT INSERT ON *.* TO 'username'@'localhost';|to grant insert privileges to a MySQL user|
+|4.|SHOW GRANTS FOR username;|To display all the current privileges held by a user|
+|5.|GRANT ALL PRIVILEGES ON *.* TO 'database_user'@'localhost';|To grant all privileges to MySQL User on all databases|
+|6.|GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';|To grant all privileges to a user account on a specific database|
+|7.|GRANT ALL PRIVILEGES ON database_name.table_name TO 'database_user'@'localhost';|To grant all privileges to a user account over a specific table from a database |
+|8.|REVOKE permission_type ON database.table TO 'username'@'localhost';|Revoke Privileges MySQL User Account|
+|9.|DROP USER 'username'@'localhost';|Remove an Entire User Account|
+
+#### MySQL Database Basic syntax
+
+|S.NO|SYNTAX|DESCRIPTION|
+|---|----|-----|
+|1.|CREATE DATABASE [db-name];  |To create a new database.|
+|2.|SHOW DATABASES;|List out the databases.|
+|3.|USE [db-name];|Enter into the specified database.|
+|4.|DROP DATABASE [db_name];|To delete the specified database.|
+
+#### Database Table Creation Syntax
+```bash
+    CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+```
+#### MySQL ALTER TABLE Statement
+
+##### 1) ALTER TABLE - ADD Column:-
+ ```bash
+
+ALTER TABLE table_name
+ADD column_name datatype; 
+```
+##### 2) ALTER TABLE - DROP COLUMN:-
+ ```bash
+
+ALTER TABLE table_name
+DROP COLUMN column_name;  
+```
+##### 3) ALTER TABLE - MODIFY COLUMN:-
+ ```bash
+
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype;   
+```
+#### MySQL Copy/Clone/Duplicate Table:-
+ ```bash
+    CREATE TABLE new_table_name  
+    SELECT column1, column2, column3   
+    FROM existing_table_name;    
+```
+
+####  MySQL INSERT INTO Statement:-
+ ```bash
+    INSERT INTO table_name (column1, column2, column3, ...) VALUES (value1, value2, value3, ...); 
+                                            [or]
+    INSERT INTO table_name VALUES (value1, value2,...valueN),( value1, value2,...valueN ),...........,( value1, value2,...valueN );                                      
+```
+
+####  MySQL UPDATE Statement:-
+ ```bash
+    UPDATE table_name  
+        SET column1 = value1, column2 = value2, ...
+            WHERE condition;                                               
+```
+
+#### MySQL ORDER BY:
+```bash
+    SELECT column1, column2, ...
+        FROM table_name
+            ORDER BY column1, column2, ... ASC|DESC; 
+```
+
+#### LIMIT - The LIMIT clause is used to specify the number of records to return.
+```bash
+    SELECT column_name(s)
+        FROM table_name
+            WHERE condition
+                LIMIT number; 
+```
+#### Basic Syntax of MySQL 
+
+|S.NO|SYNTAX|DESCRIPTION|
+|---|----|-----|
+|1.|TRUNCATE TABLE table_name;|It is used to delete the data inside a table.|
+|2.|SHOW TABLES; | List out all the tables in specified database.|
+|3.|RENAME old_table TO new_table;| To rename the name of the table|
+|4.|DESC table_name|Describe the specified table details.|
+|5.|DROP TABLE  table_name;|It is used to delete complete the data in the table.|
+|6.|DELETE FROM table_name WHERE condition; |To delete the row of the table using where condition.|
+|7.|SELECT column1, column2, ...FROM table_name; |To view the specified colums details in specified table.|
+|8.|SELECT * FROM table_name; |To view a details of the entire specified table.|
+
+
+For more details visit this page - https://www.javatpoint.com/mysql-tutorial
