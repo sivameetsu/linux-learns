@@ -85,20 +85,20 @@ ADD column_name datatype;
 ##### 2) ALTER TABLE - DROP COLUMN:-
  ```bash
 
-ALTER TABLE table_name
-DROP COLUMN column_name;  
+  ALTER TABLE table_name
+    DROP COLUMN column_name;  
 ```
 ##### 3) ALTER TABLE - MODIFY COLUMN:-
  ```bash
 
-ALTER TABLE table_name
-MODIFY COLUMN column_name datatype;   
+  ALTER TABLE table_name
+    MODIFY COLUMN column_name datatype;   
 ```
 #### MySQL Copy/Clone/Duplicate Table:-
  ```bash
     CREATE TABLE new_table_name  
-    SELECT column1, column2, column3   
-    FROM existing_table_name;    
+      SELECT column1, column2, column3   
+        FROM existing_table_name;    
 ```
 
 ####  MySQL INSERT INTO Statement:-
