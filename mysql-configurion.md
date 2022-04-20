@@ -39,4 +39,8 @@ MySQL supports many Operating Systems like Windows
   ##### 3. Date and Time Data Types:
   
   ![image](https://user-images.githubusercontent.com/91359308/163949699-a87cfcad-dfd0-4f45-9176-8a7d0f9a0e07.png)
+  
+  #### MySQL Server Connection Using command-line client
+  
+  
 
