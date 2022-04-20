@@ -6,7 +6,7 @@ FTP is a standard network protocol used for the transfer of files between a clie
 
 **What is vsftpd?**
 
-vsftpd stands for very secure FTP daemon. It is secure, stable and extremely fast. If you want to setup complicated FTP, then go with vsftpd. It has ability to handle large numbers of connections efficiently and securely.
+vsftpd stands for **Very Secure FTP Daemon**. It is secure, stable and extremely fast. If you want to setup complicated FTP, then go with vsftpd. It has ability to handle large numbers of connections efficiently and securely.
 
 **Examine the case requirements**
 
