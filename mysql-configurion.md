@@ -79,8 +79,8 @@ MySQL supports many Operating Systems like Windows
 ##### 1) ALTER TABLE - ADD Column:-
  ```bash
 
-ALTER TABLE table_name
-ADD column_name datatype; 
+  ALTER TABLE table_name
+    ADD column_name datatype; 
 ```
 ##### 2) ALTER TABLE - DROP COLUMN:-
  ```bash
