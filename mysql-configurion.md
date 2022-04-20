@@ -2,7 +2,7 @@
 
 #### What is MySQL?
 
-MySQL is currently the most popular database management system software used for managing the relational database. It is open-source database software, which is supported by Oracle Company. It is fast, scalable, and easy to use database management system in comparison with Microsoft SQL Server and Oracle Database.MySQL follows the working of a client/server architecture.MySQL supports many Operating Systems like Windows, Linux
+MySQL is currently the most popular database management system software used for managing the relational database. It is open-source database software, which is supported by Oracle Company. It is fast, scalable, and easy to use database management system in comparison with Microsoft SQL Server and Oracle Database.MySQL follows the working of a client/server architecture.MySQL supports many Operating Systems like Windows, Linux.
 
 **MySQL INSTALLATION**
   
