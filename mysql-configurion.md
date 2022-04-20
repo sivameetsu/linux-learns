@@ -2,47 +2,34 @@
 
 #### What is MySQL?
 
-MySQL is currently the most popular database management system software used for managing the relational database. It is open-source database software, which is supported by Oracle Company. It is fast, scalable, and easy to use database management system in comparison with Microsoft SQL Server and Oracle Database.MySQL follows the working of a client/server architecture.
-MySQL supports many Operating Systems like Windows
-, Linux
-#### How MySQL Works?
+MySQL is currently the most popular database management system software used for managing the relational database. It is open-source database software, which is supported by Oracle Company. It is fast, scalable, and easy to use database management system in comparison with Microsoft SQL Server and Oracle Database.MySQL follows the working of a client/server architecture.MySQL supports many Operating Systems like Windows, Linux
 
-![image](https://user-images.githubusercontent.com/91359308/163947248-11d3d500-84d1-475a-9a53-d98fde11fd77.png)
+**MySQL INSTALLATION**
+  
+```bash
+sudo apt update
+sudo apt install mysql-server -y
+```
+**secure installtion**
 
-#### MySQL Data Types
-  Each column in a database table is required to have a name and a data type.
+```bash
+sudo mysql_secure_installtion
+.....
+```
 
-  An SQL developer must decide what type of data that will be stored inside each column when creating a table. The data type is a guideline for SQL to       understand what type of data is expected inside of each column, and it also identifies how SQL will interact with the stored data.
+**MySQL login**
 
-  In MySQL there are three main data types: **string**, **numeric**, and **date and time**.
-  
- ##### 1. String Data Types:
-  
-  ![image](https://user-images.githubusercontent.com/91359308/163949310-74e71d76-61c6-4f54-9cac-2c10a1857f6e.png)
-
-  ##### 2. Numeric Data Types:
-  
-  ![image](https://user-images.githubusercontent.com/91359308/163949560-ecd81d03-c5f2-477e-9e28-20dbb2c44f15.png)
-  
-  ##### 3. Date and Time Data Types:
-  
-  ![image](https://user-images.githubusercontent.com/91359308/163949699-a87cfcad-dfd0-4f45-9176-8a7d0f9a0e07.png)
-  
-  #### MySQL INSTALLATION
-  
-    sudo apt update
-    sudo apt install mysql
-  
-  #### MySQL Server Connection
-  
-    sudo mysql -u root -p
+```bash
+sudo mysql -u root -p
+```
    
-  #### How to exit the database
-  
-     exit (or) \q
+**How to exit the database**
+
+```bash
+exit (or) \q
+```
     
-    
-### How to Create New MySQL User
+**How to Create New MySQL User**
 
 |S.NO|SYNTAX|DESCRIPTION|
 |---|----|-----|
