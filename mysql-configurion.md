@@ -142,5 +142,6 @@ ADD column_name datatype;
 |7.|SELECT column1, column2, ...FROM table_name; |To view the specified colums details in specified table.|
 |8.|SELECT * FROM table_name; |To view a details of the entire specified table.|
 
+### Reference:-
 
 For more details visit this page - https://www.javatpoint.com/mysql-tutorial
