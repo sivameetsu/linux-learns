@@ -1,6 +1,6 @@
 ## vsftpd configuration
 
- **What is Fftp?**
+ **What is Ftp?**
 
 FTP is a standard network protocol used for the transfer of files between a client and server on a computer network
 
