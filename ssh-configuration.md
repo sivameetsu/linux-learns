@@ -18,16 +18,26 @@ sudo apt install openssh-client -y
 ```
 
 
-HOW TO ENABLE SSH SERVER ON UBUNTU 
-# sudo systemctl enable ssh
+**how to enable ssh server on ubuntu**
 
-HOW TO VIEW STATUS OF SSH RUN
-# sudo systemctl status ssh
+```bash
+sudo systemctl enable ssh
+```
+**how to view status of ssh run**
 
-Once the installation done, use this command to loging to the remote server 
-# ssh user@server-ip-here
+```bash
+sudo systemctl status ssh
+```
+**Once the installation done, use this command to loging to the remote server**
 
-HOW DO DISABLE THE SSH SERVER ON UBUNTU 
-# sudo systemctl stop ssh
-# sudo systemctl disable ssh
-# sudo apt-get remove opnessh-server
+```bash
+ssh user@server-ip-here
+```
+
+**how do disable the ssh server on ubuntu**
+
+```bash
+sudo systemctl stop ssh
+sudo systemctl disable ssh
+sudo apt-get remove opnessh-server
+```
