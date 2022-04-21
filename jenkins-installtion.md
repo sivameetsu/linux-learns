@@ -32,3 +32,12 @@ sudo systemctl start jenkins
 sudo systemctl enable jenkins
 
 ```
+
+**Iptables issues**
+
+if iptables are enables you should execute this command or 
+
+
+
+
+
