@@ -43,6 +43,16 @@ exit (or) \q
 |8.|REVOKE permission_type ON database.table TO 'username'@'localhost';|Revoke Privileges MySQL User Account|
 |9.|DROP USER 'username'@'localhost';|Remove an Entire User Account|
 
+
+![image](https://user-images.githubusercontent.com/98270930/164440513-e8d7f900-461d-4db9-9382-62d153b1f232.png)
+
+![image](https://user-images.githubusercontent.com/98270930/164442717-9d8699bc-d67a-42b8-b779-63d3e06c57c8.png)
+
+![image](https://user-images.githubusercontent.com/98270930/164443627-9caf820a-68d6-4626-a5f2-8d96b4578ee5.png)
+
+![image](https://user-images.githubusercontent.com/98270930/164444271-ae4a6350-2c79-47c6-b928-75de64fd624e.png)
+
+
 #### MySQL Database Basic syntax
 
 |S.NO|SYNTAX|DESCRIPTION|
