@@ -4,13 +4,16 @@ Jenkins is a self-contained, open source automation server which can be used to 
 
 * Jenkins can be installed through native system packages, Docker, or even run standalone by any machine with a Java Runtime Environment (JRE) installed.
 
-
-## Jenkins installtion on ubuntu
+**dependencies**
 
 ```bash
-
 sudo apt install default-jre -y
+```
 
+
+**Jenkins installtion on ubuntu**
+
+```bash
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
   
@@ -37,7 +40,11 @@ sudo systemctl enable jenkins
 
 if iptables are enables you should execute this command or 
 
+```bash
+# Allow all traffic from outside
 
+sudo iptables -I INPUT -j ACCEPT
+```
 
 
 
