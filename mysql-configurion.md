@@ -52,6 +52,18 @@ exit (or) \q
 |3.|USE [db-name];|Enter into the specified database.|
 |4.|DROP DATABASE [db_name];|To delete the specified database.|
 
+
+#### Output 
+
+![image](https://user-images.githubusercontent.com/98270930/164432767-f103370c-7ba6-42c6-9d05-5f881fb1b58e.png)
+
+ ![image](https://user-images.githubusercontent.com/98270930/164433044-e189e893-5549-4b81-8f05-42d63a4506a6.png)
+
+ ![image](https://user-images.githubusercontent.com/98270930/164433288-a061e2e5-26aa-4b93-90fe-cdb70cd822ec.png)
+ 
+ ![image](https://user-images.githubusercontent.com/98270930/164434562-50e2d6f2-6e5f-4de9-9bb2-522124a8d163.png)
+
+
 #### Database Table Creation Syntax
 ```bash
     CREATE TABLE table_name (
