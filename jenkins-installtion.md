@@ -46,5 +46,12 @@ if iptables are enables you should execute this command or
 sudo iptables -I INPUT -j ACCEPT
 ```
 
+**Iptable rules maintain after reboot*
+
+```bash
+sudo mkdir /etc/iptable-rules
+sudo iptables-save > /etc/iptable-rules/rules.txt
+sudo iptables-restore < /etc/iptable-rules/rules.txt
+```
 
 
