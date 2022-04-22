@@ -33,9 +33,9 @@ exit (or) \q
 
 |S.NO|SYNTAX|DESCRIPTION|
 |---|----|-----|
-|1.|CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'; [or] CREATE USER 'username'@'ip_address' IDENTIFIED BY 'password';| Create a new user|
+|1.|CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';| Create a new user|
 |2.|GRANT permission_type ON database.table TO 'username'@'localhost';| to grant privileges to a user account |
-|3.|GRANT INSERT ON *.* TO 'username'@'localhost';|to grant insert privileges to a MySQL user|
+|3.|GRANT INSERT ON * . * TO 'username'@'localhost';|to grant insert privileges to a MySQL user|
 |4.|SHOW GRANTS FOR username;|To display all the current privileges held by a user|
 |5.|GRANT ALL PRIVILEGES ON *.* TO 'database_user'@'localhost';|To grant all privileges to MySQL User on all databases|
 |6.|GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';|To grant all privileges to a user account on a specific database|
