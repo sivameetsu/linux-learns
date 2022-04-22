@@ -83,6 +83,16 @@ exit (or) \q
    ....
 );
 ```
+
+![image](https://user-images.githubusercontent.com/98270930/164617301-b93b1806-e354-4f14-a079-8439e092c3ea.png)
+
+![image](https://user-images.githubusercontent.com/98270930/164617414-dbe67257-ba14-4cd9-b15e-461243a86151.png)
+
+![image](https://user-images.githubusercontent.com/98270930/164617506-d45b25d2-cb2c-4d5e-bd36-141c0e300a0b.png)
+
+![image](https://user-images.githubusercontent.com/98270930/164618028-e9a74e1b-559f-4d31-8dfb-276aedc3ec0a.png)
+
+
 #### MySQL ALTER TABLE Statement
 
 ##### 1) ALTER TABLE - ADD Column:-
