@@ -73,6 +73,7 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 |/etc/hosts|host file|
 
 **VHOST Setting**
+
 we can make directire in default path and chage the permission and ownership 
 
 ```bash
