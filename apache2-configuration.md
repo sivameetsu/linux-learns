@@ -63,6 +63,10 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 ![image](https://user-images.githubusercontent.com/98270930/164885373-486c6d82-e358-4dba-8f86-d71c8d00a45d.png)
 
 
+**apache file structure details**
 
-
+|LOCATION| PURPOSE |
+|---|---|
+| /etc/apache2 | configuration files |
+| /var/log/apache2 | logs files |
 
