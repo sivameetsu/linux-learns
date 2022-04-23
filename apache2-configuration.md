@@ -81,11 +81,40 @@ sudo mkdir /var/www/your_domain
 sudo chown -R USER:USER /var/www/domain name
 sudo chmod -R 755 /var/www/domain name
 ```
-Then create html file for for index page
+Then create html file for website index page
 
 ```bash
 sudo touch /var/www/html/index.html
 ```
+**To Modify Apache2 Sites available Conf**
+
+In this section we can modify one conf file
+```bash
+cd /etc/apache2/sites-available
+```
+![Screenshot from 2022-04-23 18-21-06](https://user-images.githubusercontent.com/102893121/164895480-7f6f38b1-444a-4091-a4ac-752171f27f97.png)
+
+create new domain conf file or copy the 000-default.conf file  
+
+```bash
+sudo vim /etc/apache2/sites-available/dev.conf
+```
+![Screenshot from 2022-04-23 18-35-34](https://user-images.githubusercontent.com/102893121/164895804-6edb0681-989a-448c-ba52-66b2cfe0bbd3.png)
+
+**Note: Line no 12,13,14 change** 
+
+Then Enable ur site , Disable old Site and reload apache2 server
+
+```bash
+sudo a2ensite dev.conf
+sudo a2dissite ooo-default_bak.conf
+sudo systemctl reload apache2
+```
+**output Verification for command line**
+
+![Screenshot from 2022-04-23 19-02-58](https://user-images.githubusercontent.com/102893121/164896808-be3f053f-541d-4b33-85ad-8b19c47722c5.png)
+
+
 
 
 
