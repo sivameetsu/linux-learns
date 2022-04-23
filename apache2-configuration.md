@@ -72,20 +72,6 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 |/var/www/html|Default path |
 |/etc/hosts|host file|
 
-**Vhost Configuration**
-
-we can make directory in default path and chage the permission and ownership 
-
-```bash
-sudo mkdir /var/www/your_domain
-sudo chown -R USER:USER /var/www/domain name
-sudo chmod -R 755 /var/www/domain name
-```
-Then create html file for website index page
-
-```bash
-sudo touch /var/www/html/index.html
-```
 **To Modify Apache2 Sites available Conf**
 
 In this section we can modify one conf file
@@ -113,6 +99,22 @@ sudo systemctl reload apache2
 **output Verification for command line**
 
 ![Screenshot from 2022-04-23 19-02-58](https://user-images.githubusercontent.com/102893121/164896808-be3f053f-541d-4b33-85ad-8b19c47722c5.png)
+
+**Vhost Configuration**
+
+we can make directory in default path and chage the permission and ownership 
+
+```bash
+sudo mkdir /var/www/your_domain
+sudo chown -R USER:USER /var/www/domain name
+sudo chmod -R 755 /var/www/domain name
+```
+Then create html file for website index page
+
+```bash
+sudo touch /var/www/html/index.html
+```
+
 
 
 
