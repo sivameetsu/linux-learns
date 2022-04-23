@@ -72,3 +72,12 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 |/var/www|Default path |
 |/etc/hosts|host file|
 
+**VHOST Setting**
+we can make directire in default path and chage the permission and ownership 
+
+```bash
+sudo mkdir /var/www/your_domain
+sudo chown -R USER:USER /var/www/domain name
+sudo chmod -R 755 /var/www/domain name
+```
+
