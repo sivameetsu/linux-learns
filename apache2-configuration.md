@@ -74,7 +74,7 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 
 **VHOST Setting**
 
-we can make directire in default path and chage the permission and ownership 
+we can make directory in default path and chage the permission and ownership 
 
 ```bash
 sudo mkdir /var/www/your_domain
