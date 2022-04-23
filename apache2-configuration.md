@@ -147,3 +147,24 @@ output Shown below
 Some details Enter like country state lacality given shown below output
 
 ![Screenshot from 2022-04-23 19-25-02](https://user-images.githubusercontent.com/102893121/164908996-f3ddb56f-cd09-4fa5-bf44-f457d43ae138.png)
+
+**Config SSL Cetr to Apache**
+
+```bash
+sudo vim /etc/apache2/sites-available/dev.conf
+```
+add SSL cert for config file output shown below
+
+![Screenshot from 2022-04-23 19-31-41](https://user-images.githubusercontent.com/102893121/164909224-6df13140-6b5f-4ed9-89d4-cdaed0c2a1ed.png)
+
+then reload Apache2 server
+
+```bash
+sudo systemctl reload apache2
+```
+and check output Result on ur web browser
+
+![Screenshot from 2022-04-23 19-35-04](https://user-images.githubusercontent.com/102893121/164909359-4ab61342-715e-4719-ab22-30407a21f62d.png)
+
+
+
