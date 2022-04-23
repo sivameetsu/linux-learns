@@ -73,6 +73,7 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 |/etc/hosts|host file|
 
 **To Modify Apache2 Sites available Conf**
+---
 
 In this section we can modify one conf file
 ```bash
@@ -101,6 +102,7 @@ sudo systemctl reload apache2
 ![Screenshot from 2022-04-23 19-02-58](https://user-images.githubusercontent.com/102893121/164896808-be3f053f-541d-4b33-85ad-8b19c47722c5.png)
 
 **Vhost Configuration**
+---
 
 we can make directory in default path and chage the permission and ownership 
 
@@ -121,6 +123,12 @@ sudo touch /var/www/html/index.html
 **In web browser Result**
 ![Screenshot from 2022-04-23 19-12-42](https://user-images.githubusercontent.com/102893121/164900709-b65cede7-ce1d-4906-a0da-9d5692b9f0f4.png)
 
+## SSL configuration
+
+**What is SSL**
+SSL stands for Secure Sockets Layer and, in short, it's the standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems
+
+---
 
 
 
