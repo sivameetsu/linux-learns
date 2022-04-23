@@ -60,7 +60,7 @@ sudo ss -tln
 curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 ```
 
-![image](https://user-images.githubusercontent.com/98270930/164885373-486c6d82-e358-4dba-8f86-d71c8d00a45d.png)
+![image](https://user-images.githubusercontent.com/98270930/164885623-aba68ccd-0bf8-4ad2-92f3-b757ed3f009a.png)
 
 
 **apache file structure details**
