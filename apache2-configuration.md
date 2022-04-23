@@ -70,4 +70,5 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 | /etc/apache2 | configuration files |
 | /var/log/apache2 | logs files |
 |/var/www|Default path |
+|/etc/hosts|host file|
 
