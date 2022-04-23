@@ -130,11 +130,20 @@ SSL stands for Secure Sockets Layer and, in short, it's the standard technology 
 
 ---
 
+In this Section first Enable SSL and reload the server
 
+```bash
+enable SSL
+sudo a2enmod ssl
+sudo systemctl restart apache2
+```
 
+**Create SSL key for Below command line**
 
+```bash
+sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+```
+output Shown below
+Some details Enter like country state lacality given shown below output
 
-
-
-
-
+![Screenshot from 2022-04-23 19-25-02](https://user-images.githubusercontent.com/102893121/164908996-f3ddb56f-cd09-4fa5-bf44-f457d43ae138.png)
