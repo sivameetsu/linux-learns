@@ -46,6 +46,22 @@ sudo systemctl status apache2
 
 ![image](https://user-images.githubusercontent.com/98270930/164885150-46e5e883-21d0-4abd-8f0b-bc6282c69c99.png)
 
+**apache2 listen ports**
+
+```bash
+sudo ss -tln
+```
+
+![image](https://user-images.githubusercontent.com/98270930/164885528-9f6b6cb4-2781-45be-8e5c-f42fd3b218f9.png)
+
+**outout verification in commandline**
+
+```bash
+curl -o /dev/null -s -w "%{http_code}\n" http://localhost
+```
+
+![image](https://user-images.githubusercontent.com/98270930/164885373-486c6d82-e358-4dba-8f86-d71c8d00a45d.png)
+
 
 
 
