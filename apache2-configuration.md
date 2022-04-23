@@ -114,6 +114,16 @@ Then create html file for website index page
 ```bash
 sudo touch /var/www/html/index.html
 ```
+**sample HTML page Below**
+
+![Screenshot from 2022-04-23 19-09-22](https://user-images.githubusercontent.com/102893121/164898224-7f97b743-ce1f-412e-962c-208c81f58312.png)
+
+**In web browser Result**
+![Screenshot from 2022-04-23 19-12-42](https://user-images.githubusercontent.com/102893121/164900709-b65cede7-ce1d-4906-a0da-9d5692b9f0f4.png)
+
+
+
+
 
 
 
