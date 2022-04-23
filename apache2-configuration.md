@@ -69,10 +69,10 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 |---|---|
 | /etc/apache2 | configuration files |
 | /var/log/apache2 | logs files |
-|/var/www|Default path |
+|/var/www/html|Default path |
 |/etc/hosts|host file|
 
-**VHOST Setting**
+**Vhost Configuration**
 
 we can make directory in default path and chage the permission and ownership 
 
@@ -81,4 +81,11 @@ sudo mkdir /var/www/your_domain
 sudo chown -R USER:USER /var/www/domain name
 sudo chmod -R 755 /var/www/domain name
 ```
+Then create html file for for index page
+
+```bash
+sudo touch /var/www/html/index.html
+```
+
+
 
