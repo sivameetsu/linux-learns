@@ -104,7 +104,15 @@ After making changes, restart the cloudwatch agent on the ecw instance.
 sudo systemctl restart awslogs
 ```
 
+**cloudwatch logs**
 
+When logs are created, the ec2 instance's cloudwatch agent automatically pushes them to the cloudwatch logs group. we can get it from cloudwatch log group.
+
+![image](https://user-images.githubusercontent.com/57703276/165018504-9b2d1781-c524-4262-ad86-1a4590945e86.png)
+
+**cloudwatch stream**
+
+![image](https://user-images.githubusercontent.com/57703276/165018765-48f54378-9925-4504-8767-2661c0b9a4c6.png)
 
 
 
