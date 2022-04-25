@@ -114,6 +114,44 @@ When logs are created, the ec2 instance's cloudwatch agent automatically pushes 
 
 ![image](https://user-images.githubusercontent.com/57703276/165018765-48f54378-9925-4504-8767-2661c0b9a4c6.png)
 
+**lambda function subscribtion**
+
+create the lambda function to capture the error logs and sent to them into S3 bucket.
+
+![image](https://user-images.githubusercontent.com/57703276/165019127-1e7e4c2a-6b4a-49fd-9081-ba349b5cfd8f.png)
+
+**lambda fuction**
+
+```py
+import gzip
+import json
+import base64
+import boto3
+
+def lambda_handler(event, context):
+    cw_data = event['awslogs']['data']
+    compressed_payload = base64.b64decode(cw_data)
+    uncompressed_payload = gzip.decompress(compressed_payload)
+    payload = json.loads(uncompressed_payload)
+
+    AWS_BUCKET_NAME = 'nginx-logs-store'
+    s3 = boto3.resource('s3')
+    data = payload
+    object = s3.Object(AWS_BUCKET_NAME, 'results.json')
+    object.put(
+        Body=(bytes(json.dumps(payload).encode('UTF-8')))
+    )
+    
+    log_events = payload['logEvents']
+    for log_event in log_events:
+        print(f'LogEvent: {log_event}')
+```
+
+**S3 datas**
+
+Finally, you can examine the log in the S3 bucket.
+
+![image](https://user-images.githubusercontent.com/57703276/165019341-20022b5d-3cb5-45ac-87f5-2c50c0f1af26.png)
 
 
 
