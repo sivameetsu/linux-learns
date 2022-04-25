@@ -96,6 +96,14 @@ initial_position = end_of_file
 log_group_name = /ec2/nginx/logs
 ```
 
+restart cloudwatch agent**
+
+After making changes, restart the cloudwatch agent on the ecw instance.
+
+```bash
+sudo systemctl restart awslogs
+```
+
 
 
 
