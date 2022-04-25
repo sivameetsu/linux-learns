@@ -13,7 +13,7 @@ haproxy configuration using the purpose for load balancing and high availability
 **server installtion**
 
 ```bash
-apt update 
+sudo apt update 
 sudo apt install -y haproxy
 
 ```
