@@ -147,6 +147,12 @@ def lambda_handler(event, context):
         print(f'LogEvent: {log_event}')
 ```
 
+**subscription filter**
+
+Create a subscription filter in the cloudwatch log group and send events to lambda for processing.
+
+![image](https://user-images.githubusercontent.com/57703276/165019641-c5136674-6dc6-4624-8d8c-c1589897ed2b.png)
+
 **S3 datas**
 
 Finally, you can examine the log in the S3 bucket.
