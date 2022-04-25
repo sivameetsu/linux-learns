@@ -28,7 +28,3 @@ find [options] [path...] [expression]
 | `find . -type f  -name "*.txt" -o -name "*.pdf" -o -name "*.doc"`|Find multiple files with different extensions from all directories.|![image](https://user-images.githubusercontent.com/91359308/165080141-026c54c5-21fe-4407-ac43-d3c36dca4ab7.png)|
 | `find /usr -type f -size +50M` |Find files larger than 50mb in Linux  |![image](https://user-images.githubusercontent.com/91359308/165080652-6adc6a96-a5d4-4711-b469-e8002dbff448.png)|
 
-| `` |  |
-| `` |  |
-| `` |  |
-| `` |  |
