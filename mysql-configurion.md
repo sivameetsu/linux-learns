@@ -29,47 +29,43 @@ sudo mysql -u root -p
 exit (or) \q
 ```
     
-**How to Create New MySQL User**
-
-|S.NO|SYNTAX|DESCRIPTION|
-|---|----|-----|
-|1.|CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';| Create a new user|
-|2.|GRANT permission_type ON database.table TO 'username'@'localhost';| to grant privileges to a user account |
-|3.|GRANT INSERT ON * . * TO 'username'@'localhost';|to grant insert privileges to a MySQL user|
-|4.|SHOW GRANTS FOR username;|To display all the current privileges held by a user|
-|5.|GRANT ALL PRIVILEGES ON *.* TO 'database_user'@'localhost';|To grant all privileges to MySQL User on all databases|
-|6.|GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';|To grant all privileges to a user account on a specific database|
-|7.|GRANT ALL PRIVILEGES ON database_name.table_name TO 'database_user'@'localhost';|To grant all privileges to a user account over a specific table from a database |
-|8.|REVOKE permission_type ON database.table TO 'username'@'localhost';|Revoke Privileges MySQL User Account|
-|9.|DROP USER 'username'@'localhost';|Remove an Entire User Account|
 
 
-![image](https://user-images.githubusercontent.com/98270930/164440513-e8d7f900-461d-4db9-9382-62d153b1f232.png)
+#### Create a MySQL New User:-
 
-![image](https://user-images.githubusercontent.com/98270930/164442717-9d8699bc-d67a-42b8-b779-63d3e06c57c8.png)
+![image](https://user-images.githubusercontent.com/91359308/164618635-021aae64-c33b-4996-bdc0-df0b4e04e03d.png)
 
-![image](https://user-images.githubusercontent.com/98270930/164443627-9caf820a-68d6-4626-a5f2-8d96b4578ee5.png)
+#### To grant all privileges to MySQL User on all databases:-
 
-![image](https://user-images.githubusercontent.com/98270930/164444271-ae4a6350-2c79-47c6-b928-75de64fd624e.png)
+![image](https://user-images.githubusercontent.com/91359308/164618698-e43771d2-1ed5-4471-9a3e-327452a9aecf.png)
+
+#### To grant insert privileges to a MySQL user:-
+
+![image](https://user-images.githubusercontent.com/91359308/164619089-96d53733-976d-4be5-9b3b-143ab81622a0.png)
+
+#### To show all the privileges in a specified user:-
+
+![image](https://user-images.githubusercontent.com/91359308/164619150-fa0ccbad-0241-4c82-b1fd-357a572f5f6a.png)
+
+#### List out the details of users:-
+
+![image](https://user-images.githubusercontent.com/91359308/164619600-2d0a46a7-303a-4764-9a51-2ec690af9005.png)
 
 
-#### MySQL Database Basic syntax
 
-|S.NO|SYNTAX|DESCRIPTION|
-|---|----|-----|
-|1.|CREATE DATABASE [db-name];  |To create a new database.|
-|2.|SHOW DATABASES;|List out the databases.|
-|3.|USE [db-name];|Enter into the specified database.|
-|4.|DROP DATABASE [db_name];|To delete the specified database.|
-
-
-#### Output 
+#### Create a Database:- 
 
 ![image](https://user-images.githubusercontent.com/98270930/164432767-f103370c-7ba6-42c6-9d05-5f881fb1b58e.png)
 
+#### Show the Created Database:- 
+
  ![image](https://user-images.githubusercontent.com/98270930/164433044-e189e893-5549-4b81-8f05-42d63a4506a6.png)
 
+#### Enter into the specified Database:- 
+
  ![image](https://user-images.githubusercontent.com/98270930/164433288-a061e2e5-26aa-4b93-90fe-cdb70cd822ec.png)
+ 
+ #### Delete the Database:-
  
  ![image](https://user-images.githubusercontent.com/98270930/164434562-50e2d6f2-6e5f-4de9-9bb2-522124a8d163.png)
 
@@ -83,16 +79,6 @@ exit (or) \q
    ....
 );
 ```
-
-![image](https://user-images.githubusercontent.com/98270930/164617301-b93b1806-e354-4f14-a079-8439e092c3ea.png)
-
-![image](https://user-images.githubusercontent.com/98270930/164617414-dbe67257-ba14-4cd9-b15e-461243a86151.png)
-
-![image](https://user-images.githubusercontent.com/98270930/164617506-d45b25d2-cb2c-4d5e-bd36-141c0e300a0b.png)
-
-![image](https://user-images.githubusercontent.com/98270930/164618028-e9a74e1b-559f-4d31-8dfb-276aedc3ec0a.png)
-
-
 #### MySQL ALTER TABLE Statement
 
 ##### 1) ALTER TABLE - ADD Column:-
@@ -152,15 +138,29 @@ exit (or) \q
 
 |S.NO|SYNTAX|DESCRIPTION|
 |---|----|-----|
-|1.|TRUNCATE TABLE table_name;|It is used to delete the data inside a table.|
-|2.|SHOW TABLES; | List out all the tables in specified database.|
-|3.|RENAME old_table TO new_table;| To rename the name of the table|
-|4.|DESC table_name|Describe the specified table details.|
-|5.|DROP TABLE  table_name;|It is used to delete complete the data in the table.|
-|6.|DELETE FROM table_name WHERE condition; |To delete the row of the table using where condition.|
-|7.|SELECT column1, column2, ...FROM table_name; |To view the specified colums details in specified table.|
-|8.|SELECT * FROM table_name; |To view a details of the entire specified table.|
+|1.|CREATE DATABASE [db-name];  |To create a new database.|
+|2.|SHOW DATABASES;|List out the databases.|
+|3.|USE [db-name];|Enter into the specified database.|
+|4.|DROP DATABASE [db_name];|To delete the specified database.|
+|5.|CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';| Create a new user|
+|6.|GRANT permission_type ON database.table TO 'username'@'localhost';| To grant privileges to a user account |
+|7.|GRANT INSERT ON * . * TO 'username'@'localhost';|To grant insert privileges to a MySQL user|
+|8.|SHOW GRANTS FOR username;|To display all the current privileges held by a user|
+|9.|GRANT ALL PRIVILEGES ON * . * TO 'database_user'@'localhost';|To grant all privileges to MySQL User on all databases|
+|10.|GRANT ALL PRIVILEGES ON database_name.* TO 'database_user'@'localhost';|To grant all privileges to a user account on a specific database|
+|11.|GRANT ALL PRIVILEGES ON database_name.table_name TO 'database_user'@'localhost';|To grant all privileges to a user account over a specific table from a database |
+|12.|REVOKE permission_type ON database.table TO 'username'@'localhost';|Revoke Privileges MySQL User Account|
+|13.|DROP USER 'username'@'localhost';|Remove an Entire User Account|
+|14.|TRUNCATE TABLE table_name;|It is used to delete the data inside a table.|
+|15.|SHOW TABLES; | List out all the tables in specified database.|
+|16.|RENAME old_table TO new_table;| To rename the name of the table|
+|17.|DESC table_name|Describe the specified table details.|
+|18.|DROP TABLE  table_name;|It is used to delete complete the data in the table.|
+|19.|DELETE FROM table_name WHERE condition; |To delete the row of the table using where condition.|
+|20.|SELECT column1, column2, ...FROM table_name; |To view the specified colums details in specified table.|
+|21.|SELECT * FROM table_name; |To view a details of the entire specified table.|
 
 ### Reference:-
 
 For more details visit this page - https://www.javatpoint.com/mysql-tutorial
+
