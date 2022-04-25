@@ -24,6 +24,54 @@ Use cloudwatch agents when the nginx web server generates logs that are forwarde
 
 **IAM Role**
 
-```bash
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents",
+            "logs:DescribeLogStreams"
+        ],
+        "Resource": [
+            "arn:aws:logs:*:*:*"
+        ]
+    }]
+}
 
 ```
+
+**Install CloudWatch Logs Agent**
+
+```bash
+sudo apt update
+sudo apt install curl -y
+curl https://s3.amazonaws.com/aws-cloudwatch/downloads/latest/awslogs-agent-setup.py -O
+python3 ./awslogs-agent-setup.py --region ap-south-1
+```
+
+**Install nginx**
+
+```bash
+sudo apt update
+sudo apt install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
+
+**How to trigger the nginx logs**
+
+```bash
+# Open terminal and excute the command to generate 
+for i in {1..1000}; do curl -o /dev/null -s -w "%{http_code}\n" http://locahost; sleep 2; done
+```
+
+
+
+
+
+
+
+
