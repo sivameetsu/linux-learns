@@ -14,7 +14,7 @@ find [options] [path...] [expression]
 ```
 
 
-### Part I: Basic Find Commands for Finding Files with Names
+### Basic Find Commands for Finding Files with Names
 
 | Command | Description |Output|
 | --- | --- |--|
