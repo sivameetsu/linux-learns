@@ -49,9 +49,17 @@ GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 
 #### To grant insert privileges to a MySQL user:-
 
+```bash 
+GRANT INSERT ON *.* TO 'new_user-name'@'localhost';
+```
+
 ![image](https://user-images.githubusercontent.com/91359308/164619089-96d53733-976d-4be5-9b3b-143ab81622a0.png)
 
 #### To show all the privileges in a specified user:-
+
+```bash
+SHOW GRANTS FOR 'new_user_name'@'localhost';
+```
 
 ![image](https://user-images.githubusercontent.com/91359308/164619150-fa0ccbad-0241-4c82-b1fd-357a572f5f6a.png)
 
