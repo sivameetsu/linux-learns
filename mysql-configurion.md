@@ -33,6 +33,10 @@ exit (or) \q
 
 #### Create a MySQL New User:-
 
+```bash
+CREATE USER 'New_user_name'@'localhost' IDENTIFIED BY 'password';
+```
+
 ![image](https://user-images.githubusercontent.com/91359308/164618635-021aae64-c33b-4996-bdc0-df0b4e04e03d.png)
 
 #### To grant all privileges to MySQL User on all databases:-
