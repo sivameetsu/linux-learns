@@ -41,6 +41,10 @@ CREATE USER 'New_user_name'@'localhost' IDENTIFIED BY 'password';
 
 #### To grant all privileges to MySQL User on all databases:-
 
+```bash
+GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+```
+
 ![image](https://user-images.githubusercontent.com/91359308/164618698-e43771d2-1ed5-4471-9a3e-327452a9aecf.png)
 
 #### To grant insert privileges to a MySQL user:-
