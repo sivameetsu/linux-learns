@@ -51,3 +51,32 @@ backend http_back
   Testing the setup
     
  http://<public IP>/haproxy?stats
+   
+ # HAProxy Log setup
+   
+ log 127.0.0.1 local Needed to enable the UDp SYSLOG reception in /etc/rsyslog.conf
+ vi /etc/rsyslog.conf
+ #### MODULES ####
+
+$ModLoad imuxsock # provides support for local system logging (e.g. Via logger command)
+$ModLoad imklog # provides kernel logging support (previously done by rklogd)
+#$ModLoad immark # provides --MARK-- message capability
+
+# Provides UDP syslog reception
+$ModLoad imudp
+$UDPServerRun 514
+
+# Provides TCP SYSLOG reception
+#$ModLoad imtcp
+#$InputTCPServerRun 514
+   
+Now create a haproxy.conf in /etc/rsyslog.d/ folder to create log files
+vi /etc/rsyslog.d/haproxy.conf
+
+Add the below line to create the file
+local.* /var/log/haproxy.log
+   
+Restart the rsyslog services to update the changes we made
+# service rsyslog restart
+   
+
