@@ -13,7 +13,7 @@ sudo apt install mysql-server -y
 **secure installtion**
 
 ```bash
-sudo mysql_secure_installtion
+sudo mysql_secure_installation
 .....
 ```
 
