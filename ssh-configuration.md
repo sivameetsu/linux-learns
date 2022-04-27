@@ -41,3 +41,30 @@ sudo systemctl stop ssh
 sudo systemctl disable ssh
 sudo apt-get remove opnessh-server
 ```
+**Limit SSH User Logins**
+
+If you have a large number of user accounts on the systems, then it makes sense that we limit remote SSH access to those users who really need it. Open the /etc/ssh/sshd_config file.
+
+  vim /etc/ssh/sshd_config
+  
+  Add an AllowUsers line at the bottom of the file with a space separated by a list of usernames.
+  
+  ![image](https://user-images.githubusercontent.com/98270930/165550413-043b9c7d-9f5b-48cb-95d7-8fe3628c2450.png)
+
+
+**output**
+
+![image](https://user-images.githubusercontent.com/98270930/165551212-b7e3b4ae-cf10-4f23-836a-8d748d3b9ac5.png)
+
+
+![image](https://user-images.githubusercontent.com/98270930/165553054-02aab5bb-39c5-49b8-830b-cf061ff51feb.png)
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
