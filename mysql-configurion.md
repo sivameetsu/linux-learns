@@ -180,18 +180,7 @@ SHOW GRANTS FOR 'new_user_name'@'localhost';
 
 For more details visit this page - https://www.javatpoint.com/mysql-tutorial
 ----
-----
-### MySql Root Passwd Error and Solve the issue
 
-![Screenshot from 2022-04-28 11-42-13](https://user-images.githubusercontent.com/102893121/165688546-865c17f7-bf6c-485c-83c4-d9f3a37f5ad1.png)
-
-**Try this command**
-
-```bash
-sudo /usr/bin/mysql_secure_installation
-
-```
-![Screenshot from 2022-04-28 11-51-18](https://user-images.githubusercontent.com/102893121/165689814-a79c48a9-290b-4550-b491-573979fb6fbf.png)
 
 
 
