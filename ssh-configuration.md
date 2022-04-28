@@ -60,7 +60,15 @@ If you have a large number of user accounts on the systems, then it makes sense 
 ![image](https://user-images.githubusercontent.com/98270930/165553054-02aab5bb-39c5-49b8-830b-cf061ff51feb.png)
 
   
+  **SSH PORT LISTEN CHECK**
   
+  ```bash
+  netstat -tulpn
+  ```
+   **Output**
+   ![Screenshot from 2022-04-28 19-09-23](https://user-images.githubusercontent.com/102893121/165765334-a8cba6af-3a11-4bd1-8583-c8f357630a6e.png)
+
+   
   
   
   
