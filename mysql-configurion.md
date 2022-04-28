@@ -184,7 +184,7 @@ For more details visit this page - https://www.javatpoint.com/mysql-tutorial
 
 ![Screenshot from 2022-04-28 11-42-13](https://user-images.githubusercontent.com/102893121/165688546-865c17f7-bf6c-485c-83c4-d9f3a37f5ad1.png)
 
-**Try this command
+**Try this command**
 
 ```bash
 sudo /usr/bin/mysql_secure_installation
