@@ -36,8 +36,9 @@ exit (or) \q
 ```bash
 CREATE USER 'New_user_name'@'localhost' IDENTIFIED BY 'password';
 ```
+![Screenshot from 2022-04-28 20-55-30](https://user-images.githubusercontent.com/102893121/165788150-f4263fc5-6a9a-499d-b4de-404f2af01d1d.png)
 
-![image](https://user-images.githubusercontent.com/91359308/164618635-021aae64-c33b-4996-bdc0-df0b4e04e03d.png)
+
 
 #### To grant all privileges to MySQL User on all databases:-
 
@@ -45,15 +46,17 @@ CREATE USER 'New_user_name'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'Neww_user_name'@'localhost' WITH GRANT OPTION;
 ```
 
-![image](https://user-images.githubusercontent.com/91359308/164618698-e43771d2-1ed5-4471-9a3e-327452a9aecf.png)
+![Screenshot from 2022-04-28 20-57-49](https://user-images.githubusercontent.com/102893121/165788530-abfaa209-8368-4d11-803b-93de143f57b8.png)
+
 
 #### To grant insert privileges to a MySQL user:-
 
 ```bash 
-GRANT INSERT ON *.* TO 'new_user-name'@'localhost';
+GRANT INSERT ON *.* TO 'New_user-name'@'localhost';
 ```
+![Screenshot from 2022-04-28 21-01-05](https://user-images.githubusercontent.com/102893121/165789253-1f4357f1-fd98-45a2-8341-66c1fddc6626.png)
 
-![image](https://user-images.githubusercontent.com/91359308/164619089-96d53733-976d-4be5-9b3b-143ab81622a0.png)
+
 
 #### To show all the privileges in a specified user:-
 
