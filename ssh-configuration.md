@@ -85,16 +85,17 @@ If you have a large number of user accounts on the systems, then it makes sense 
  
   ## 2.Check permission **SSH private and Public host key files**
  
-     **Note**
+  **Note**
      
-     **ssh_host_dsa_key => denotes Private key file and check file permission 600** by default
+ **ssh_host_dsa_key => denotes Private key file and check file permission 600** by default
                
-     **ssh_host_dsa_key.pub => denotes Public key file and check file permission 644** by default
+ **ssh_host_dsa_key.pub => denotes Public key file and check file permission 644** by default
     
     
     ```bash
     ls -l /etc/ssh/ |grep key*
     ```
+    
     ![Screenshot from 2022-04-29 17-19-57](https://user-images.githubusercontent.com/102893121/165938942-9f426465-8a1c-4b74-b13f-9127196d937c.png)
     
   ## 3.SET USER,GROUP ACCESS permission
