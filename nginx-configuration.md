@@ -23,4 +23,13 @@ sudo apt install nginx
 
 **NGINX installation verification**
 
-after instaaling the nginx package, use this commmand to verification the nginx package
+after instaling the nginx package, use this commmand to verification the nginx package
+```bash
+# configuration details 
+    nginx -V
+    
+# version details
+  nginx -v
+```
+![image](https://user-images.githubusercontent.com/98270930/165892592-0a069961-4e06-4cd5-9afd-a09fabf5ac0f.png)
+
