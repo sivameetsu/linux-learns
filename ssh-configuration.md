@@ -82,9 +82,14 @@ If you have a large number of user accounts on the systems, then it makes sense 
  ![Screenshot from 2022-04-29 17-07-48](https://user-images.githubusercontent.com/102893121/165937368-0301e1d8-fa93-47cd-8636-bac7cafaf231.png)
  
  
- 2. Check permission **SSH private host key files**
-     **Note** ssh_host_dsa_key => denotes Private key file
-              ssh_host_dsa_key.pub => denotes Public key file
+ 2. Check permission **SSH private and Public host key files**
+ 
+     **Note**
+     
+     **ssh_host_dsa_key => denotes Private key file and check file permission 600** by default
+               
+     **ssh_host_dsa_key.pub => denotes Public key file and check file permission 644** by default
+    
     
     ```bash
     ls -l /etc/ssh/ |grep key*
