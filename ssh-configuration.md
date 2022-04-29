@@ -73,7 +73,7 @@ If you have a large number of user accounts on the systems, then it makes sense 
   ### SSHD config file Important Parameters
   
   
-  ## 1.check permission for the config file  
+  **1.check permission for the config file  
   
   **/etc/ssh/sshd.config** files check GID and UID to Root or Use ls -a to view the the file permission to by default 600 
   
@@ -83,22 +83,17 @@ If you have a large number of user accounts on the systems, then it makes sense 
  ![Screenshot from 2022-04-29 17-07-48](https://user-images.githubusercontent.com/102893121/165937368-0301e1d8-fa93-47cd-8636-bac7cafaf231.png)
  
  
-  ## 2.Check permission **SSH private and Public host key files**
+  **2.Check permission **SSH private and Public host key files**
  
   **Note**
      
- **ssh_host_dsa_key => denotes Private key file and check file permission 600** by default
+     ssh_host_dsa_key => denotes Private key file and check file permission 600 by default
                
- **ssh_host_dsa_key.pub => denotes Public key file and check file permission 644** by default
+     ssh_host_dsa_key.pub => denotes Public key file and check file permission 644 by default
+
+![Screenshot from 2022-04-29 17-19-57](https://user-images.githubusercontent.com/102893121/165938942-9f426465-8a1c-4b74-b13f-9127196d937c.png)
     
-    
-    ```bash
-    ls -l /etc/ssh/ |grep key*
-    ```
-    
-    ![Screenshot from 2022-04-29 17-19-57](https://user-images.githubusercontent.com/102893121/165938942-9f426465-8a1c-4b74-b13f-9127196d937c.png)
-    
-  ## 3.SET USER,GROUP ACCESS permission
+  **3.SET USER,GROUP ACCESS permission (LINE NO 86)**
     
     ```bash
      vim /etc/ssh/sshd_config
@@ -108,5 +103,59 @@ If you have a large number of user accounts on the systems, then it makes sense 
   **output**
  ![Screenshot from 2022-04-29 18-20-30](https://user-images.githubusercontent.com/102893121/165947560-7405ff17-97a4-4e85-a613-719ffb1bc298.png)
 
-
   
+  **4. check LogLevel (LINE NO:28)**
+  
+      Two Levels there **INFO AND VERBOSE** 
+      
+      INFO - Only recors login activity
+      
+      Verbose - specifies that login and logout activity
+  
+      
+      By default - INFO **If ur wish chage INFO TO VERBOSE**
+  
+   
+   **5.X11 forwarding is disabled(LINEE NO 90)** 
+   
+      By Default YES **If you chage NO**
+   
+   
+   **6.SSH MaxAuthTries is set to 4 or less (LINE NO 35)**
+   
+      The MaxAuthTries parameter specifies the maximum number of authentication attempts
+      permitted per connection.
+   
+      By Default 6 **If you chage 4**
+   
+   
+   **7.SSH root login is disabled(LINE NO 33)**
+   
+      PermitRootLogin no
+   
+   
+   **8. SSH PermitEmptyPasswords is disabled(LINE NO 58)**
+   
+      By default PermitEmptyPasswords no
+   
+       
+   **9.SSH PermitUserEnvironment is disabled(LINE NO 97)**
+   
+      By Default PermitUserEnvironment no
+   
+   
+   **10.SSH Idle Timeout Interval is configured(LINE NO 99,100)** 
+     
+      BY default ClientAliveInterval 0 **If you change 300**
+      ClientAliveCountMax 3
+   
+   
+   **11.SSH LoginGraceTime is set to one minute or less(LINE NO 32)** 
+   
+      BY default LoginGraceTime 2m **if change 60**
+     
+   
+   **12. SSH warning banner is configured (Line No 109)**
+   
+      By Default None 
+   
