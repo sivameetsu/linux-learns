@@ -70,11 +70,12 @@ If you have a large number of user accounts on the systems, then it makes sense 
 
    
   
-  ### SSH Important Parameters
+  ### SSHD config file Important Parameters
   
   
-  1. check permission for the config file **/etc/ssh/sshd.config** files check GID and UID to Root or Use ls -a to view the the file permission 
-     to by default 600 
+  ## 1.check permission for the config file  
+  
+  **/etc/ssh/sshd.config** files check GID and UID to Root or Use ls -a to view the the file permission to by default 600 
   
   ```bash
  stat /etc/ssh/sshd_config
@@ -82,7 +83,7 @@ If you have a large number of user accounts on the systems, then it makes sense 
  ![Screenshot from 2022-04-29 17-07-48](https://user-images.githubusercontent.com/102893121/165937368-0301e1d8-fa93-47cd-8636-bac7cafaf231.png)
  
  
- 2. Check permission **SSH private and Public host key files**
+  ## 2.Check permission **SSH private and Public host key files**
  
      **Note**
      
@@ -95,6 +96,16 @@ If you have a large number of user accounts on the systems, then it makes sense 
     ls -l /etc/ssh/ |grep key*
     ```
     ![Screenshot from 2022-04-29 17-19-57](https://user-images.githubusercontent.com/102893121/165938942-9f426465-8a1c-4b74-b13f-9127196d937c.png)
+    
+  ## 3.SET USER,GROUP ACCESS permission
+    
+    ```bash
+     vim /etc/ssh/sshd_config
+     ```
+  **Insert "Allow User" "Deny User" "Allow Group" "Deny Group"
+     
+  **output**
+ ![Screenshot from 2022-04-29 18-20-30](https://user-images.githubusercontent.com/102893121/165947560-7405ff17-97a4-4e85-a613-719ffb1bc298.png)
 
 
   
