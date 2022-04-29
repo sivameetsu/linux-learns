@@ -70,20 +70,26 @@ If you have a large number of user accounts on the systems, then it makes sense 
 
    
   
-  ### SSH permission check
+  ### SSH Important Parameters
   
   
-  change Root permission for config files check GID and UID for Root 
+  1. check permission for the config file **/etc/ssh/sshd.config** files check GID and UID to Root or Use ls -a to view the the file permission 
+     to by default 600 
   
   ```bash
-  stat /etc/ssh/sshd_config
-  ```
-  ![Screenshot from 2022-04-29 09-58-39](https://user-images.githubusercontent.com/102893121/165885400-39bd927f-9bc1-40a1-8c36-861bd569ec76.png)
-  
-  
+ stat /etc/ssh/sshd_config
+ ```
+ ![Screenshot from 2022-04-29 17-07-48](https://user-images.githubusercontent.com/102893121/165937368-0301e1d8-fa93-47cd-8636-bac7cafaf231.png)
+ 
+ 
+ 2. Check permission **SSH private host key files**
+     **Note** ssh_host_dsa_key => denotes Private key file
+              ssh_host_dsa_key.pub => denotes Public key file
+    
+    ```bash
+    ls -l /etc/ssh/ |grep key*
+    ```
+    ![Screenshot from 2022-04-29 17-19-57](https://user-images.githubusercontent.com/102893121/165938942-9f426465-8a1c-4b74-b13f-9127196d937c.png)
 
-  
-  
-  
-  
+
   
