@@ -70,13 +70,17 @@ If you have a large number of user accounts on the systems, then it makes sense 
 
    
   
-  **SSH permission check**
+  ### SSH permission check
+  
+  
   change Root permission for config files check GID and UID for Root 
   
   ```bash
   stat /etc/ssh/sshd_config
   ```
   ![Screenshot from 2022-04-29 09-58-39](https://user-images.githubusercontent.com/102893121/165885400-39bd927f-9bc1-40a1-8c36-861bd569ec76.png)
+  
+  
 
   
   
