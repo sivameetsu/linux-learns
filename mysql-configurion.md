@@ -225,13 +225,52 @@ CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
 
 (corrctly enter user name and password)
 
+then check user is created or not using this command
+
+**select user from mysql.user;**
+
 then grant ALL privileges to user for this command
 
 **GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;**
 
 in this section give specific database permission for this command
 
-**GRANT ALL PRIVILEGES ON database_name.* TO 'sammy'@'localhost' WITH GRANT OPTION;** 
+**GRANT ON database_name.* TO 'sammy'@'localhost';** 
 
+then save ur privilege changes using this command
 
+**fluses privileges;**
+
+and check ur privileges are assign or not using this commant
+
+**show grants for user1@localhost;**
+
+Next We will create database on Root user Set privilege to specify user
+
+first create database on Root User account and give specify permission to user this account
+
+**create database database_name;**
+
+and check database are create or niot using this commant
+
+**show databases;**
+
+then give permission to access the user
+
+**grant all on user_name.* to user'3@'localhost';**
+
+check ur privileges are assign or not using this commant
+
+**show grants for user1@localhost;**
+in this section complete then next table create
+
+**Next create table for the databases**
+
+in this section first you enter ur user account 
+
+then create table 
+
+**CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );**
+
+using this commant modify for ur changes
 
