@@ -185,5 +185,53 @@ For more details visit this page - https://www.javatpoint.com/mysql-tutorial
 ----
 
 
+## MySQL Install And create user Process (Ubuntu OS)
+
+In this case first Update and install the MYsql server USing this Command
+
+Ctrl + t - open terminal and 
+
+**sudo apt update** - update the previous files then 
+
+enter **Sudo apt-get install mysql-server -y** after install the server
+
+check running status on the server using **sudo systemctl status mysql.service** It complete status shown **Active** then going to coinfig process
+
+## MYSQL Config process
+
+ In this section first run secure Process Like Password, privilages set and etc... using this commant
+ 
+ **sudo mysql_secure_installation**
+
+after enter the (yes or no) option 
+set ROOT password and remind or note the Root password on your dairy or Note
+then select your Password strenght (Low,medium,High) 
+complete this section then move user,datebase,table creation privileges 
+
+## Mysql user,datebase,table creation privileges**
+
+In this section we will show how to create user datebase table and the privileges 
+
+first of all enter with ur root user and password using this comment
+
+**mysql -u root -p**
+
+then enter ur Root Password
+
+then enter mysql server 
+
+first create the user on the server using this command
+CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
+
+(corrctly enter user name and password)
+
+then grant ALL privileges to user for this command
+
+**GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;**
+
+in this section give specific database permission for this command
+
+**GRANT ALL PRIVILEGES ON database_name.* TO 'sammy'@'localhost' WITH GRANT OPTION;** 
+
 
 
