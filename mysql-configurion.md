@@ -297,3 +297,28 @@ then create multiple databases backup in sinle comment
 **mysqldump -u root -p --databases user1data user2data user3data > /home/deva/Mysql_bak/alldatabase_bak.sql**
 
 and Next create back in single Table
+
+**mysqldump -u root -p user1data A >/home/deva/Table_bak/single_bak.sql**
+
+and next Multiple table in single  command
+
+**mysqldump -u root -p user1data A B C >/home/deva/Table_bak/all_bak.sql**
+
+##Restore
+
+in this section how to restore the bacup tables in single file
+
+**mysql -u root -p user3data < /home/deva/Table_bak/a3_bak.sql**
+
+Multiple table restore
+
+**mysql -u root -p user3data < /home/deva/Table_bak/all3_bak.sql**
+
+in this section restore single data base in mysql
+
+**
+
+
+
+
+
