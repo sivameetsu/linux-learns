@@ -72,7 +72,7 @@ If you have a large number of user accounts on the systems, then it makes sense 
 
    **error pic below**
    
-    ![Screenshot from 2022-04-30 19-28-21](https://user-images.githubusercontent.com/102893121/166108542-14869367-acb6-43f9-a44d-ee95d2decf3f.png)
+  ![Screenshot from 2022-04-30 19-28-21](https://user-images.githubusercontent.com/102893121/166108542-14869367-acb6-43f9-a44d-ee95d2decf3f.png)
 
    
   
