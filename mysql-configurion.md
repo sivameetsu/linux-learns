@@ -316,9 +316,16 @@ Multiple table restore
 
 in this section restore single data base in mysql
 
-**
+in restore process first you remove privious databases using drop commant
 
+create new empty database 
 
+**mysql -u root -p user1data < /home/deva/Mysql_bak/user1data_bak.sql**
 
+in this section restore single data base in mysql
+
+**mysql -u root -p uset1 < /home/deva/Mysql_bak/alldatabase_bak.sql **
+
+restore single and mutiple restore process cmd is same.
 
 
