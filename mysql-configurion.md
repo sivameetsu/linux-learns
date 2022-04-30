@@ -187,7 +187,7 @@ For more details visit this page - https://www.javatpoint.com/mysql-tutorial
 
 ## MySQL Install And create user Process (Ubuntu OS)
 
-In this case first Update and install the MYsql server USing this Command
+In this case first Update and install the MYsql USing this Command
 
 Ctrl + t - open terminal and 
 
