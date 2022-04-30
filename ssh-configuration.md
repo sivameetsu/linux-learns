@@ -68,6 +68,12 @@ If you have a large number of user accounts on the systems, then it makes sense 
    **Output**
    ![Screenshot from 2022-04-28 19-09-23](https://user-images.githubusercontent.com/102893121/165765334-a8cba6af-3a11-4bd1-8583-c8f357630a6e.png)
 
+  ## SSH remotelogin Allowuser Error solve
+
+   **error pic below**
+   
+    ![Screenshot from 2022-04-30 19-28-21](https://user-images.githubusercontent.com/102893121/166108542-14869367-acb6-43f9-a44d-ee95d2decf3f.png)
+
    
   
   ### SSHD config file Important Parameters
