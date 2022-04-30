@@ -274,3 +274,26 @@ then create table
 
 using this commant modify for ur changes
 
+to view the table use below command
+
+**describe table_name;**
+
+then insert values to the Table using this commnad for ur values
+
+**insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);**
+
+to view the value you insert the table use below command
+
+**describe table_name;**
+ 
+ complete the section Next How to get backup database and table
+ 
+ In this Section first how to backup single database for Mysql in below commant
+ 
+ **mysqldump -u root -p user1data > /home/deva/Mysql_bak/user1data_bak.sql**
+
+then create multiple databases backup in sinle comment
+
+**mysqldump -u root -p --databases user1data user2data user3data > /home/deva/Mysql_bak/alldatabase_bak.sql**
+
+and Next create back in single Table
