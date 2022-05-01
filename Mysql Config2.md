@@ -105,6 +105,15 @@ check ur privileges are assign or not using this commant
 ```bash
 show grants for user1@localhost;
 ```
+To enter any database use this commant
+```bash
+use database name
+```
+To view the current database name
+```bash
+status;
+```
+
 in this section complete then next table create
 
 **Next create table for the databases**
