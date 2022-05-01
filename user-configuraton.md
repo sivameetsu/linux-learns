@@ -25,4 +25,8 @@ with userdel command you can dlelete a user
 ```bash
 sudo userdel -f username
 ```
+**Set Password**
 
+```bash
+sudo passwd username
+```
