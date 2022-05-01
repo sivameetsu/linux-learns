@@ -191,77 +191,107 @@ In this case first Update and install the MYsql USing this Command
 
 Ctrl + t - open terminal and 
 
-**sudo apt update** - update the previous files then 
+```bash
+sudo apt update
+```
+- update the previous files then 
 
-enter **Sudo apt-get install mysql-server -y** after install the server
+```bash
+Sudo apt-get install mysql-server -y
+```
+after install the server
 
-check running status on the server using **sudo systemctl status mysql.service** It complete status shown **Active** then going to coinfig process
+check running status on the server using 
+```bash
+sudo systemctl status mysql.service
+```
+It complete status shown **Active** then going to coinfig process
 
 ## MYSQL Config process
 
  In this section first run secure Process Like Password, privilages set and etc... using this commant
  
- **sudo mysql_secure_installation**
-
+ ```bash
+ sudo mysql_secure_installation**
+```
 after enter the (yes or no) option 
 set ROOT password and remind or note the Root password on your dairy or Note
 then select your Password strenght (Low,medium,High) 
 complete this section then move user,datebase,table creation privileges 
 
-## Mysql user,datebase,table creation privileges**
+## Mysql user,datebase,table creation privileges
 
 In this section we will show how to create user datebase table and the privileges 
 
 first of all enter with ur root user and password using this comment
 
-**mysql -u root -p**
-
+```bash
+mysql -u root -p
+```
 then enter ur Root Password
 
 then enter mysql server 
 
 first create the user on the server using this command
+```bash
 CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
-
+```
 (corrctly enter user name and password)
 
 then check user is created or not using this command
 
-**select user from mysql.user;**
-
+```bash
+select user from mysql.user;
+```
 then grant ALL privileges to user for this command
 
-**GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;**
+```bash
+GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+```
 
 in this section give specific database permission for this command
 
-**GRANT ON database_name.* TO 'sammy'@'localhost';** 
+```bash
+GRANT ON database_name.* TO 'sammy'@'localhost';
+```
 
 then save ur privilege changes using this command
 
-**fluses privileges;**
+```bash
+fluses privileges;
+```
 
 and check ur privileges are assign or not using this commant
 
-**show grants for user1@localhost;**
+```bash
+show grants for user1@localhost;
+```
 
 Next We will create database on Root user Set privilege to specify user
 
 first create database on Root User account and give specify permission to user this account
 
-**create database database_name;**
+```bash
+create database database_name;
+```
 
 and check database are create or niot using this commant
 
-**show databases;**
+```bash
+show databases;
+```
 
 then give permission to access the user
 
-**grant all on user_name.* to user'3@'localhost';**
+```bash
+grant all on user_name.* to user'3@'localhost';
+```
 
 check ur privileges are assign or not using this commant
 
-**show grants for user1@localhost;**
+```bash
+show grants for user1@localhost;
+```
 in this section complete then next table create
 
 **Next create table for the databases**
@@ -270,49 +300,69 @@ in this section first you enter ur user account
 
 then create table 
 
-**CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );**
+```bash
+CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );
+```
 
 using this commant modify for ur changes
 
 to view the table use below command
 
-**describe table_name;**
+```bash
+describe table_name;
+```
 
 then insert values to the Table using this commnad for ur values
 
-**insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);**
+```bash
+insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);
+```
 
 to view the value you insert the table use below command
 
-**describe table_name;**
+```bash
+describe table_name;
+```
  
- complete the section Next How to get backup database and table
+complete the section Next How to get backup database and table
  
- In this Section first how to backup single database for Mysql in below commant
+In this Section first how to backup single database for Mysql in below commant
  
- **mysqldump -u root -p user1data > /home/deva/Mysql_bak/user1data_bak.sql**
+ ```bash
+ mysqldump -u root -p user1data > /home/deva/Mysql_bak/user1data_bak.sql
+ ```
 
 then create multiple databases backup in sinle comment
 
-**mysqldump -u root -p --databases user1data user2data user3data > /home/deva/Mysql_bak/alldatabase_bak.sql**
+```bash
+ mysqldump -u root -p --databases user1data user2data user3data > /home/deva/Mysql_bak/alldatabase_bak.sql
+ ```
 
 and Next create back in single Table
 
-**mysqldump -u root -p user1data A >/home/deva/Table_bak/single_bak.sql**
+```bash
+mysqldump -u root -p user1data A >/home/deva/Table_bak/single_bak.sql
+```
 
 and next Multiple table in single  command
 
-**mysqldump -u root -p user1data A B C >/home/deva/Table_bak/all_bak.sql**
+```bash
+mysqldump -u root -p user1data A B C >/home/deva/Table_bak/all_bak.sql
+```
 
 ##Restore
 
 in this section how to restore the bacup tables in single file
 
-**mysql -u root -p user3data < /home/deva/Table_bak/a3_bak.sql**
+```bash
+mysql -u root -p user3data < /home/deva/Table_bak/a3_bak.sql
+```
 
 Multiple table restore
 
-**mysql -u root -p user3data < /home/deva/Table_bak/all3_bak.sql**
+```bash
+mysql -u root -p user3data < /home/deva/Table_bak/all3_bak.sql
+```
 
 in this section restore single data base in mysql
 
@@ -320,11 +370,15 @@ in restore process first you remove privious databases using drop commant
 
 create new empty database 
 
-**mysql -u root -p user1data < /home/deva/Mysql_bak/user1data_bak.sql**
+```bash
+mysql -u root -p user1data < /home/deva/Mysql_bak/user1data_bak.sql
+```
 
 in this section restore single data base in mysql
 
-**mysql -u root -p uset1 < /home/deva/Mysql_bak/alldatabase_bak.sql **
+```bash
+mysql -u root -p uset1 < /home/deva/Mysql_bak/alldatabase_bak.sql
+```
 
 restore single and mutiple restore process cmd is same.
 
