@@ -2,7 +2,7 @@
 
 In this case first Update and install the MYsql USing this Command
 
-Ctrl + t - open terminal and 
+Ctrl +Alt+ t - open terminal and 
 
 ```bash
 sudo apt update
