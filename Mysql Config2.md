@@ -119,7 +119,7 @@ CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );
 
 using this commant modify for ur changes
 
-to view the table use below command
+to view the table header name use below command
 
 ```bash
 describe table_name;
@@ -134,7 +134,7 @@ insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);
 to view the value you insert the table use below command
 
 ```bash
-describe table_name;
+select * from table name;
 ```
  
 complete the section Next How to get backup database and table
