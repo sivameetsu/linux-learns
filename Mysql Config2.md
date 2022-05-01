@@ -197,6 +197,7 @@ mysql -u root -p user1data < /home/deva/Mysql_bak/user1data_bak.sql
 ```
 
 in this section restore single data base in mysql
+**in this commant use is base terminal not mysql**
 
 ```bash
 mysql -u root -p uset1 < /home/deva/Mysql_bak/alldatabase_bak.sql
@@ -204,4 +205,7 @@ mysql -u root -p uset1 < /home/deva/Mysql_bak/alldatabase_bak.sql
 
 restore single and mutiple restore process cmd is same.
 
-
+to check the restore database table record
+```bash
+select count(*) from data_2;
+```
