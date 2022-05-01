@@ -1,0 +1,39 @@
+MYSQL DC1 TO DC2  BACKUP AND RESTORE
+
+**DC1 Server configuration**
+
+first connect to your dc1 mysql server Create one database, then use it to create three tables.
+ 
+ ```bash 
+ 
+ mysql -u root -p 
+ ```
+ Then enter your root password,da
+ 
+ ```bash
+ 
+ create database data;
+ ```
+Now use the data database
+
+use data;
+
+Now create  three tables   data_1, data_2, data_3;
+Insert some values in your tables;
+
+then back up the your database
+
+```bash
+
+mysqldump -u root -p  database_name > backup filename path
+
+```
+
+Finally transfer the backup file in your dc2 server
+
+scp sourcefilename dc2servername@dc2 ip:/dc2 storage path
+
+
+
+ 
+ 
