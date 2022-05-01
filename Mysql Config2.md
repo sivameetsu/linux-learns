@@ -209,3 +209,27 @@ to check the restore database table record
 ```bash
 select count(*) from data_2;
 ```
+
+## MySql backup database file transfer one server to another server
+
+first enter the mysql console
+backup ur need database using this command
+
+```bash
+ mysqldump -u root -p database name > file path/user1data_bak.sql
+ ```
+and tranfer ur file to another server using this command
+
+```bash
+scp source_file_name username@destination_host:destination_folder
+```
+once file transfered then next restore using this command **using command in base terminal not mysql console**
+
+```bash
+mysql -u root -p databasename < filepath/backup.sql;
+```
+
+to check the restore database table record
+```bash
+select count(*) from data_2;
+```
