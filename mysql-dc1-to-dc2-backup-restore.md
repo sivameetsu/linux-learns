@@ -4,12 +4,13 @@
 
 **Requirements**
 
+It is required two servers. this servers should be  install `mysql` service and `ssh` services.
+
 |server name| username | IPAddress | password |
 |---|---| --- | --- | 
 |dc1-node1|ubuntu|192.168.0.2|PasswordChnaged|
 |dc2-node1|ubuntu|192.168.1.2|PasswordChnaged|
 
-**Prepackages**
 
 **DC1 Server configuration**
 
