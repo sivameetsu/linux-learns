@@ -10,14 +10,8 @@ The root user is the superuser and have all the powers for creating a user, dele
 With useradd commands you can add a user.
 
 ```bash
-useradd
+useradd dodo
 ```
- 
-![image](https://user-images.githubusercontent.com/98270930/166136960-cdd3b639-421f-47b6-a574-614c35a65bf1.png)
-
-
-![image](https://user-images.githubusercontent.com/98270930/166136972-6e8f84cb-53ab-4a5b-bad5-3756365263e5.png)
-
 **User Deletion**
 
 with userdel command you can dlelete a user
