@@ -1,4 +1,15 @@
-MYSQL DC1 TO DC2  BACKUP AND RESTORE
+**MySQL DC1 TO DC2  BACKUP and RESTORE**
+
+----
+
+**Requirements**
+
+|server name| username | IPAddress | password |
+|---|---| --- | --- | 
+|dc1-node1|ubuntu|192.168.0.2|PasswordChnaged|
+|dc2-node1|ubuntu|192.168.0.2|PasswordChnaged|
+
+**Prepackages**
 
 **DC1 Server configuration**
 
