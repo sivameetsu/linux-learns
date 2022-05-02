@@ -1,25 +1,26 @@
 ## user management
 User management includes everything from creating a user to deleting a user on your system.
 
-**Process flow to create the users**
+_**Requirmenets**_
 
 |users | state |
 |---|---|
 | root | default user |
 | dodo | custom user |
 
-**root user**
+_**root user**_
 
 The root user is the `superuse`r and have all the permissions for creating a user, deleting a user and can even login with the other user's account. The root user always has userid 0. this user can be control entire systes.
 
-**user Creation process**
+_**custom user creation process**_
 
-With useradd commands you can add a user.
+_**in ubuntu**_
 
 ```bash
 useradd dodo
 ```
-**User Deletion**
+
+_**user deletion**_
 
 with userdel command you can dlelete a user
 
@@ -31,3 +32,10 @@ sudo userdel -f dodo
 ```bash
 sudo passwd dodo
 ```
+
+_**custom shell assign for users**_
+
+_**in centos**_
+
+
+
