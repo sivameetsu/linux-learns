@@ -18,7 +18,7 @@ check running status on the server using
 ```bash
 sudo systemctl status mysql.service
 ```
-It complete status shown **Active** then going to coinfig process
+It complete status shown `Active` then going to coinfig process
 
 ## MYSQL Config process
 
