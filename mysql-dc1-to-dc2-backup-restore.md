@@ -1,4 +1,4 @@
-**MySQL DC1 TO DC2  BACKUP and RESTORE**
+**DC1 to DC2 MySQL backup and restore**
 
 ----
 
