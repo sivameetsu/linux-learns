@@ -19,6 +19,7 @@ _**in ubuntu**_
 ```bash
 useradd dodo
 ```
+In this command create /etc/passwd, /etc/shadow, /etc/group and /etc/gshadow files for the newly created user accounts.
 
 _**user deletion**_
 
@@ -32,6 +33,40 @@ sudo userdel -f dodo
 ```bash
 sudo passwd dodo
 ```
+**To check user creation**
+
+```bash
+cat /etc/passwd
+```
+**Group Creation Group**
+
+```bash 
+groupadd Group-Name
+```
+The command adds an entry for the new group to the /etc/group and /etc/gshadow files.
+
+```bash
+groupadd -f mygroup
+```
+
+Group add with specify Group ID
+```bash
+groupadd -g 1010 mygroup
+```
+to view and verify the GroupID use this command
+
+```bash
+getent group | grep mygroup
+```
+group Create with Password use this command
+
+```bash
+groupadd -p grouppassword mygroup
+```
+
+
+
+
 
 _**custom shell assign for users**_
 
