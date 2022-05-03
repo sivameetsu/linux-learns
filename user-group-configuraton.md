@@ -38,7 +38,7 @@ sudo passwd dodo
 ```bash
 cat /etc/passwd
 ```
-**Group Creation Group**
+**Group Creation **
 
 ```bash 
 groupadd Group-Name
@@ -49,16 +49,17 @@ The command adds an entry for the new group to the /etc/group and /etc/gshadow f
 groupadd -f mygroup
 ```
 
-Group add with specify Group ID
+**Group add with specify Group ID**
+
 ```bash
 groupadd -g 1010 mygroup
 ```
-to view and verify the GroupID use this command
+to view and **verify the GroupID** use this command
 
 ```bash
 getent group | grep mygroup
 ```
-group Create with Password use this command
+**group Create with Password use this command**
 
 ```bash
 groupadd -p grouppassword mygroup
