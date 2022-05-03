@@ -21,6 +21,24 @@ useradd dodo
 ```
 In this command create /etc/passwd, /etc/shadow, /etc/group and /etc/gshadow files for the newly created user accounts.
 
+**User without Home Directory**
+```bash
+useradd -M username
+```
+
+**useradd with account Expiry**
+
+```bash
+useradd -e 2021-08-27 username
+```
+**Set passwd expiry to user account**
+```bash
+chage -M 120 username
+```
+to set expiry date to the user
+
+aand check **man chage** for more details
+
 _**user deletion**_
 
 with userdel command you can dlelete a user
