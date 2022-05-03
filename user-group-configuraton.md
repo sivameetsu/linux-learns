@@ -107,3 +107,5 @@ vi /etc/passwd
 ```
 
 
+---
+For more user commands Please Refer -- https://www.tecmint.com/add-users-in-linux/
