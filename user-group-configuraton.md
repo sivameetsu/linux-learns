@@ -63,14 +63,46 @@ group Create with Password use this command
 ```bash
 groupadd -p grouppassword mygroup
 ```
+---
 
+In this command udsed to delete the group
 
+```bash
+groupdel GROUPNAME
+```
+to verify the group delete
 
+```bash
+getent group | grep groupname
+```
+In this command used to add the existing group
 
+```bash
+sudo usermod -a -G groupname username
+```
+in this command user to **ange the primary group for the user**
+```bash
+sudo usermod -g groupname username
+```
+
+In this command used to **mve the user from the group**
+```bash
+sudo gpasswd -d username groupname
+```
+
+in this command used to **user linked groups**
+```bash
+groups username
+```
 
 _**custom shell assign for users**_
 
 _**in centos**_
 
+Change User Shell in /etc/passwd File **UbuntuOS**
+
+```bash
+vi /etc/passwd
+```
 
 
