@@ -10,34 +10,34 @@ for each of the above-stated actions are discussed below.
 **Requirements**
 
 
-|OS|
-|---|
-|Ubuntu|
+|operating system | username | groupname |
+|---|---|---|
+|Ubuntu| dodo | lucas |
 
 _**group creation details**_
 
 ```bash
-# Create group user
-sudo groupadd username
+# Create group 
+sudo groupadd lucas
 ```
 ```bash
 # One group into one user
-sudo usermod -a -G groupname username 
+sudo usermod -a -G lucas dodo 
 ```
 
 ```bash
 # Muliple group in one user
-usermod -a -G group1,group2,group3 username
+usermod -a -G group1,group2,group3 dodo
 ```
 
 ```bash
 # Remove a user from group
-sudo gpasswd -d  username groupname
+sudo gpasswd -d  dodo lucas
 ```
 
 ```bash
 # User information
-sudo usermod -c "This is demo user" username
+sudo usermod -c "This is dodo user" dodo
 ```
 
 ```bash
