@@ -1,6 +1,7 @@
-## User management 
+#### user management 
+---
 
-what is User Managemen?
+_what is user management?_
 
 User Administration is the process of managing different user accounts and their respective permissions in an operating system.In Linux or Unix-based 
 operating systems, we can create different user accounts, sort them into groups, change their set of permissions or delete them. The terminal commands 
