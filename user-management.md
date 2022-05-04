@@ -13,34 +13,46 @@ for each of the above-stated actions are discussed below.
 |---|
 |Ubuntu|
 
-## Group Creation Details:
+_**group creation details**_
+
 ```bash
 # Create group user
 sudo groupadd username
-
+```
+```bash
 # One group into one user
 sudo usermod -a -G groupname username 
+```
 
+```bash
 # Muliple group in one user
 usermod -a -G group1,group2,group3 username
+```
 
+```bash
 # Remove a user from group
 sudo gpasswd -d  username groupname
+```
 
+```bash
 # User information
 sudo usermod -c "This is demo user" username
+```
 
+```bash
 # Add the users into docker group
 sudo usermod -aG docker ubuntu4
+```
 
+```bash
 # List out the created group
 cat /etc/group
+```
 
+```bash
 # set a password in group user
 sudo gpasswd groupname
-
-
- ```
+```
 
 
 ## User Creation Details:
