@@ -10,7 +10,6 @@ for each of the above-stated actions are discussed below.
 
 **Requirements**
 
-
 |operating system | username | groupname |
 |---|---|---|
 |Ubuntu| dodo | lucas |
@@ -21,6 +20,13 @@ _**group creation details**_
 # Create group 
 sudo groupadd lucas
 ```
+
+_**user creation details**_
+
+```bash
+sudo adduser dodo
+```
+
 ```bash
 # One group into one user
 sudo usermod -a -G lucas dodo 
