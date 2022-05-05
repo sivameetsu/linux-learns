@@ -80,7 +80,7 @@ vsftpd_log_file=/var/log/vsftpd.log
  **Create a directory and assign it to 755 authentications**
  
  ```bash
-mkdir /etc/vsftpd/users_list
+mkdir /etc/vsftpd/users
 mkdir /var/www/html/ftpuser1
 chown ftpuser1:ftpuser1 /var/www/html/ftpuser1
  ```
@@ -88,7 +88,7 @@ chown ftpuser1:ftpuser1 /var/www/html/ftpuser1
 **Enable the user list file**
 
 ```bash
-vim /etc/vsftpd/users_list/keypass 
+vim /etc/vsftpd/users/ftuser1 
 # add lines
 local_root=/var/www/html/ftpuser1
 ```
