@@ -1,4 +1,4 @@
-**_user management_**
+**_User Management_**
 
 ---
 
@@ -14,17 +14,11 @@ for each of the above-stated actions are discussed below.
 |---|---|---|
 |Ubuntu| dodo | lucas |
 
-_**group creation details**_
+_**Group Creation Details**_
 
 ```bash
 # Create group 
 sudo groupadd lucas
-```
-
-_**user creation details**_
-
-```bash
-sudo adduser dodo
 ```
 
 ```bash
@@ -34,7 +28,7 @@ sudo usermod -a -G lucas dodo
 
 ```bash
 # Muliple group in one user
-usermod -a -G group1,group2,group3 dodo
+usermod -a -G lucas1,lucas2,lucas3 dodo
 ```
 
 ```bash
@@ -61,42 +55,62 @@ cat /etc/group
 # set a password in group user
 sudo gpasswd groupname
 ```
-
-
-## User Creation Details:
+```bash
+#  Remove user from a user group
+ sudo deluser dodo lucas
+```
+_**User Creation Details:**_
 
 ```bash
 # create the user
-sudo useradd username
-
+sudo useradd dodo
+```
+```bash
 # Login to the user
-su username
+su dodo
    (or)
-ssh username@ip_address
+ssh dodo@ip_address
    (or)
-ssh username@localhost
-
+ssh dodo@localhost
+```
+```bash
 # Delete the user
-sudo userdel username
-
+sudo userdel dodo
+```
+```bash
 # set a password in user
-sudo passwd username
-
+sudo passwd dodo
+```
+```bash
 # List out the created users
 cat /etc/passwd
-
+```
+```bash
+#  Disable a user
+sudo passwd -l dodo
+```
+```bash
+ # Gives information on all logged in user
+ finger
+ ```
+ ```bash
+ # Gives information of a particular user
+finger dodo
 ```
 #### Give the Permission - File to Group
 ```bash
 # Create a file 
 touch filename
-
+```
+```bash
 # Ggive the permission - group to file
 chgrp groupname filename
-
+```
+```bash
 # To give the read, write, execute permission
 chmod g+rwx filename
-
+```
+```bash
 # view the file content in the user
 cat filename
 ```
