@@ -129,6 +129,28 @@ systemctl disable firewalld
  sudo apt update
  sudo apt install ftp -y
 ```
+client access kindly check ```/etc/vsfdp.conf```
+
+change No to Yes ```write_enable=YES```
+
+if you change another Directory use this command
+
+```bash 
+lcd ~/folders
+```
+if you download from server
+
+use 
+```bash
+get filename
+mget filename1 filename2 --> to download multiple file
+```
+
+if you uplaod to server
+
+```bash
+put filename
+mput filename1 filename 2 --> to upload multiple file
 
 **commandline uploads**
 
