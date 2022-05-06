@@ -5,6 +5,8 @@ _Disk Alerts_
 
 # Set alert level 80% is default
 ALERT=80
+
+# Log file storage location
 LOG_FILE=/tmp/space.txt
 
 df -H | grep -vE '^Filesystem|tmpfs|cdrom' | awk '{ print $5 " " $1 " " $6 }' | while read output;
