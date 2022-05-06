@@ -7,7 +7,6 @@ LOG_FILE=/tmp/space.txt
 
 df -H | grep -vE '^Filesystem|tmpfs|cdrom' | awk '{ print $5 " " $1 " " $6 }' | while read output;
 do
-#   echo $output
   usep=$(echo $output | awk '{ print $1 $3}' | cut -d'%' -f1  )
   path=$(echo $output | awk '{ print $3}' )
   partition=$(echo $output | awk '{ print $2 }' )
