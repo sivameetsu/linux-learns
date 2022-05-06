@@ -15,3 +15,11 @@ do
   fi
 done 
 ```
+
+
+_**Execution**_
+
+```bash
+# create the file in the name of disk-space.sh
+bash disk-space.sh
+```
