@@ -3,7 +3,7 @@ _Disk Alerts_
 ```bash
 #!/usr/bin/env bash
 
-# set alert level 80% is default
+# Set alert level 80% is default
 ALERT=80
 LOG_FILE=/tmp/space.txt
 
