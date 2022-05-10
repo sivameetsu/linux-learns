@@ -42,6 +42,12 @@ sudo systemctl start docker
 ```bash
 sudo systemctl stop docker
 ```
+**Status of the Docker**
+
+```bash
+sudo systemctl status docker
+```
+
 
 **Restart the Docker**
 
