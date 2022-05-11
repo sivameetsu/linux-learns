@@ -6,12 +6,14 @@ oldest parts of the TCP/IP suite.  The term NTP applies to both the protocol and
 
 **Requirements**
 
-|OS |SERVICE |PORT|
+|OS |ipaddress | act as |
 |---|---|---|
-|Ubuntu |NTP |123|
+|Ubuntu |192.168.1.3| server |
+|Ubuntu |192.168.1.4| client |
 
 
-**NTP Installation**
+_configuration of NTP server_
+---
 
 If the package is not found, use the following commands to install NTP.
 
@@ -20,39 +22,46 @@ sudo apt update
 sudo apt install ntp -y
 ```
 **Find Version**
+
 ```bash
 sntp --version
 ```
-**Edit server Config file**
+_**Edit server Config file**_
+
 ```bash
-vim/etc/ntp.con
+vim/etc/ntp.conf
+
+# In this section line no 21 to 24 and 27 and 51 lines are customise for ur needs get backup then edit
+# to get pool file plz visit for more info => https://www.pool.ntp.org/zone/asia
 ```
-In this section line no 21 to 24 and 27 and 51 lines are customise for ur needs get backup then edit
 
-to get pool file plz visit for more info ---> https://www.pool.ntp.org/zone/asia
 
-Next restart the service 
+_Next restart the service _
 
 ```bash
 systemctl restart ntp 
 ```
-and check status
+_and check status_
 ```bash
 systemctl status ntp
 ```
 
-## config NTP client
+_configuration of NTP client_
+---
 
 first check the running status  using this command
 ```bash
 systemctl status systemd-timesyncd 
 ```
-then edit conf file
+_edit conf file_
+
 ```bash 
  vi /etc/systemd/timesyncd.conf 
+ 
+ # add ur domain name in last line
+ NTP=192.168.1.3
  ```
- add ur domain name in last line
- **NTP=ur ntp server name**
+
  
  then restart
  ```bash
