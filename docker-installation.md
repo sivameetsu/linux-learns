@@ -1,4 +1,5 @@
-## Docker installation
+_Docker installation on ubuntu_
+---
 
 **Setup the repository**
 
