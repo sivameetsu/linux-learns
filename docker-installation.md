@@ -1,7 +1,7 @@
 _Docker installation on ubuntu_
 ---
 
-**Setup the repository**
+_**Setup the repository**_
 
 ```bash
   sudo apt-get update
@@ -11,13 +11,13 @@ _Docker installation on ubuntu_
     gnupg \
     lsb-release -y
 ```
-**Add Docker’s official GPG key**
+_**Add Docker’s official GPG key**_
 
 ```bash
  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg \
       --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 ```
-**set up the stable repository**
+_**set up the stable repository**_
 
 ```bash
 echo \
@@ -25,14 +25,14 @@ echo \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
-**Install Docker Engine**
+_**Install Docker Engine**_
 
 ```bash
  sudo apt-get update
  sudo apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
 
-**Start the Docker**
+_**Start the Docker**_
 
 ```bash
 sudo systemctl start docker
