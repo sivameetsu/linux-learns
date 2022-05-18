@@ -71,3 +71,8 @@ To inspect
 docker (contaier or volume) inspect name
 ```
 
+To find nerwork
+```bash
+docker network ls
+docker network
+```
