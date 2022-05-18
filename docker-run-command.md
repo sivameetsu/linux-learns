@@ -31,3 +31,8 @@ To enter inside the containes use this
 ```bash
 docker exec -it containerID bash
 ```
+how to find container down reason using command 
+
+```bash
+docker logs containerID
+```
