@@ -26,8 +26,7 @@ docker volume inspect (volume name)
  docker volume rm (volume name)
 ```
 
-## Start a container with a volume
----
+# Start a container with a volume:-
 **Syntax for --mount:**
 ---
 ```bash 
