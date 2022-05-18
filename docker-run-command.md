@@ -36,3 +36,38 @@ how to find container down reason using command
 ```bash
 docker logs containerID
 ```
+To remove container 
+```bash
+docker rm -f containerID or Name
+```
+
+To remove Images
+```bash 
+docker rmi imageame
+```
+Docker running commands
+```bash 
+Docker Start container name
+Docker restart container name
+Docker Stop Container name
+Docker kill container name
+```
+
+To login
+```bash
+docker login
+```
+
+To create volume
+```bash
+docker volume create volume name
+```
+```bash
+Docker volume ls
+```
+
+To inspect 
+```bash
+docker (contaier or volume) inspect name
+```
+
