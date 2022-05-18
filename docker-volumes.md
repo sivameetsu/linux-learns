@@ -28,26 +28,29 @@ docker volume inspect (volume name)
 
 ## Start a container with a volume
 ---
-**--mount**
+**Syntax for --mount:**
+---
 ```bash 
  docker run -d \
   --name containerName \
   --mount source=volumeName,target=targetPath \
   imageName
 ```
-**Example for --mount**
+**Example for --mount:**
+---
 ![image](https://user-images.githubusercontent.com/91359308/168979047-71eb5f3b-bc45-469e-a582-81824d027893.png)
 ![image](https://user-images.githubusercontent.com/91359308/168979138-65a4a360-c823-4375-95f2-fbb937378ef5.png)
 ![image](https://user-images.githubusercontent.com/91359308/168979219-683cca72-d43b-4b75-8abd-12e83f10c185.png)
 ![image](https://user-images.githubusercontent.com/91359308/168979278-96f68994-8dbe-4024-9b16-1dd0761864d1.png)
 
-**-v**
+**Syntax for -v:**
+---
 ```bash
  docker run -d \
   --name containerName \
   -v directoryPath:targetPath \
 imageName
 ```
-**Example for -v**
-
+**Example for -v:**
+---
 go to the this link - https://asciinema.org/a/9XQdosSnsXiEgkE9o7U4PhzSO
