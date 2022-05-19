@@ -21,10 +21,6 @@ docker volume ls
 ```bash 
 docker volume inspect (volume name)
 ```
-output 
-to find target location using inspect command
-
-![Screenshot from 2022-05-18 18-49-07](https://user-images.githubusercontent.com/102893121/169048551-98f30880-d20c-4d6c-a212-9409027846f3.png)
 
 **Remove a volume:**
 ```bash 
