@@ -13,7 +13,7 @@ CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 ```bash
 docker build -t (tagname) .
 ```
-Docker image details
+**Docker image details**
 |purpose|details|
 |---|---|
 |operating system| centos:7 |
