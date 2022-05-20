@@ -9,7 +9,7 @@ RUN yum install httpd -y
 COPY index.html /var/www/html/index.html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 ```
-**_Build the custom httpd custom image_**
+**_Build the httpd custom image_**
 ```bash
 docker build -t (tagname) .
 ```
