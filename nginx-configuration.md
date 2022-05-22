@@ -9,9 +9,9 @@ Above all, it allows admins to set up advanced configurations and can deal with 
 
 **Requirements**
 
-  | SERVER 	       ||  IPADDRESS |
-
-  | Ubuntu 	       ||  192.168.0.10 |
+  | SERVER 	       |  IPADDRESS |
+  | --- | --- |
+  | Ubuntu 	       |  192.168.0.10 |
 
 **NGINX Installation**
 
@@ -125,5 +125,52 @@ curi fourtimes.ml
 
 ![image](https://user-images.githubusercontent.com/102893121/169698940-283b90c0-6342-4b08-87e1-f971abca268b.png)
 
+_ssl and http to https redirection_
 
+`/etc/nginx/sites-enabled/fourtimes.ml.conf`
+
+```conf
+
+server {
+    listen       80;
+    server_name  fourtimes.ml www.fourtimes.ml;
+    return 301 https://$host$request_uri;
+    
+    location / {
+        root   /var/www/fourtimes.ml;
+        index  index.html index.htm;
+    }
+}
+
+server {
+    listen                443 ssl;
+    ssl                  on;
+    ssl_certificate      /etc/nginx/ssl-certificate/certificate.crt; 
+    ssl_certificate_key  /etc/nginx/ssl-certificate/private.key;
+    server_name  fourtimes.ml;
+    access_log   /var/log/nginx/fourtimes.ml.access.log;
+    error_log    /var/log/nginx/fourtimes.ml.error.log;
+
+    location     / {
+        root         /var/www/fourtimes.ml;
+        index        index.html index.htm;
+    }
+}
+
+```
+
+_validation the nginx_
+
+```bash
+nginx -t
+```
+
+_restart the service_
+
+```bash
+systemctl stop nginx
+systemctl start nginx 
+```
+
+We can validate the domain using http or https in your browser. If you visit the domain http, it will automatically redirect to https.
 
