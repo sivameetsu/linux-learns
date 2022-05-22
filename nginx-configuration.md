@@ -9,9 +9,9 @@ Above all, it allows admins to set up advanced configurations and can deal with 
 
 **Requirements**
 
-  SERVER 	         IPADDRESS
+  | SERVER 	       ||  IPADDRESS |
 
-  Ubuntu 	         192.168.0.10
+  | Ubuntu 	       ||  192.168.0.10 |
 
 **NGINX Installation**
 
@@ -24,16 +24,15 @@ sudo apt install nginx
 **NGINX installation verification**
 
 after instaling the nginx package, use this commmand to verification the nginx package
+
 ```bash
 # configuration details 
-    nginx -V
-    
-# version details
-  nginx -v
+    nginx -v
 ```
 
 to check service status
-``bash
+
+```bash
 sudo systemctl status nginx.service 
 ```
 
@@ -52,16 +51,18 @@ sudo chown -R dodo:dodo /var/www/fourtimes.ml/
 
 Then change /etc/nginx/sites-available directoy
 
-`bash
+```bash
 cd /etc/nginx/sites-available
 ```
 
 In this directory already default page are there so backup the file and delete the default file using this command
+
 ```bash
 cp default default_backup
 rm -f default
 ```
 then copy the backup file using ur domain name like this
+
 ```bash
 cp default_backup fourtimes.ml.conf
 ```
