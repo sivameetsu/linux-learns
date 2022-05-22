@@ -31,5 +31,98 @@ after instaling the nginx package, use this commmand to verification the nginx p
 # version details
   nginx -v
 ```
-![image](https://user-images.githubusercontent.com/98270930/165892592-0a069961-4e06-4cd5-9afd-a09fabf5ac0f.png)
+
+to check service status
+``bash
+sudo systemctl status nginx.service 
+```
+
+**Config Nginx**
+
+In this section **fourtimes.ml** domain config
+
+To create domain folder using and change perission to the folder
+
+```bash
+sudo mkdir -p /var/www/fourtimes.ml
+sudo vim /var/www/fourtimes.ml/index.html
+sudo chown -R dodo:dodo /var/www/fourtimes.ml/
+```
+![Screenshot from 2022-05-22 19-05-42](https://user-images.githubusercontent.com/102893121/169697870-f864dce6-aa56-4704-916b-304fc73611a3.png)
+
+Then change /etc/nginx/sites-available directoy
+
+`bash
+cd /etc/nginx/sites-available
+```
+
+In this directory already default page are there so backup the file and delete the default file using this command
+```bash
+cp default default_backup
+rm -f default
+```
+then copy the backup file using ur domain name like this
+```bash
+cp default_backup fourtimes.ml.conf
+```
+change root path and server name like below
+
+![Screenshot from 2022-05-22 19-14-16](https://user-images.githubusercontent.com/102893121/169698221-8e9ecbb1-6b54-4ec5-b9ac-bf15bd4eb43c.png)
+
+In this case i will assign separate access log and error log for my domain, so add the below command for uyour sites available conf file
+
+```bash
+access_log /var/log/nginx/fourtimes.ml.access.log;
+error_log /var/log/nginx/fourtimes.ml.error.log;
+```
+```bash 
+vim /etc/nginx/sites-available/fourtimes.ml.conf
+```
+![Screenshot from 2022-05-22 19-19-33](https://user-images.githubusercontent.com/102893121/169699164-96fa7e01-d9cd-43f7-bfc8-baeeeb7ab10a.png)
+
+
+
+then enable the file by creating a link from it to the sites-enabled directory,
+
+```bash 
+sudo ln -s /etc/nginx/sites-available/fourtimes.ml.conf /etc/nginx/sites-enabled/
+```
+
+in this case i will face error so i skip the step to move on
+
+so erase the link using rm command
+
+```bash
+rm -rf fourtimes.ml.conf 
+```
+then cop the sites available conf file insert directly to sites enables directory
+
+```bash
+sudo cp ../sites-available/al.fourtimes.ml.conf .
+```
+
+then check nginx status
+
+``bash
+ nginx -t
+```
+![Screenshot from 2022-05-22 19-25-50](https://user-images.githubusercontent.com/102893121/169698744-d2b9ac2d-0870-4c35-919e-87be700b5a71.png)
+
+Add ur hosts using this command
+
+```bash
+vim etc/hosts
+```
+![image](https://user-images.githubusercontent.com/102893121/169699049-5fcfb5fe-d193-4e28-bacc-9791fcfe7b63.png)
+
+then restart ur service and check ur index page using this command
+
+```bash
+systemctl restart nginx
+curi fourtimes.ml
+```
+
+![image](https://user-images.githubusercontent.com/102893121/169698940-283b90c0-6342-4b08-87e1-f971abca268b.png)
+
+
 
