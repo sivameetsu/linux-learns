@@ -136,4 +136,8 @@ systemctl start nginx
 We can validate the domain using http or https in your browser. If you visit the domain http, it will automatically redirect to https.
 
 
+
+
+
+
 **NOTE**: In this case, we are utilising the freenom and zerossl procedures.
