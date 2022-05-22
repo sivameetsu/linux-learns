@@ -21,7 +21,7 @@ Nginx is available in Ubuntu’s default repositories, it is possible to install
 
 ```bash
 sudo apt update
-sudo apt install nginx
+sudo apt install nginx -y
 ```
 
 _**NGINX installation verification**_
@@ -29,7 +29,7 @@ _**NGINX installation verification**_
 after instaling the nginx package, use this commmand to verification the nginx package
 
 ```bash
-    nginx -v
+nginx -v
 ```
 
 _**Configuration of Nginx**_
