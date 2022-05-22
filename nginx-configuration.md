@@ -133,9 +133,7 @@ systemctl stop nginx
 systemctl start nginx 
 ```
 
-We can validate the domain using http or https in your browser. If you visit the domain http, it will automatically redirect to https.
-
-
+We can validate the domain using http or https in your browser. If you visit the domain http, it will automatically redirect to https://fourtimes.ml.
 
 
 
