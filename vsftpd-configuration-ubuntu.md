@@ -9,9 +9,9 @@ _ftp user creation_
 
 ```bash
 
-sudo useradd user-a  -s /sbin/nologin
+useradd -m -s /bin/false user-a
 sudo passwd user-a
-sudo useradd user-b  -s /sbin/nologin
+suseradd -m -s /bin/false user-b
 sudo passwd user-b
 ```
 
