@@ -71,15 +71,15 @@ ssl_enable=NO
 create vsftpd users list
 
 ```bash
-mkdir -p /etc/vsftpd/users
+sudo mkdir -p /etc/vsftpd/users
 
-mkdir -p /var/www/api.fourtimes.ml
-chown -R user-a:user-a /var/www/api.fourtimes.ml
+sudo mkdir -p /var/www/api.fourtimes.ml
+sudo chown -R user-a:user-a /var/www/api.fourtimes.ml
 sudo vim /etc/vsftpd/users/user-a
 local_root=/var/www/api.fourtimes.ml
 
-mkdir -p /var/www/ai.fourtimes.ml
-chown -R user-b:user-b /var/www/ai.fourtimes.ml
+sudo mkdir -p /var/www/ai.fourtimes.ml
+sudo chown -R user-b:user-b /var/www/ai.fourtimes.ml
 sudo vim /etc/vsftpd/users/user-b
 local_root=/var/www/ai.fourtimes.ml
 
