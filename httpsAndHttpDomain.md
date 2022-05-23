@@ -107,7 +107,7 @@ welcome to the fourtimes.ml domain
 ```
 
 
-13. To run inside the terminapi
+13. To run inside the terminal
 
 ```bash
 curl api.fourtimes.ml
