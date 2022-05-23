@@ -9,9 +9,10 @@ _ftp user creation_
 
 ```bash
 
-useradd user-a  -s /usr/sbin/nologin
-useradd user-b  -s /usr/sbin/nologin
-
+sudo useradd user-a  -s /usr/sbin/nologin
+sudo passwd user-a
+sudo useradd user-b  -s /usr/sbin/nologin
+sudo passwd user-b
 ```
 
 _user document root create_
