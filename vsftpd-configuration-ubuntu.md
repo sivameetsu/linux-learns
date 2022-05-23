@@ -34,7 +34,10 @@ sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
 
 adjust the configuration according to the needs
 
+`sudo vim /etc/vsftpd.conf`
+
 ```conf
+# sudo vim /etc/vsftpd.conf
 listen=YES
 listen_ipv6=NO
 anonymous_enable=NO
