@@ -1,0 +1,84 @@
+
+```bash
+sudo apt update
+sudo apt install vsftpd -y
+```
+ftp user creation
+
+```bash
+
+useradd user-a  -s /usr/sbin/nologin
+useradd user-b  -s /usr/sbin/nologin
+
+```
+
+user document root create
+
+|users| document root|
+|---|---|
+|user-a|/var/www/api.fourtimes.ml|
+|user-b|/var/www/ai.fourtimes.ml|
+
+```bash
+
+```
+_configuration changes_
+
+backup the original file
+
+```bash
+sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
+```
+
+```conf
+listen=YES
+listen_ipv6=NO
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+use_localtime=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_file=/var/log/vsftpd.log
+xferlog_std_format=YES
+idle_session_timeout=600
+data_connection_timeout=120
+ascii_upload_enable=YES
+ascii_download_enable=YES
+ftpd_banner=Welcome to fourtimes.ml FTP service.
+chroot_local_user=NO
+chroot_list_enable=YES
+user_config_dir=/etc/vsftpd/users
+allow_writeable_chroot=YES
+secure_chroot_dir=/var/run/vsftpd/empty
+pam_service_name=vsftpd
+rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable=NO
+
+```
+
+
+create vsftpd users list
+
+```bash
+mkdir -p /etc/vsftpd/users
+
+mkdir -p /var/www/api.fourtimes.ml
+chown -R user-a:user-a /var/www/api.fourtimes.ml
+sudo vim /etc/vsftpd/users/user-a
+local_root=/var/www/api.fourtimes.ml
+
+mkdir -p /var/www/ai.fourtimes.ml
+chown -R user-b:user-b /var/www/ai.fourtimes.ml
+sudo vim /etc/vsftpd/users/user-b
+local_root=/var/www/ai.fourtimes.ml
+
+```
+
+
+
+
+
