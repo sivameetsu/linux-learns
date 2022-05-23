@@ -1,9 +1,11 @@
 
+_package installation_
+
 ```bash
 sudo apt update
 sudo apt install vsftpd -y
 ```
-ftp user creation
+_ftp user creation_
 
 ```bash
 
@@ -12,7 +14,7 @@ useradd user-b  -s /usr/sbin/nologin
 
 ```
 
-user document root create
+_user document root create_
 
 |users| document root|
 |---|---|
@@ -24,7 +26,7 @@ user document root create
 ```
 _configuration changes_
 
-backup the original file
+backup the original file  for future issues.
 
 ```bash
 sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
@@ -57,7 +59,6 @@ pam_service_name=vsftpd
 rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
 rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
 ssl_enable=NO
-
 ```
 
 
@@ -79,6 +80,13 @@ local_root=/var/www/ai.fourtimes.ml
 ```
 
 
+_restart the service_
 
+```bash
+
+systemctl start vsftpd
+systemctl status vsftpd
+
+```
 
 
