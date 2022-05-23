@@ -32,6 +32,8 @@ backup the original file  for future issues.
 sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
 ```
 
+adjust the configuration according to the needs
+
 ```conf
 listen=YES
 listen_ipv6=NO
