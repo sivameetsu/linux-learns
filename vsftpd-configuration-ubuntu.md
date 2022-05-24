@@ -85,6 +85,15 @@ local_root=/var/www/ai.fourtimes.ml
 
 ```
 
+Create Userlist file
+
+add the user in chroot_list file
+
+```bash
+vim /etc/vsftpd/chroo_list
+
+```
+
 
 _restart the service_
 
