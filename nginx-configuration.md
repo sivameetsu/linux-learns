@@ -61,6 +61,9 @@ server {
     listen       80;
     server_name  fourtimes.ml www.fourtimes.ml;
     return 301 https://$host$request_uri;
+    access_log           /var/log/nginx/fourtimes.ml.access.log;
+    error_log            /var/log/nginx/fourtimes.ml.error.log;
+    
     
     location / {
         root   /var/www/fourtimes.ml;
