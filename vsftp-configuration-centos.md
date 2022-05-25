@@ -40,22 +40,22 @@ Once the Ftp packages have been installed,you can use this location to determine
  ```bash
 # Based on this value you can insert or update the config file
 
-anonymous_enable=NO line no 25
-local_enable=YES line no 28
-write_enable=YES line no 31
-local_umask=022 line no 35
-dirmessage_enable=YES line no 48
-xferlog_enable=YES line no 57
-xferlog_std_format=YES line no 74
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+xferlog_std_format=YES
 ascii_upload_enable=YES
 ascii_download_enable=YES
 ftpd_banner=Welcome to Radiant FTP service.
-listen=YES line no 14
-listen_ipv6=NO line no 22
-pam_service_name=vsftpd line no 145
+listen=YES
+listen_ipv6=NO
+pam_service_name=vsftpd
 userlist_enable=YES
 tcp_wrappers=YES
-use_localtime=YES line no 54
+use_localtime=YES
 user_config_dir=/etc/vsftpd/users
 allow_writeable_chroot=YES
 ```
