@@ -181,7 +181,8 @@ add SSL cert for config file output shown below
         ServerAdmin webmaster@dodo-found.tk
         Servername dodo-found.tk
         DocumentRoot /var/www/dodo-found.tk
-
+        return 301 https://dodo-found.tk
+          
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
         
