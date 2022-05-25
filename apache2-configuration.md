@@ -1,5 +1,4 @@
 #### apache2 configuration
-
 ---
 
 **What is apache2**
@@ -52,7 +51,7 @@ We can utilise the domain **dodo-found.tk** in this part.
 |/etc/hosts|host file|
 
 **HTTP vhost Configuration**
----------
+---
 
 We can create a directory in the default path and modify the ownership and permissions.
 
