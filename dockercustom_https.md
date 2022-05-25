@@ -112,6 +112,7 @@ sudo vim Dockerfile
 Basic configuration is presented below; if you wish to adjust any custom levels, do so according to your needs.
 
 Use https://zerossl.com to create an SSL certificate for your domain.
+
 To see this page, upload your SSL certificate to your config file —> https://help.zerossl.com/hc/en-us/sections/360012132973-Installation
 
 ```bash
@@ -211,8 +212,7 @@ ex:
 docker run -d -p 8080:80 --name apache napache:v1.0
 ```
 ---
-
-add your domanin on your base machine host section
+Add your domain to the host section of your base computer.
 
 ```
 sudo vim /etc/hosts
