@@ -14,19 +14,18 @@ Apache is the most commonly used Web server on Linux systems. Web servers are us
 
 **_apache2 Installation_**
 
-If the package is not found, use the following commands to install apache2.
+If the package cannot be found, run the commands below to install apache2.
 
 ```bash
-
 sudo apt update
 sudo apt install apache2 -y
-
 ```
+
 **_apache2 installtion verification_**
 
-After installing the apache2 package, use this command to verify the apache2 packages.
+Use this command to check the apache2 packages after they've been installed.
 
-**_service handling process_**
+_service handling process_
 
 This command can be used to start the service and check its status.
 
@@ -43,7 +42,7 @@ sudo ss -tln
 
 **_apache file structure details_**
 
-in this section we can use **dodo-found.tk** domain
+We can utilise the domain **dodo-found.tk** in this part.
 
 |LOCATION| PURPOSE |
 |---|---|
@@ -57,7 +56,7 @@ in this section we can use **dodo-found.tk** domain
 ---------
 ---------
 
-we can make directory in default path and chage the permission and ownership 
+We can create a directory in the default path and modify the ownership and permissions.
 
 ```bash
 sudo mkdir /var/www/your_domain
@@ -86,12 +85,12 @@ sudo touch /var/www/html/index.html
 
 `-----`
 
-In this section we can modify one conf file
+We can modify one conf file in this section.
 
 ```bash
 /etc/apache2/sites-available
 ```
-create new domain conf file or copy the 000-default.conf file  
+Copy the 000-default.conf file or build a new domain conf file.
 
 ```bash
 sudo vim /etc/apache2/sites-available/dodo-found.conf
@@ -125,8 +124,7 @@ SSL stands for Secure Sockets Layer and, in short, it's the standard technology 
 
 ---
 
-In this Section first Enable SSL and reload the server
-
+First, enable SSL and refresh the server in this section.
 ```bash
 enable SSL
 sudo a2enmod ssl
