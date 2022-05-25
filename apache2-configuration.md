@@ -51,8 +51,8 @@ We can utilise the domain `dodo-found.tk` in this part.
 |---|---|
 | /etc/apache2 | configuration files |
 | /var/log/apache2 | logs files |
-|/var/www/dodo-found.tk|Default path |
-|/etc/hosts|host file|
+|/var/www/dodo-found.tk|Document Root |
+
 
 **HTTP vhost Configuration**
 ---
