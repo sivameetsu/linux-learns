@@ -155,7 +155,34 @@ sudo vim /etc/apache2/sites-available/dev.conf
 ```
 add SSL cert for config file output shown below
 
-![Screenshot from 2022-04-23 19-31-41](https://user-images.githubusercontent.com/102893121/164909224-6df13140-6b5f-4ed9-89d4-cdaed0c2a1ed.png)
+```bash
+<VirtualHost *:443>
+
+        ServerAdmin webmaster@dodo-found.tk
+        Servername dodo-found.tk
+        DocumentRoot /var/www/dodo-found.tk
+
+        SSLEngine                on
+        SSLCertificateFile       /etc/ssl/certificate.crt
+        SSLCertificateKeyFile    /etc/ssl/privates/private.key
+        SSLCertificateChainFile  /etc/ssl/ca_bundle.crt
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+</VirtualHost>
+
+
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@dodo-found.tk
+        Servername dodo-found.tk
+        DocumentRoot /var/www/dodo-found.tk
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+</VirtualHost>
+~                  
+```
 
 then reload Apache2 server
 
