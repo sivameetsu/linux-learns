@@ -39,7 +39,7 @@ CMD ["apachectl","-D","FOREGROUND"]
 
 **_index.html file_**
 
-_To create an index file in your nginx directory_
+_To create an index file in your apache2 directory_
 
 ```bash
 sudo vim apache2/index.html
@@ -58,7 +58,7 @@ sudo vim apache2/index.html
 ---
 **_dodo-found.conf file_**
 
-_To create an dodo-found config file in your nginx directory_
+_To create an dodo-found config file in your apache2 directory_
 
 ```bash
 vim apache2/dodo-found.conf
