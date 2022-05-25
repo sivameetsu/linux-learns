@@ -143,7 +143,7 @@ First, enable SSL and refresh the server in this section.
 # enable SSL
 sudo a2enmod ssl
 sudo a2enmod rewrite
-
+sudo mkdir -p /etc/apache2/ssl
 ```
 
 **Create SSL key for Below command line**
@@ -175,12 +175,14 @@ copy and past the below configuration in this file
         ServerAdmin  webmaster@dodo-found.tk
         Servername   dodo-found.tk
         DocumentRoot /var/www/dodo-found.tk
-
+        
+        # HTTP TO HTTPS REDIRECTION
         SSLEngine                on
-        SSLCertificateFile       /etc/ssl/certificate.crt
-        SSLCertificateKeyFile    /etc/ssl/privates/private.key
-        SSLCertificateChainFile  /etc/ssl/ca_bundle.crt
-
+        SSLCertificateFile       /etc/apache2/ssl/certificate.crt
+        SSLCertificateKeyFile    /etc/apache2/ssl/private.key
+        SSLCertificateChainFile  /etc/apache2/ssl/ca_bundle.crt
+        
+        # APACHE2 LOGS
         ErrorLog  ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
         
