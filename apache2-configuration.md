@@ -6,13 +6,13 @@
 
 Apache is the most commonly used Web server on Linux systems. Web servers are used to serve Web pages requested by client computers. Clients typically request and view Web pages using Web browser applications such as Firefox, Opera, Chromium, or Internet Explorer.
 
-_Requirements_
+**_Requirements_**
 
 |SERVER|IPADDRESS|
 |---|---|
 |Ubuntu| 192.168.0.10|
 
-_apache2 Installation_
+**_apache2 Installation_**
 
 If the package is not found, use the following commands to install apache2.
 
@@ -22,11 +22,11 @@ sudo apt update
 sudo apt install apache2 -y
 
 ```
-_apache2 installtion verification_
+**_apache2 installtion verification_**
 
 After installing the apache2 package, use this command to verify the apache2 packages.
 
-_service handling process_
+**_service handling process_**
 
 This command can be used to start the service and check its status.
 
@@ -41,7 +41,7 @@ _apache2 listen ports_
 sudo ss -tln
 ```
 
-_apache file structure details_
+**_apache file structure details_**
 
 in this section we can use **dodo-found.tk** domain
 
