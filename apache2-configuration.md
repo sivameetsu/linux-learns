@@ -37,7 +37,7 @@ sudo systemctl status apache2
 _apache2 listen ports_
 
 ```bash
-sudo ss -tln
+sudo ss -tulpn
 ```
 
 **_apache file structure details_**
@@ -51,22 +51,24 @@ We can utilise the domain **dodo-found.tk** in this part.
 |/var/www/html|Default path |
 |/etc/hosts|host file|
 
-**Vhost Configuration**
-
----------
+**HTTP vhost Configuration**
 ---------
 
 We can create a directory in the default path and modify the ownership and permissions.
 
 ```bash
+
 sudo mkdir /var/www/your_domain
 sudo chown -R dodo:dodo /var/www/dodofound
 sudo chmod -R 755 /var/www/dodofound
+
 ```
 Then create html file for website index page
 
 ```bash
-sudo touch /var/www/html/index.html
+
+echo "dodo-found.tk domain" | sudo tee  /var/www/html/index.html
+
 ```
  _sample index file_
  
@@ -82,19 +84,24 @@ sudo touch /var/www/html/index.html
 ```
 
 **To Modify Apache2 Sites available Conf**
-
-`-----`
+---
 
 We can modify one conf file in this section.
 
 ```bash
+
 /etc/apache2/sites-available
+
 ```
+
 Copy the 000-default.conf file or build a new domain conf file.
 
 ```bash
+
 sudo vim /etc/apache2/sites-available/dodo-found.conf
+
 ```
+
 use this conf file
 
 ```bash
@@ -117,16 +124,16 @@ sudo a2dissite ooo-default_bak.conf
 sudo systemctl reload apache2
 ```
 
-## SSL configuration
+## HTTPS Vhost configuration
+---
 
 **What is SSL**
 SSL stands for Secure Sockets Layer and, in short, it's the standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems
 
----
-
 First, enable SSL and refresh the server in this section.
+
 ```bash
-enable SSL
+# enable SSL
 sudo a2enmod ssl
 sudo systemctl restart apache2
 ```
@@ -134,15 +141,21 @@ sudo systemctl restart apache2
 **Create SSL key for Below command line**
 
 ```bash
+# this example certificate creation command
+
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+
 ```
+
 In this case im use https://zerossl.com/ to create the ssl certificate
 
-**Config SSL Cetr to Apache**
+**Configuration HTTP and HTTPS in Apache**
+---
 
 ```bash
 sudo vim /etc/apache2/sites-available/dev.conf
 ```
+
 add SSL cert for config file output shown below
 
 ```bash
@@ -176,8 +189,11 @@ add SSL cert for config file output shown below
 then reload Apache2 server
 
 ```bash
+
 sudo systemctl reload apache2
+
 ```
+
 Using your web browser, examine the output result
 
 
