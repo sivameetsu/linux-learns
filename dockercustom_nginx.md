@@ -205,7 +205,13 @@ docker run -d -p (localhost_port):(container_port) --name (containername) (image
 ex:
 docker run -d -p 8080:80 --name nginx nginx:v1.0
 ```
+---
+Add your domain to the host section of your base computer.
 
+```
+sudo vim /etc/hosts
+17.12.0.1   dodo-found.tk
+```
 **_OUTPUT_**
 
 ```bash
