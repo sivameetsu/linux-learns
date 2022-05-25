@@ -160,6 +160,10 @@ to create the Config file on your nginx folder
 vim nginx/dodo-found.conf
 ```
 
+Use https://zerossl.com to create an SSL certificate for your domain.
+
+To see this page, upload your SSL certificate to your config file —> https://help.zerossl.com/hc/en-us/sections/360012132973-Installation
+
 ```bash
 
 server {
