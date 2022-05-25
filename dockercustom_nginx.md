@@ -55,6 +55,8 @@ sudo vim nginx/index.html
     </body>
 </html>
 ```
+---
+
 _To create an dodo-found config file in your nginx directory_
 
 ```bash
@@ -95,7 +97,7 @@ docker exec -ti (container id) bash
 ```
 ---
 
-**nginx with SSL config **
+**Nginx with SSL config**
 
 We build a custom image for nginx with SSL configuration in this section.Use zerossl.com to create an SSL certificate for your domain.
 
@@ -128,6 +130,8 @@ COPY private.key /etc/nginx/ssl-certificate/
 
 CMD ["nginx", "-g", "daemon off;"]
 ```
+---
+
 **_index.html file_**
 
 to create the index file on your nginx folder
@@ -146,7 +150,9 @@ sudo vim nginx/index.html
     </body>
 </html>
 ```
-*_dodo-found.conf file_**
+---
+
+**_dodo-found.conf file_**
 
 to create the Config file on your nginx folder
 
@@ -202,4 +208,7 @@ docker run -d -p 8080:80 --name nginx nginx:v1.0
 curl -k https://dodo-found.tk
 ```
 or browse your domain name --> https://dodo-found.tk 
+
+
+
 
