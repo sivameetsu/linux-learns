@@ -95,6 +95,7 @@ disable the default configuration file
 sudo a2dissite 000-default.conf
 
 ```
+create the domain in the name of domain 
 
 ```bash
 
