@@ -30,14 +30,12 @@ After installing the apache2 package, use this command to verify the apache2 pac
 
 **service handling process**
 
-We can start the service after apache2 verification.
+This command can be used to start the service and check its status.
 
 ```bash
 sudo systemctl start apache2
 sudo systemctl status apache2
 ```
-
-![image](https://user-images.githubusercontent.com/98270930/164885150-46e5e883-21d0-4abd-8f0b-bc6282c69c99.png)
 
 **apache2 listen ports**
 
@@ -45,18 +43,9 @@ sudo systemctl status apache2
 sudo ss -tln
 ```
 
-![image](https://user-images.githubusercontent.com/98270930/164885528-9f6b6cb4-2781-45be-8e5c-f42fd3b218f9.png)
+_apache file structure details_
 
-**outout verification in commandline**
-
-```bash
-curl -o /dev/null -s -w "%{http_code}\n" http://localhost
-```
-
-![image](https://user-images.githubusercontent.com/98270930/164885623-aba68ccd-0bf8-4ad2-92f3-b757ed3f009a.png)
-
-
-**apache file structure details**
+in this section we can use **dodo-found.tk** domain
 
 |LOCATION| PURPOSE |
 |---|---|
@@ -65,35 +54,6 @@ curl -o /dev/null -s -w "%{http_code}\n" http://localhost
 |/var/www/html|Default path |
 |/etc/hosts|host file|
 
-**To Modify Apache2 Sites available Conf**
----
-
-In this section we can modify one conf file
-```bash
-cd /etc/apache2/sites-available
-```
-![Screenshot from 2022-04-23 18-21-06](https://user-images.githubusercontent.com/102893121/164895480-7f6f38b1-444a-4091-a4ac-752171f27f97.png)
-
-create new domain conf file or copy the 000-default.conf file  
-
-```bash
-sudo vim /etc/apache2/sites-available/dev.conf
-```
-![Screenshot from 2022-04-23 18-35-34](https://user-images.githubusercontent.com/102893121/164895804-6edb0681-989a-448c-ba52-66b2cfe0bbd3.png)
-
-**Note: Line no 12,13,14 change** 
-
-Then Enable ur site , Disable old Site and reload apache2 server
-
-```bash
-sudo a2ensite dev.conf
-sudo a2dissite ooo-default_bak.conf
-sudo systemctl reload apache2
-```
-**output Verification for command line**
-
-![Screenshot from 2022-04-23 19-02-58](https://user-images.githubusercontent.com/102893121/164896808-be3f053f-541d-4b33-85ad-8b19c47722c5.png)
-
 **Vhost Configuration**
 ---
 
@@ -101,20 +61,61 @@ we can make directory in default path and chage the permission and ownership
 
 ```bash
 sudo mkdir /var/www/your_domain
-sudo chown -R USER:USER /var/www/domain name
-sudo chmod -R 755 /var/www/domain name
+sudo chown -R dodo:dodo /var/www/dodofound
+sudo chmod -R 755 /var/www/dodofound
 ```
 Then create html file for website index page
 
 ```bash
 sudo touch /var/www/html/index.html
 ```
-**sample HTML page Below**
+ _sample index file_
+ 
+```bash
+<html>
+    <head>
+        <title>Welcome to DoDo Foundation!</title>
+    </head>
+    <body>
+        <h1>Success!  The DoDo found virtual host is working!</h1>
+    </body>
+</html>
+```
 
-![Screenshot from 2022-04-23 19-09-22](https://user-images.githubusercontent.com/102893121/164898224-7f97b743-ce1f-412e-962c-208c81f58312.png)
+**To Modify Apache2 Sites available Conf**
+---
 
-**In web browser Result**
-![Screenshot from 2022-04-23 19-12-42](https://user-images.githubusercontent.com/102893121/164900709-b65cede7-ce1d-4906-a0da-9d5692b9f0f4.png)
+In this section we can modify one conf file
+
+```bash
+/etc/apache2/sites-available
+```
+create new domain conf file or copy the 000-default.conf file  
+
+```bash
+sudo vim /etc/apache2/sites-available/dodo-found.conf
+```
+use this conf file
+
+```bash
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@dodo-found.tk
+        Servername dodo-found.tk
+        DocumentRoot /var/www/dodo-found.tk
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+</VirtualHost>
+```
+
+Then enable your site, disable the old one, and restart the Apache2 server.
+
+```bash
+sudo a2ensite dev.conf
+sudo a2dissite ooo-default_bak.conf
+sudo systemctl reload apache2
+```
 
 ## SSL configuration
 
