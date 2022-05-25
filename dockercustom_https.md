@@ -77,7 +77,7 @@ vim apache2/dodo-found.conf
 ```
 ---
 
-**_Build the nginx custom image_**
+**_Build the apache custom image_**
 ```bash
 docker build -t apache:v1.0 .
 ```
@@ -199,7 +199,7 @@ server {
 }                                                                                                                                                    
 ```
 
-**_Build the nginx custom image_**
+**_Build the apache custom image_**
 ```bash
 docker build -t apache:v1.0 .
 ```
