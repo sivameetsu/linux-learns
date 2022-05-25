@@ -26,14 +26,7 @@ sudo apt install apache2 -y
 
 After installing the apache2 package, use this command to verify the apache2 packages.
 
-```bash
-# configuration details 
-apache2 -V
 
-# version details
-apache2 -v
-```
-![image](https://user-images.githubusercontent.com/98270930/164885249-7540a0f3-f4f3-4978-88c5-e6cb02042210.png)
 
 **service handling process**
 
