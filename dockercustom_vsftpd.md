@@ -34,7 +34,7 @@ CMD ["/usr/sbin/vsftpd", "/etc/vsftpd.conf"]
 
 **_vsftpd.conf file_**
 
-_To create an dodo-found config file in your apache2 directory_
+_To create an dodo-found config file in your vsftpd directory_
 
 ```bash
 vim vsftpd/vsftpd.conf
