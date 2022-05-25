@@ -108,6 +108,7 @@ sudo vim /etc/apache2/sites-available/dodo-found.tk.conf
 use this conf file
 
 ```bash
+
 <VirtualHost *:80>
 
         ServerAdmin webmaster@dodo-found.tk
@@ -141,15 +142,15 @@ First, enable SSL and refresh the server in this section.
 
 # enable SSL
 sudo a2enmod ssl
-sudo systemctl restart apache2
+sudo a2enmod rewrite
 
 ```
 
 **Create SSL key for Below command line**
 
 ```bash
-# optinal
 
+# optinal
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
 ```
@@ -192,6 +193,10 @@ copy and past the below configuration in this file
         ServerAdmin webmaster@dodo-found.tk
         Servername dodo-found.tk
         DocumentRoot /var/www/dodo-found.tk
+        # Redirect permanent / https://dodo-found.tk/
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
