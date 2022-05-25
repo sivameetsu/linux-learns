@@ -92,8 +92,8 @@ Create Userlist file
 add the user in chroot_list file
 
 ```bash
-vim /etc/vsftpd.chroot_list
-
+echo "user-a" | tee  /etc/vsftpd.chroot_list
+echo "user-b" | tee -a /etc/vsftpd.chroot_list
 ```
 
 
