@@ -98,6 +98,7 @@ sudo passwd -l dodo
 finger dodo
 ```
 #### Give the Permission - File to Group
+
 ```bash
 # Create a file 
 touch filename
