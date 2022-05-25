@@ -77,19 +77,14 @@ sudo mkdir -p /etc/vsftpd/users
 
 sudo mkdir -p /var/www/api.fourtimes.ml
 sudo chown -R user-a:user-a /var/www/api.fourtimes.ml
-sudo vim /etc/vsftpd/users/user-a
-local_root=/var/www/api.fourtimes.ml
+sudo "local_root=/var/www/api.fourtimes.ml" | tee  /etc/vsftpd/users/user-a
 
 sudo mkdir -p /var/www/ai.fourtimes.ml
 sudo chown -R user-b:user-b /var/www/ai.fourtimes.ml
-sudo vim /etc/vsftpd/users/user-b
-local_root=/var/www/ai.fourtimes.ml
-
+sudo "local_root=/var/www/ai.fourtimes.ml" | tee /etc/vsftpd/users/user-b
 ```
 
-Create Userlist file
-
-add the user in chroot_list file
+_restrict the users at root level_
 
 ```bash
 echo "user-a" | tee  /etc/vsftpd.chroot_list
