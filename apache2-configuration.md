@@ -137,10 +137,7 @@ sudo systemctl restart apache2
 ```bash
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 ```
-output Shown below
-Some details Enter like country state lacality given shown below output
-
-![Screenshot from 2022-04-23 19-25-02](https://user-images.githubusercontent.com/102893121/164908996-f3ddb56f-cd09-4fa5-bf44-f457d43ae138.png)
+In this case im use https://zerossl.com/ to create the ssl certificate
 
 **Config SSL Cetr to Apache**
 
@@ -174,8 +171,7 @@ add SSL cert for config file output shown below
 
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
-</VirtualHost>
-~                  
+</VirtualHost>                 
 ```
 
 then reload Apache2 server
@@ -183,9 +179,7 @@ then reload Apache2 server
 ```bash
 sudo systemctl reload apache2
 ```
-and check output Result on ur web browser
-
-![Screenshot from 2022-04-23 19-35-04](https://user-images.githubusercontent.com/102893121/164909359-4ab61342-715e-4719-ab22-30407a21f62d.png)
+Using your web browser, examine the output result
 
 
 
