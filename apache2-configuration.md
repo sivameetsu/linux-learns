@@ -20,7 +20,7 @@ sudo apt update
 sudo apt install apache2 -y
 ```
 
-**_apache2 installtion verification_**
+_apache2 installtion verification_
 
 Use this command to check the apache2 packages after they've been installed.
 
@@ -29,19 +29,23 @@ _service handling process_
 This command can be used to start the service and check its status.
 
 ```bash
+
 sudo systemctl start apache2
 sudo systemctl status apache2
+
 ```
 
 _apache2 listen ports_
 
 ```bash
+
 sudo ss -tulpn
+
 ```
 
-**_apache file structure details_**
+_apache file structure details_
 
-We can utilise the domain **dodo-found.tk** in this part.
+We can utilise the domain `dodo-found.tk` in this part.
 
 |LOCATION| PURPOSE |
 |---|---|
@@ -68,9 +72,11 @@ Then create html file for website index page
 echo "dodo-found.tk domain" | sudo tee  /var/www/html/index.html
 
 ```
+
  _sample index file_
  
 ```bash
+
 <html>
     <head>
         <title>Welcome to DoDo Foundation!</title>
@@ -79,6 +85,7 @@ echo "dodo-found.tk domain" | sudo tee  /var/www/html/index.html
         <h1>Success!  The DoDo found virtual host is working!</h1>
     </body>
 </html>
+
 ```
 
 disable the default configuration file
@@ -126,9 +133,11 @@ SSL stands for Secure Sockets Layer and, in short, it's the standard technology 
 First, enable SSL and refresh the server in this section.
 
 ```bash
+
 # enable SSL
 sudo a2enmod ssl
 sudo systemctl restart apache2
+
 ```
 
 **Create SSL key for Below command line**
