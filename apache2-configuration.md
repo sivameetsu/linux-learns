@@ -20,11 +20,11 @@ sudo apt update
 sudo apt install apache2 -y
 ```
 
-_apache2 installtion verification_
+**_apache2 installtion verification_**
 
 Use this command to check the apache2 packages after they've been installed.
 
-_service handling process_
+**_service handling process_**
 
 This command can be used to start the service and check its status.
 
@@ -35,7 +35,7 @@ sudo systemctl status apache2
 
 ```
 
-_apache2 listen ports_
+**_apache2 listen ports_**
 
 ```bash
 
@@ -43,7 +43,7 @@ sudo ss -tulpn
 
 ```
 
-_apache file structure details_
+**_apache file structure details_**
 
 We can utilise the domain `dodo-found.tk` in this part.
 
@@ -52,6 +52,8 @@ We can utilise the domain `dodo-found.tk` in this part.
 | /etc/apache2 | configuration files |
 | /var/log/apache2 | logs files |
 |/var/www/dodo-found.tk|Document Root |
+|80|HTTP|
+|443|HTTPs|
 
 
 **HTTP vhost Configuration**
