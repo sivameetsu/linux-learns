@@ -85,75 +85,46 @@ mkdir /var/www/html/ftpuser1
 chown ftpuser1:ftpuser1 /var/www/html/ftpuser1
  ```
  
-**Enable the user list file**
+_**Enable the user list file**_
 
 ```bash
-vim /etc/vsftpd/users/ftuser1 
-# add lines
-local_root=/var/www/html/ftpuser1
+echo "local_root=/var/www/html/ftpuser1" | tee /etc/vsftpd/users/ftuser1 
 ```
 
-**Restart the service**
+_**Restart the service**_
  
  ```bash
  systemctl restart vsftpd
  systemctl enable vsftpd 
  ```
- 
 
+ **Firewall configuration**
  
- ## **Firewall configuration**
+ ---
  
- **Firwall whitelist**
+ 
+ _**Firwall whitelist**_
  
  ```bash
  firewall-cmd --permanent --add-service=samba
  firewall-cmd --reload
 ```
-**stop and disable the firewall**
+_**stop and disable the firewall**_
 
 ```bash  
 systemctl stop firewalld
 systemctl disable firewalld
  ```
    
- **SELINUX configuration**
+_**SELINUX configuration**_
    
  CentOS will always enable selinux, so you must disable it.
 
  File location `/etc/selinux/conf`
      
- **Client Installation**
+_**Client Installation**_
  
 ```bash
  sudo apt update
- sudo apt install ftp -y
+ sudo apt install filezilla -y
 ```
-client access kindly check ```/etc/vsfdp.conf```
-
-change No to Yes ```write_enable=YES```
-
-if you change another Directory use this command
-
-```bash 
-lcd ~/folders
-```
-if you download from server
-
-use 
-```bash
-get filename
-mget filename1 filename2 --> to download multiple file
-```
-
-if you uplaod to server
-
-```bash
-put filename
-mput filename1 filename 2 --> to upload multiple file
-
-**commandline uploads**
-
-
-**Log file audit**
-
