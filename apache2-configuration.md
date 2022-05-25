@@ -81,17 +81,13 @@ echo "dodo-found.tk domain" | sudo tee  /var/www/html/index.html
 </html>
 ```
 
-**To Modify Apache2 Sites available Conf**
-
-We can modify one conf file in this section.
+disable the default configuration file
 
 ```bash
 
-/etc/apache2/sites-available
+sudo a2dissite 000-default.conf
 
 ```
-
-Copy the 000-default.conf file or build a new domain conf file.
 
 ```bash
 
@@ -117,7 +113,6 @@ Then enable your site, disable the old one, and restart the Apache2 server.
 
 ```bash
 sudo a2ensite dodo-found.tk.conf
-sudo a2dissite 000-default.conf
 sudo systemctl reload apache2
 ```
 
@@ -139,7 +134,7 @@ sudo systemctl restart apache2
 **Create SSL key for Below command line**
 
 ```bash
-# this example certificate creation command
+# optinal
 
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
@@ -149,10 +144,12 @@ In this case im use `https://zerossl.com/` to create the ssl certificate
 
 
 ```bash
+
 sudo vim /etc/apache2/sites-available/dodo-found.tk.conf
+
 ```
 
-add SSL cert for config file output shown below
+copy and past the below configuration in this file
 
 ```bash
 
@@ -181,8 +178,7 @@ add SSL cert for config file output shown below
         ServerAdmin webmaster@dodo-found.tk
         Servername dodo-found.tk
         DocumentRoot /var/www/dodo-found.tk
-        return 301 https://dodo-found.tk
-          
+
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
         
