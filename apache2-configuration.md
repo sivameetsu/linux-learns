@@ -47,7 +47,7 @@ We can utilise the domain **dodo-found.tk** in this part.
 |---|---|
 | /etc/apache2 | configuration files |
 | /var/log/apache2 | logs files |
-|/var/www/html|Default path |
+|/var/www/dodo-found.tk|Default path |
 |/etc/hosts|host file|
 
 **HTTP vhost Configuration**
@@ -57,9 +57,8 @@ We can create a directory in the default path and modify the ownership and permi
 
 ```bash
 
-sudo mkdir /var/www/your_domain
-sudo chown -R dodo:dodo /var/www/dodofound
-sudo chmod -R 755 /var/www/dodofound
+sudo mkdir /var/www/dodo-found.tk
+sudo chmod -R 755 /var/www/dodo-found.tk
 
 ```
 Then create html file for website index page
@@ -83,7 +82,6 @@ echo "dodo-found.tk domain" | sudo tee  /var/www/html/index.html
 ```
 
 **To Modify Apache2 Sites available Conf**
----
 
 We can modify one conf file in this section.
 
@@ -97,7 +95,7 @@ Copy the 000-default.conf file or build a new domain conf file.
 
 ```bash
 
-sudo vim /etc/apache2/sites-available/dodo-found.conf
+sudo vim /etc/apache2/sites-available/dodo-found.tk.conf
 
 ```
 
@@ -118,15 +116,16 @@ use this conf file
 Then enable your site, disable the old one, and restart the Apache2 server.
 
 ```bash
-sudo a2ensite dev.conf
-sudo a2dissite ooo-default_bak.conf
+sudo a2ensite dodo-found.tk.conf
+sudo a2dissite 000-default.conf
 sudo systemctl reload apache2
 ```
 
-## HTTPS Vhost configuration
+**configuration of HTTP and HTTPS in apache2**
 ---
 
 **What is SSL**
+
 SSL stands for Secure Sockets Layer and, in short, it's the standard technology for keeping an internet connection secure and safeguarding any sensitive data that is being sent between two systems
 
 First, enable SSL and refresh the server in this section.
@@ -146,22 +145,23 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 
 ```
 
-In this case im use https://zerossl.com/ to create the ssl certificate
+In this case im use `https://zerossl.com/` to create the ssl certificate
 
-**Configuration HTTP and HTTPS in Apache**
----
 
 ```bash
-sudo vim /etc/apache2/sites-available/dev.conf
+sudo vim /etc/apache2/sites-available/dodo-found.tk.conf
 ```
 
 add SSL cert for config file output shown below
 
 ```bash
+
+# HTTPS SECTION
+
 <VirtualHost *:443>
 
-        ServerAdmin webmaster@dodo-found.tk
-        Servername dodo-found.tk
+        ServerAdmin  webmaster@dodo-found.tk
+        Servername   dodo-found.tk
         DocumentRoot /var/www/dodo-found.tk
 
         SSLEngine                on
@@ -169,10 +169,12 @@ add SSL cert for config file output shown below
         SSLCertificateKeyFile    /etc/ssl/privates/private.key
         SSLCertificateChainFile  /etc/ssl/ca_bundle.crt
 
-        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        ErrorLog  ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+        
 </VirtualHost>
 
+# HTTP SECTION
 
 <VirtualHost *:80>
 
@@ -182,7 +184,9 @@ add SSL cert for config file output shown below
 
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+        
 </VirtualHost>                 
+
 ```
 
 then reload Apache2 server
