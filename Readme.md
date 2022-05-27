@@ -15,13 +15,13 @@ linux-learns
       * configure vim 
       * configure sudo
 
-   * _**Ntp and Ssh server**_
+* _**Ntp and Ssh server**_
 
    * _**1. ntp service**_
       * configure ntp server (NTPD)
       * configure ntp server (chrony)
       * server client 
-    * _**2. ssh service**_   
+   * _**2. ssh service**_   
       * ssh service configuration
       * Password Authentication
       * SSH file transfer(ubuntu)
@@ -34,7 +34,7 @@ linux-learns
       * ssh port forwarding 
       * use parallel ssh 
       
-   * _**Dns / Dhcp server**_
+ * _**Dns / Dhcp server**_
 
 | TOPIC NAME | DOCUMENTATION |
 |---|---|
