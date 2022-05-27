@@ -1,17 +1,22 @@
 # linux-learns
 
+* _**ubuntu**_
 
-
-
-* ubuntu
   *  **installtion**
       * Get ubuntu
       * install ubuntu
+      
    * _**initial settings**_
-      * adduseraccount
+      * adduser account
       * enable root user
       * network settings
       * service configuration
+     
+   * _**ntp service**_
+      * ntp server/client configuration
+    
+    * _**ssh service**_   
+      * ssh service configuration
 
 
 | TOPIC NAME | DOCUMENTATION |
