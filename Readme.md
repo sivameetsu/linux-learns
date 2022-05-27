@@ -1,23 +1,38 @@
-# linux-learns
+linux-learns
 
 * _**ubuntu**_
 
-  *  **installtion**
-      * Get ubuntu
-      * install ubuntu
-      
-   * _**initial settings**_
+  *  ***1. Installtion***
+      * Get Ubuntu 20.04
+      * install ubuntu 20,04
+
+   *  **2.  Initial Settings :**
       * adduser account
       * enable root user
       * network settings
-      * service configuration
-     
-   * _**ntp service**_
-      * ntp server/client configuration
-    
-    * _**ssh service**_   
-      * ssh service configuration
+      * service settings
+      * update system 
+      * configure vim 
+      * configure sudo
 
+   * _**Ntp and Ssh server**_
+
+   * _**1. ntp service**_
+      * configure ntp server (NTPD)
+      * configure ntp server (chrony)
+      * server client 
+    * _**2. ssh service**_   
+      * ssh service configuration
+      * Password Authentication
+      * SSH file transfer(ubuntu)
+      * SSH file transfer (Linux)
+      * SSH Key-Pair Authentication
+      * SFTP only + Chroot
+      * use SSHPpass 
+      * use SSH-AGENT
+      * use SSHFS
+      * ssh port forwarding 
+      * use parallel ssh 
 
 | TOPIC NAME | DOCUMENTATION |
 |---|---|
