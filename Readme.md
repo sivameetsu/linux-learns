@@ -228,17 +228,14 @@
 
   ##  
     openstock xena
-    openstock wallaby
-    pen stock victoria
-    openstock Ussuri
+      openstock wallaby
+        open stock victoria
+         openstock Ussuri
     
     
     
     
-    
-    
-    
-    
+      
     
     
     
