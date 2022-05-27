@@ -1,6 +1,4 @@
-linux-learns
-
-* _**ubuntu**_
+## ubuntu
 
   *  ***1. Installtion***
       * Get Ubuntu 20.04
@@ -15,7 +13,7 @@ linux-learns
       * configure vim 
       * configure sudo
 
-* _**Ntp and Ssh server**_
+## Ntp and Ssh server
 
    * _**1. ntp service**_
       * configure ntp server (NTPD)
@@ -34,7 +32,12 @@ linux-learns
       * ssh port forwarding 
       * use parallel ssh 
       
- * _**Dns / Dhcp server**_
+## Dns / Dhcp server
+    
+      
+ 
+      
+   
 
 | TOPIC NAME | DOCUMENTATION |
 |---|---|
