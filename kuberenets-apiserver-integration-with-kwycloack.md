@@ -622,3 +622,5 @@ subjects:
   name: "developers"
   apiGroup: rbac.authorization.k8s.io
 ```
+
+https://gist.github.com/mikakatua/513f969b3555a88176222c02ff01ed9f#file-_k8s_keycloak-md
