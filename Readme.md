@@ -232,7 +232,46 @@
         open stock victoria
          openstock Ussuri
     
-    
+   ## WEB SERVER
+   
+   ### Apache2
+   - install apache2
+   - configure virtual hostings
+   - configure SSL/tls
+   - use CGI Scripts
+   - enable userdir
+   - use PHP  + PHP scripts
+   - basic athentication 
+   - configure web DAV Folder
+   - basic athentication + PAM 
+   - kerberos athentication 
+   - configure mode-md
+   - roundcup web mail
+   
+   ### Nginx
+   - install nginx 
+   - configure virtual machine 
+   - configure SSL/TLS 
+   - Enable userdir
+   - Basic athentication
+   - basic Auth + Pam
+   - basic Auth + kerberos
+   - use PHP SCRIPTS
+   - USE CGI SCRIPTS
+   - Nginx reserve proxy
+   - Nginx load balancing 
+
+## DATABASE
+   
+  ### PostgreSQL 12
+  
+  - Install postgreSQL
+  - settings for remote conection 
+  - streaming republication
+  
+ ### mariaDB
+  - install mariaDB
+  - mariaDB over SSL/TLS 
     
     
       
