@@ -33,6 +33,8 @@ linux-learns
       * use SSHFS
       * ssh port forwarding 
       * use parallel ssh 
+      
+   * _**Dns / Dhcp server**_
 
 | TOPIC NAME | DOCUMENTATION |
 |---|---|
