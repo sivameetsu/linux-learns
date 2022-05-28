@@ -102,5 +102,5 @@ systemctl start vsftpd
 systemctl status vsftpd
 
 ```
-
+ If the /home directory does not appear, check your user shell type, delete your user, then create a new user with the adduser command.
 
