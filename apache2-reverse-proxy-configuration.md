@@ -164,4 +164,3 @@ systemctl restart apache2
 _conslusion_
 
 When you visit the domain 'fourtimes.ml,' you will be automatically redirected to https://fourtimes.ml after being directed to https://ww.google.com.
-
