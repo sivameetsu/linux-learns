@@ -65,13 +65,13 @@ GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
 in this section give specific database permission for this command
 
 ```bash
-GRANT ON database_name.* TO 'sammy'@'localhost';
+GRANT all ON database_name.* TO 'sammy'@'localhost';
 ```
 
 then save ur privilege changes using this command
 
 ```bash
-flushes privileges;
+flush privileges;
 ```
 
 and check ur privileges are assign or not using this commant
