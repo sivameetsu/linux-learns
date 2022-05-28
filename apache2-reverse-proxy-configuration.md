@@ -69,7 +69,7 @@ When you visit the domain `fourtimes.ml` your browser will automatically redirec
 
 We got the SSL from zerossl.com. These are the documents we have.
 
-![image](https://user-images.githubusercontent.com/57703276/170813744-be713064-53b3-4d45-9d03-8fbada1a7aaa.png)
+![image](https://user-images.githubusercontent.com/57703276/170813774-4401a2ae-a9b0-4b36-aaa1-eb2fa6b4b85e.png)
 
 ```bash
 
