@@ -113,7 +113,12 @@ use this conf file
 
         ProxyPass "/"  "http://www.google.com/"
         ProxyPassReverse "/"  "http://www.google.com/"
-
+        
+        # Redirect permanent / https://dodo-found.tk/
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+        
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
         
