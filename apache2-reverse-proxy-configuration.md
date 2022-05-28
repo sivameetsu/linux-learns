@@ -119,8 +119,8 @@ use this conf file
         RewriteCond %{HTTPS} off
         RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
         
-        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
-        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+        ErrorLog ${APACHE_LOG_DIR}/fourtimes.ml.error.log
+        CustomLog ${APACHE_LOG_DIR}/fourtimes.ml.access.log combined
         
 </VirtualHost>
 
@@ -139,8 +139,8 @@ use this conf file
         SSLCertificateKeyFile    /etc/apache2/ssl/private.key
         SSLCertificateChainFile  /etc/apache2/ssl/ca_bundle.crt
 
-        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
-        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+        ErrorLog ${APACHE_LOG_DIR}/fourtimes.ml.error.log
+        CustomLog ${APACHE_LOG_DIR}/fourtimes.ml.access.log combined
         
 </VirtualHost>
 
