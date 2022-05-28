@@ -15,3 +15,40 @@ _A typical implementation is below_
 ![image](https://user-images.githubusercontent.com/57703276/170813018-f09b2467-7f12-44c7-9873-26741706e406.png)
 
 
+create the domain in the name of domain
+
+```bash
+
+sudo vim /etc/apache2/sites-available/reverse.fourtimes.ml.conf
+
+```
+
+use this conf file
+
+```bash
+
+<VirtualHost *:80>
+
+        # Domain mapping section
+        ServerAdmin webmaster@fourtimes.ml
+        Servername fourtimes.ml
+        
+        # Reverse proxy configuration
+        ProxyPass "/"  "http://www.google.com/"
+        ProxyPassReverse "/"  "http://www.google.com/"
+        
+        # Logs location
+        ErrorLog ${APACHE_LOG_DIR}/dfourtimes.ml.error.log
+        CustomLog ${APACHE_LOG_DIR}/fourtimes.ml.access.log combined
+        
+</VirtualHost>
+
+```
+
+enable the site location
+
+```bash
+
+a2ensite reverse.fourtimes.ml.conf
+
+```
