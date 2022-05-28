@@ -103,6 +103,24 @@ sudo vim /etc/apache2/sites-available/reverse.fourtimes.ml.conf
 use this conf file
 
 ```bash
+
+# HTTP CONFIGURATION
+
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@fourtimes.ml
+        Servername fourtimes.ml
+
+        ProxyPass "/"  "http://www.google.com/"
+        ProxyPassReverse "/"  "http://www.google.com/"
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+        
+</VirtualHost>
+
+# HTTPS CONFIGURATION
+
 <VirtualHost *:443>
 
         ServerAdmin webmaster@fourtimes.ml
@@ -121,21 +139,7 @@ use this conf file
         
 </VirtualHost>
 
-
-<VirtualHost *:80>
-
-        ServerAdmin webmaster@fourtimes.ml
-        Servername fourtimes.ml
-
-        ProxyPass "/"  "http://www.google.com/"
-        ProxyPassReverse "/"  "http://www.google.com/"
-
-        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
-        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
-        
-</VirtualHost>
-```
-enable the site location
+_Enable the site location_
 
 ```bash
 
@@ -151,9 +155,7 @@ systemctl restart apache2
 
 ```
 
-
 _conslusion_
 
-When you visit the domain 'fourtimes.ml,' your browser will automatically redirect to google.com.
-
+When you visit the domain 'fourtimes.ml,' you will be automatically redirected to https://fourtimes.ml after being directed to https://ww.google.com.
 
