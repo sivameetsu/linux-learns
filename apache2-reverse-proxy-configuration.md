@@ -52,3 +52,24 @@ enable the site location
 a2ensite reverse.fourtimes.ml.conf
 
 ```
+
+_restart the `apache2` service_
+
+```bash
+
+systemctl restart apache2
+
+```
+
+_conslusion_
+
+When you visit the domain 'fourtimes.ml,' your browser will automatically redirect to google.com.
+
+_reverse proxy with https configuration_
+
+
+```bash
+
+
+```
+
