@@ -71,7 +71,7 @@ GRANT ON database_name.* TO 'sammy'@'localhost';
 then save ur privilege changes using this command
 
 ```bash
-fluses privileges;
+flushes privileges;
 ```
 
 and check ur privileges are assign or not using this commant
