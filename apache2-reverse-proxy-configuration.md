@@ -110,9 +110,6 @@ use this conf file
 
         ServerAdmin webmaster@fourtimes.ml
         Servername fourtimes.ml
-
-        ProxyPass "/"  "http://www.google.com/"
-        ProxyPassReverse "/"  "http://www.google.com/"
         
         # Redirect permanent / https://fourtimes.ml/
         RewriteEngine On
@@ -150,7 +147,7 @@ _Enable the site location_
 
 
 ```bash
-
+a2enmod rewrite
 a2ensite reverse.fourtimes.ml.conf
 
 ```
