@@ -38,7 +38,7 @@ use this conf file
         ProxyPassReverse "/"  "http://www.google.com/"
         
         # Logs location
-        ErrorLog ${APACHE_LOG_DIR}/dfourtimes.ml.error.log
+        ErrorLog ${APACHE_LOG_DIR}/fourtimes.ml.error.log
         CustomLog ${APACHE_LOG_DIR}/fourtimes.ml.access.log combined
         
 </VirtualHost>
