@@ -61,18 +61,9 @@ systemctl restart apache2
 
 ```
 
+
 _conslusion_
 
-When you visit the domain `fourtimes.ml` your browser will automatically redirect to google.com.
+When you visit the domain 'fourtimes.ml,' your browser will automatically redirect to google.com.
 
-**_reverse proxy with https configuration_**
-
-We got the SSL from zerossl.com. These are the documents we have.
-
-![image](https://user-images.githubusercontent.com/57703276/170813774-4401a2ae-a9b0-4b36-aaa1-eb2fa6b4b85e.png)
-
-```bash
-
-
-```
 
