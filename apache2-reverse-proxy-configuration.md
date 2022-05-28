@@ -14,6 +14,17 @@ _A typical implementation is below_
 
 ![image](https://user-images.githubusercontent.com/57703276/170813018-f09b2467-7f12-44c7-9873-26741706e406.png)
 
+_Enable the apache2 reverse proxy module_
+
+```bash
+
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod proxy_balancer
+sudo a2enmod lbmethod_byrequests
+
+```
+
 
 create the domain in the name of domain
 
@@ -109,6 +120,7 @@ use this conf file
 </VirtualHost>
 ```
 
+```
 
 enable the site location
 
