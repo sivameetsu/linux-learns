@@ -114,7 +114,7 @@ use this conf file
         ProxyPass "/"  "http://www.google.com/"
         ProxyPassReverse "/"  "http://www.google.com/"
         
-        # Redirect permanent / https://dodo-found.tk/
+        # Redirect permanent / https://fourtimes.ml/
         RewriteEngine On
         RewriteCond %{HTTPS} off
         RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
