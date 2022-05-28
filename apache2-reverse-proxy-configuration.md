@@ -79,6 +79,20 @@ When you visit the domain 'fourtimes.ml,' your browser will automatically redire
 
 **_reverse proxy with https configuration_**
 
+We got the SSL from zerossl.com. These are the documents we have.
+
+![image](https://user-images.githubusercontent.com/57703276/170814060-b0817bd0-d722-4d8f-8a25-052965a81130.png)
+ 
+download the file to the target machine and move to tager get location
+
+```
+
+mkdir -p /etc/apache2/ssl
+cp ca_bundle.crt        /etc/apache2/ssl/ca_bundle.crt
+cp certificate.crt      /etc/apache2/ssl/certificate.crt     
+cp private.key          /etc/apache2/ssl/private.key
+
+```
 
 ```bash
 
@@ -99,7 +113,7 @@ use this conf file
 
         SSLEngine                on
         SSLCertificateFile       /etc/apache2/ssl/certificate.crt
-        SSLCertificateKeyFile    /etc/apache2/ssl/privates/private.key
+        SSLCertificateKeyFile    /etc/apache2/ssl/private.key
         SSLCertificateChainFile  /etc/apache2/ssl/ca_bundle.crt
 
         ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
