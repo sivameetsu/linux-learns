@@ -66,4 +66,70 @@ _conslusion_
 
 When you visit the domain 'fourtimes.ml,' your browser will automatically redirect to google.com.
 
+**_reverse proxy with https configuration_**
+
+
+```bash
+
+sudo vim /etc/apache2/sites-available/reverse.fourtimes.ml.conf
+
+```
+
+use this conf file
+
+```bash
+<VirtualHost *:443>
+
+        ServerAdmin webmaster@fourtimes.ml
+        Servername fourtimes.ml
+
+        ProxyPass "/"  "http://www.google.com/"
+        ProxyPassReverse "/"  "http://www.google.com/"
+
+        SSLEngine                on
+        SSLCertificateFile       /etc/apache2/ssl/certificate.crt
+        SSLCertificateKeyFile    /etc/apache2/ssl/privates/private.key
+        SSLCertificateChainFile  /etc/apache2/ssl/ca_bundle.crt
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+</VirtualHost>
+
+
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@fourtimes.ml
+        Servername fourtimes.ml
+
+        ProxyPass "/"  "http://www.google.com/"
+        ProxyPassReverse "/"  "http://www.google.com/"
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+</VirtualHost>
+```
+
+```
+
+enable the site location
+
+```bash
+
+a2ensite reverse.fourtimes.ml.conf
+
+```
+
+_restart the `apache2` service_
+
+```bash
+
+systemctl restart apache2
+
+```
+
+
+_conslusion_
+
+When you visit the domain 'fourtimes.ml,' your browser will automatically redirect to google.com.
+
 
