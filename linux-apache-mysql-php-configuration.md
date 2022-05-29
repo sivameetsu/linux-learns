@@ -67,13 +67,8 @@ _Vhost configuration with **http** to **https** redirection_
 
 sudo vim /etc/apache2/sites-enabled/fourtimes.ml.conf
 
-```
-
-`/etc/apache2/sites-enabled/fourtimes.ml.conf`
-
-```
-
-
+add this content in config file:
+--------------------------------
 # HTTPS SECTION
 
 <VirtualHost *:443>
@@ -180,11 +175,9 @@ _vhost configuration with **http** to **https** redirection_
 
 ```bash
 sudo vim /etc/apache2/sites-enabled/dodo-found.tk.conf
-```
 
-`/etc/apache2/sites-enabled/dodo-found.tk.conf`
-
-```bash
+add this content in config file:
+-------------------------------
 <VirtualHost *:443>
 
         ServerAdmin  webmaster@dodo-found.tk
@@ -221,7 +214,7 @@ sudo vim /etc/apache2/sites-enabled/dodo-found.tk.conf
 </VirtualHost>
 ```
 
-Enter the domain in hosts
+**Enter the domain in hosts**
 
 ```bash
 sudo /etc/hosts
@@ -230,18 +223,18 @@ add this content:
 ----------------
 192.168.20.83 dodo-found.tk
 ```
-_validation the apache2_
-
+**_validation the apache2_**
 ```bash
 sudo apache2ctl -t
 ```
 
-_restart the service_
+**_restart the service_**
 
 ```bash
 sudo systemctl restart apache2
 ```
 **OutPut:
+
 It will give your domain secure access. We can get to https://dodo-found.tk using a browser.
 
 ---
@@ -255,7 +248,7 @@ We can create a `fourtimes`, `dodofound` user and create the `fourtimes_db`, `do
 | fourtimes | fourtimes_db | Passwordchanged@123 | localhost |
 | dodofound | dodofound_db | Passwordchanged@123 | localhost |
 
-_database usage_
+**_database usage_**
 
 - We build the 'fourtimes_db' database, which can only be accessed by the 'fourtimes' user.
 
@@ -263,7 +256,7 @@ _database usage_
 
 Create a root password and set privileges in this section.
 
-_Install the packages of mysql_
+**_Install the packages of mysql_**
 ```bash
 
 sudo apt update
@@ -283,8 +276,7 @@ root password
 
 Then create a user and  database, and assign privileges to the database.
 
-_Create User and Database for fourtimes_
-
+**_Create User and Database for fourtimes_**
 ```bash
 
 CREATE USER 'fourtimes'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
@@ -294,7 +286,7 @@ flush privileges;
 
 ```
 
-_Create User and Database for dodofound_
+**_Create User and Database for dodofound_**
 
 ```bash
 CREATE USER 'dodofound'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
@@ -315,7 +307,7 @@ _user document root create_
 | fourtimes | a        | /var/www/fourtimes |
 | dodofound | b        | /var/www/dodofound |
 
-_vsftpd package installation_
+**_vsftpd package installation_**
 
 ```bash
 
@@ -324,7 +316,7 @@ sudo apt install vsftpd -y
 
 ```
 
-_vsftpd configuration for fourtimes_
+**_vsftpd configuration for fourtimes_**
 ```bash
 # Install the vsftpd packages
 sudo apt update && apt install vsftpd -y
@@ -386,7 +378,7 @@ sudo systemctl start vsftpd
 #  status of vsftpd service
 sudo systemctl status vsftpd
 ```
-_vsftpd configuration for dodofound_
+**_vsftpd configuration for dodofound_**
 ```bash
 # Install the vsftpd packages
 sudo apt update && apt install vsftpd -y
