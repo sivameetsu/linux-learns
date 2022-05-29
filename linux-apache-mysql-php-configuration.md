@@ -390,13 +390,13 @@ sudo useradd -m -s /bin/bash ashli
 echo "dodofound:password123" | sudo chpasswd
 
 # Create a directory
-sudo mkdir -p /etc/vsftpd/users /var/www/html/dodo-found.tk /var/run/vsftpd/empty
+sudo mkdir -p /etc/vsftpd/users /var/www/html/dodofound.tk /var/run/vsftpd/empty
 
 # give the owner permission of new user
-sudo chown -R ashli:ashli /var/www/html/dodo-found.tk
+sudo chown -R ashli:ashli /var/www/html/dodofound.tk
 
 # give the local root
-echo "local_root=/var/www/html/dodo-found.tk" | sudo tee -a /etc/vsftpd/users/ashli
+echo "local_root=/var/www/html/dodofound.tk" | sudo tee -a /etc/vsftpd/users/ashli
 
 # give the change root
 echo "ashli" | sudo tee /etc/vsftpd.chroot_list
@@ -422,7 +422,7 @@ idle_session_timeout=600
 data_connection_timeout=120
 ascii_upload_enable=YES
 ascii_download_enable=YES
-ftpd_banner=Welcome to dodo-found.tk FTP service.
+ftpd_banner=Welcome to dodofound.tk FTP service.
 chroot_local_user=NO
 chroot_list_enable=YES
 user_config_dir=/etc/vsftpd/users
