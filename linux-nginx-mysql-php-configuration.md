@@ -289,12 +289,22 @@ _ftp user creation_
 
 ```bash
 
-sudo useradd -m -s /bin/false fourtimes
+sudo useradd -m -s /bin/bash fourtimes
 sudo passwd fourtimes
-sudo useradd -m -s /bin/false dodofound
+sudo useradd -m -s /bin/bash dodofound
 sudo passwd dodofound
 
 ```
+**_In this scenario, the vsftpd user can log in via ssh, so the user must be blocked in ssh_**
+ 
+ ```bash
+ 
+ sudo vim /etc/ssh/sshd_config
+ 
+ #add this line last line
+ Deny fourtimes, dodofound
+ 
+ ```
 
 _configuration changes_
 
