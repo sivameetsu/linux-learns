@@ -244,7 +244,7 @@ sudo mysql_secure_installation
 ```
 
 **To log in with root and a password, go here.**
-`Create a root password and set privileges in this section.`
+
 ```bash
 sudo mysql -u root -p
 root password
