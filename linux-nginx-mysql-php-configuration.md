@@ -44,7 +44,7 @@ We got the SSL from zerossl.com. These are the documents we have.
  
 download the file to the target machine and move to target location
 
-**Note- In this example, the content of the certificate.crt and ca bundle.crt files is copied to a new file and named certificate.crt.***
+**Note- In this example, the content of the certificate.crt and ca_bundle.crt files is copied to a new file and named certificate.crt.***
 
 ```bash
 
@@ -142,7 +142,7 @@ We got the SSL from zerossl.com. These are the documents we have.
 download the file to the target machine and move to tager get location
 
 
-**Note- In this example, the content of the certificate.crt and ca bundle.crt files is copied to a new file and named certificate.crt.***
+**Note- In this example, the content of the certificate.crt and ca_bundle.crt files is copied to a new file and named certificate.crt.***
 
 ```bash
 mkdir -p /etc/nginx/ssl
