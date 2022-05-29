@@ -27,6 +27,22 @@ sudo vim /var/www/fourtimes.ml/index.html
 
 ```
 
+_sample index page_
+
+```bash
+
+<html>
+    <head>
+        <title>Welcome to Fourtimes</title>
+    </head>
+    <body>
+        <h1>Success!  The Fourtimes server block is working!</h1>
+    </body>
+</html>
+
+```
+
+
 _remove the default domain_
 
 ```bash
@@ -127,6 +143,21 @@ create the document root for this vhost configuration
 ```bash
 sudo mkdir -p /var/www/dodofound
 sudo vim /var/www/dodofound/index.html
+```
+
+_sample index page_
+
+```bash
+
+<html>
+    <head>
+        <title>Welcome to DoDo Found</title>
+    </head>
+    <body>
+        <h1>Success!  The DoDo Found block is working!</h1>
+    </body>
+</html>
+
 ```
 
 _vhost configuration_
