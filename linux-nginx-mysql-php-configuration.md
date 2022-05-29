@@ -200,7 +200,6 @@ sudo systemctl restart nginx
 It will give your domain secure access. We can get to https://dodo-found.tk using a browser.
 
 ---
----
 
 ### Create a MySQL user and a database, then assign privileges to the database.
 
