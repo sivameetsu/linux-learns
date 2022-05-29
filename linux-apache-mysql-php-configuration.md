@@ -48,10 +48,10 @@ We got the SSL from zerossl.com. These are the documents we have.
 download the file and move to target location
 
 ```bash
-mkdir -p /etc/apache2/ssl
-cp ca_bundle.crt        /etc/apache2/ssl/ca_bundle.crt
-cp certificate.crt      /etc/apache2/ssl/certificate.crt
-cp private.key          /etc/apache2/ssl/private.key
+mkdir -p /etc/apache2/ssl-fourtimes
+cp ca_bundle.crt        /etc/apache2/ssl-fourtimes/ca_bundle.crt
+cp certificate.crt      /etc/apache2/ssl-fourtimes/certificate.crt
+cp private.key          /etc/apache2/ssl-fourtimes/private.key
 ```
 
 **_Vhost configuration with `http` to `https` redirection_**
@@ -108,9 +108,7 @@ sudo /etc/hosts
 **_validation the apache2_**
 
 ```bash
-
 apache2ctl -t
-
 ```
 
 **_restart the service_**
