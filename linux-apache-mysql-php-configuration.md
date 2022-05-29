@@ -6,7 +6,7 @@ We have to check the apache2 packages
 apt list apache2
 ```
 
-In case it is not installed, we can use this command.
+**In case it is not installed, we can use this command.**
 
 ```bash
 
@@ -30,7 +30,7 @@ sudo vim /var/www/fourtimes.ml/index.html
 
 ```
 
-_remove the default configuration_
+**_remove the default configuration_**
 
 ```bash
 
@@ -39,7 +39,7 @@ rm -rf /etc/apache2/sites-available/default
 
 ```
 
-_SSL Certificate Creation_
+**_SSL Certificate Creation_**
 
 We got the SSL from zerossl.com. These are the documents we have.
 
@@ -48,15 +48,13 @@ We got the SSL from zerossl.com. These are the documents we have.
 download the file and move to target location
 
 ```bash
-
 mkdir -p /etc/apache2/ssl
 cp ca_bundle.crt        /etc/apache2/ssl/ca_bundle.crt
 cp certificate.crt      /etc/apache2/ssl/certificate.crt
 cp private.key          /etc/apache2/ssl/private.key
-
 ```
 
-_Vhost configuration with **http** to **https** redirection_
+**_Vhost configuration with `http` to `https` redirection_**
 
 `/etc/apache2/sites-enabled/fourtimes.ml.conf`
 
@@ -100,14 +98,14 @@ _Vhost configuration with **http** to **https** redirection_
 </VirtualHost>
 
 ```
-_Enter the domain in hosts_
+**_Enter the domain in hosts_**
 
 ```bash
 sudo /etc/hosts
 
 192.168.20.83 fourtimes.ml
 ```
-_validation the apache2_
+**_validation the apache2_**
 
 ```bash
 
@@ -115,13 +113,14 @@ apache2ctl -t
 
 ```
 
-_restart the service_
+**_restart the service_**
 
 ```bash
 systemctl restart apache2
 ```
 
 **OutPut:**
+
 It will give your domain secure access. We can get to https://fourtimes.ml using a browser.
 
 ---
@@ -132,26 +131,25 @@ It will give your domain secure access. We can get to https://fourtimes.ml using
 | ------------- | ------------------ |
 | dodo-found.tk | /var/www/dodofound |
 
-create the document root for this vhost configuration
+**create the document root for this vhost configuration**
 
 ```bash
 sudo mkdir -p /var/www/dodofound
 sudo vim /var/www/dodofound/index.html
 ```
 
-_vhost configuration_
+**_vhost configuration_**
 
 `/etc/apache2/sites-enabled/dodo-found.tk.conf`
 
-_SSL Certificate Creation_
+**_SSL Certificate Creation_**
 
 We got the SSL from zerossl.com. These are the documents we have.
 
 ![image](https://user-images.githubusercontent.com/57703276/170814060-b0817bd0-d722-4d8f-8a25-052965a81130.png)
 
-download the file to the target machine and move to tager get location
+download the file and move to taget ssl location
 
-**Note- In this example, the content of the certificate.crt and ca_bundle.crt files is copied to a new file and named certificate.crt.\***
 
 ```bash
 mkdir -p /etc/apache2/ssl
@@ -164,7 +162,7 @@ cp private.key          /etc/apache2/ssl/private.key
 
 ```
 
-_vhost configuration with **http** to **https** redirection_
+**_vhost configuration with `http` to `https` redirection_**
 
 ```bash
 sudo vim /etc/apache2/sites-enabled/dodo-found.tk.conf
@@ -247,31 +245,24 @@ We can create a `fourtimes`, `dodofound` user and create the `fourtimes_db`, `do
 
 - We build the 'dodofound_db' database, which can only be accessed by the 'dodofound' user.
 
-Create a root password and set privileges in this section.
-
 **_Install the packages of mysql_**
-```bash
 
+```bash
 sudo apt update
 sudo apt-get install mysql-server -y
 sudo mysql_secure_installation
-
 ```
 
-To log in with root and a password, go here.
-
+**To log in with root and a password, go here.**
+`Create a root password and set privileges in this section.`
 ```bash
-
 sudo mysql -u root -p
 root password
-
 ```
 
-Then create a user and  database, and assign privileges to the database.
-
 **_Create User and Database for fourtimes_**
+`Then create a user and  database, and assign privileges to the database.`
 ```bash
-
 CREATE USER 'fourtimes'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
 CREATE DATABASE fourtimes;
 GRANT all ON fourtimes.* TO 'fourtimes'@'localhost';
@@ -288,150 +279,114 @@ GRANT all ON dodofound.* TO 'dodofound'@'localhost';
 flush privileges;
 
 ```
-
+---
 #### Create a VSFTPD account and give it a specific path to access the user.
 
----
 
-_user document root create_
+**_user document root create_**
 
-| user      | password | Path               |
-| --------- | -------- | ------------------ |
-| fourtimes | a        | /var/www/fourtimes |
-| dodofound | b        | /var/www/dodofound |
+|user|password|Path|
+|---|---|---|
+|fourtimes|a|/var/www/fourtimes|
+|dodofound|b|/var/www/dodofound|
 
-**_vsftpd package installation_**
+
+**_package installation_**
 
 ```bash
-
 sudo apt update
 sudo apt install vsftpd -y
-
 ```
 
-**_vsftpd configuration for fourtimes_**
+**_vsftpd user creation_**
+
 ```bash
-# Install the vsftpd packages
-sudo apt update && apt install vsftpd -y
-
-# create the new user
-sudo useradd -m -s /bin/bash ashli
-
-#  set the password of new user
-echo "ashli:password" | sudo chpasswd
-
-# Create a directory
-sudo mkdir -p /etc/vsftpd/users /var/www/html/fourtimes.ml /var/run/vsftpd/empty
-
-# give the owner permission of new user
-sudo chown -R ashli:ashli /var/www/html/fourtimes.ml
-
-# give the local root
-echo "local_root=/var/www/html/fourtimes.ml" | sudo tee -a /etc/vsftpd/users/ashli
-
-# give the change root
-echo "ashli" | sudo tee /etc/vsftpd.chroot_list
-
-# Create a configuration file in vsftpd
-vim /etc/vsftpd.conf
-
-add this content in vsftpd.conf file:
--------------------------------------
-listen=YES
-listen_ipv6=NO
-anonymous_enable=NO
-local_enable=YES
-write_enable=YES
-local_umask=022
-dirmessage_enable=YES
-use_localtime=YES
-xferlog_enable=YES
-connect_from_port_20=YES
-xferlog_file=/var/log/vsftpd.log
-xferlog_std_format=NO
-idle_session_timeout=600
-data_connection_timeout=120
-ascii_upload_enable=YES
-ascii_download_enable=YES
-ftpd_banner=Welcome to fourtimes.ml FTP service.
-chroot_local_user=NO
-chroot_list_enable=YES
-user_config_dir=/etc/vsftpd/users
-allow_writeable_chroot=YES
-secure_chroot_dir=/var/run/vsftpd/empty
-pam_service_name=vsftpd
-rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-ssl_enable=NO
-chroot_list_file=/etc/vsftpd.chroot_list
-
-#  start the vsftpd service
-sudo systemctl start vsftpd
-
-#  status of vsftpd service
-sudo systemctl status vsftpd
+sudo useradd -m -s /bin/bash fourtimes
+sudo passwd fourtimes
+sudo useradd -m -s /bin/bash dodofound
+sudo passwd dodofound
 ```
-**_vsftpd configuration for dodofound_**
+**_In this scenario, the vsftpd user can log in via ssh, so the user must be blocked in ssh_**
+ 
+ ```bash 
+ sudo vim /etc/ssh/sshd_config
+ 
+ #add this line last line
+ Deny fourtimes, dodofound 
+ ```
+
+**_configuration changes_**
+
+backup the original file  for future issues.
+
 ```bash
-# Install the vsftpd packages
-sudo apt update && apt install vsftpd -y
+sudo cp /etc/vsftpd.conf /etc/vsftpd.conf.original
+```
+**_Changing the configuration according to the needs_**
 
-# create the new user
-sudo useradd -m -s /bin/bash ashli
+`sudo vim /etc/vsftpd.conf`
 
-#  set the password of new user
-echo "dodofound:password123" | sudo chpasswd
+```conf
+listen                  = YES
+listen_ipv6             = NO
+anonymous_enable        = NO
+local_enable            = YES
+write_enable            = YES
+local_umask             = 022
+dirmessage_enable       = YES
+use_localtime           = YES
+xferlog_enable          = YES
+connect_from_port_20    = YES
+xferlog_file            = /var/log/vsftpd.log
+xferlog_std_format      = NO
+idle_session_timeout    = 600
+data_connection_timeout = 120
+ascii_upload_enable     = YES
+ascii_download_enable   = YES
+ftpd_banner             = Welcome to fourtimes.ml FTP service.
+chroot_local_user       = NO
+chroot_list_enable      = YES
+user_config_dir         = /etc/vsftpd/users
+allow_writeable_chroot  = YES
+secure_chroot_dir       = /var/run/vsftpd/empty
+pam_service_name        =vsftpd
+rsa_cert_file           =/etc/ssl/certs/ssl-cert-snakeoil.pem
+rsa_private_key_file    =/etc/ssl/private/ssl-cert-snakeoil.key
+ssl_enable              =NO
+chroot_list_file        =/etc/vsftpd.chroot_list
+```
+**_create vsftpd users list_**
 
-# Create a directory
-sudo mkdir -p /etc/vsftpd/users /var/www/html/dodofound.tk /var/run/vsftpd/empty
+```bash
+sudo mkdir -p /etc/vsftpd/users
+```
+```bash
+# first user for fourtimes.ml domain document root
 
-# give the owner permission of new user
-sudo chown -R ashli:ashli /var/www/html/dodofound.tk
-
-# give the local root
-echo "local_root=/var/www/html/dodofound.tk" | sudo tee -a /etc/vsftpd/users/ashli
-
-# give the change root
-echo "ashli" | sudo tee /etc/vsftpd.chroot_list
-
-# Create a configuration file in vsftpd
-vim /etc/vsftpd.conf
-
-add this content in vsftpd.conf file:
--------------------------------------
-listen=YES
-listen_ipv6=NO
-anonymous_enable=NO
-local_enable=YES
-write_enable=YES
-local_umask=022
-dirmessage_enable=YES
-use_localtime=YES
-xferlog_enable=YES
-connect_from_port_20=YES
-xferlog_file=/var/log/vsftpd.log
-xferlog_std_format=NO
-idle_session_timeout=600
-data_connection_timeout=120
-ascii_upload_enable=YES
-ascii_download_enable=YES
-ftpd_banner=Welcome to dodofound.tk FTP service.
-chroot_local_user=NO
-chroot_list_enable=YES
-user_config_dir=/etc/vsftpd/users
-allow_writeable_chroot=YES
-secure_chroot_dir=/var/run/vsftpd/empty
-pam_service_name=vsftpd
-rsa_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-rsa_private_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-ssl_enable=NO
-chroot_list_file=/etc/vsftpd.chroot_list
-
-#  start the vsftpd service
-sudo systemctl start vsftpd
-
-#  status of vsftpd service
-sudo systemctl status vsftpd
+sudo mkdir -p /var/www/fourtimes
+sudo chown -R fourtimes:fourtimes /var/www/fourtimes
+sudo "local_root=/var/www/fourtimes" | tee  /etc/vsftpd/users/fourtimes
 ```
 
-**Note:** If the error /home directory does not appear, check your user shell type, delete your user, then create a new user with the `adduser` command.
+```bash
+# second user for dodofound.tk domain document root
+
+sudo mkdir -p /var/www/dodofound
+sudo chown -R dodofound:dodofound /var/www/dodofound
+sudo "local_root=/var/www/dodofound" | tee /etc/vsftpd/users/dodofound
+```
+
+**_restrict the users at root level_**
+
+```bash
+sudo echo "fourtimes" | tee  /etc/vsftpd.chroot_list
+sudo echo "dodofound" | tee  -a /etc/vsftpd.chroot_list
+```
+**_restart the service_**
+
+```bash
+sudo systemctl restart vsftpd
+```
+
+**Note:**  
+If the error /home directory does not appear, check your user shell type, delete your user, then create a new user with the `adduser` command.
