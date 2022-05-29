@@ -1,4 +1,4 @@
-_**Configuration of apache2 with two domains**_
+## Configuration of apache2 with two domains:
 
 We have to check the apache2 packages
 
