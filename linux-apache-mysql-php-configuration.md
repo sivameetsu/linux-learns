@@ -50,9 +50,6 @@ download the file and move to target location
 ```bash
 
 mkdir -p /etc/apache2/ssl
-
-cp * /etc/apache2/ssl # copy for all in this file.
-                        [or]
 cp ca_bundle.crt        /etc/apache2/ssl/ca_bundle.crt
 cp certificate.crt      /etc/apache2/ssl/certificate.crt
 cp private.key          /etc/apache2/ssl/private.key
@@ -65,10 +62,6 @@ _Vhost configuration with **http** to **https** redirection_
 
 ```bash
 
-sudo vim /etc/apache2/sites-enabled/fourtimes.ml.conf
-
-add this content in config file:
---------------------------------
 # HTTPS SECTION
 
 <VirtualHost *:443>
@@ -112,14 +105,14 @@ _Enter the domain in hosts_
 ```bash
 sudo /etc/hosts
 
-add this content:
-----------------
 192.168.20.83 fourtimes.ml
 ```
 _validation the apache2_
 
 ```bash
+
 apache2ctl -t
+
 ```
 
 _restart the service_
