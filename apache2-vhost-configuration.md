@@ -170,6 +170,23 @@ copy and past the below configuration in this file
 
 ```bash
 
+# HTTP SECTION
+
+<VirtualHost *:80>
+
+        ServerAdmin webmaster@dodo-found.tk
+        Servername dodo-found.tk
+        DocumentRoot /var/www/dodo-found.tk
+        # Redirect permanent / https://dodo-found.tk/
+        RewriteEngine On
+        RewriteCond %{HTTPS} off
+        RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
+        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
+        
+</VirtualHost>                 
+
 # HTTPS SECTION
 
 <VirtualHost *:443>
@@ -189,24 +206,6 @@ copy and past the below configuration in this file
         CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
         
 </VirtualHost>
-
-# HTTP SECTION
-
-<VirtualHost *:80>
-
-        ServerAdmin webmaster@dodo-found.tk
-        Servername dodo-found.tk
-        DocumentRoot /var/www/dodo-found.tk
-        # Redirect permanent / https://dodo-found.tk/
-        RewriteEngine On
-        RewriteCond %{HTTPS} off
-        RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-
-        ErrorLog ${APACHE_LOG_DIR}/dodo-found.tk.error.log
-        CustomLog ${APACHE_LOG_DIR}/dodo-found.tk.access.log combined
-        
-</VirtualHost>                 
-
 ```
 
 then reload Apache2 server
