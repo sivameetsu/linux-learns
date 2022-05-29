@@ -9,12 +9,6 @@ Configure two domains and the document root in this task.
 | dodo-found.tk | /var/www/dodofound |
 
 
-**Configure `fourtims.ml` vhost domain**
-
-|Domain| document root|
-|---|---|
-|fourtimes.ml|/var/www/fourtimes|
-
 Nginx is available in Ubuntu’s default repositories,
 
 ```bash
@@ -127,6 +121,18 @@ _vhost configuration_
 
 `/etc/nginx/sites-enabled/dodo-found.tk.conf`
 
+_SSL Certificate Creation_
+
+We got the SSL from zerossl.com. These are the documents we have.
+
+![image](https://user-images.githubusercontent.com/57703276/170814060-b0817bd0-d722-4d8f-8a25-052965a81130.png)
+ 
+download the file to the target machine and move to tager get location
+
+```bash
+cat certficate.crt ca_bundle
+
+
 ```bash
 sudo vim /etc/nginx/sites-enabled/dodo-found.tk.conf
 ```
@@ -228,28 +234,17 @@ _Create User and Database_
 ```bash
 
 CREATE USER 'fourtimes'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
-CREATE USER 'dodofound'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
-
-```
-
-_Create Database_
-
-```bash
-
 create database fourtimes;
-create database dodofound;
-
-```
-
-In this case, I'll assign a specific user who will only have access to the databases.
-
-_Set Database Privileges_
-
-```bash
-
 GRANT all ON fourtimes.* TO 'fourtimes'@'localhost';
 flush privileges;
 
+```
+
+_Create User and Database_
+
+```bash
+CREATE USER 'dodofound'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
+create database dodofound;
 GRANT all ON dodofound.* TO 'dodofound'@'localhost';
 flush privileges;
 
@@ -335,12 +330,15 @@ _create vsftpd users list_
 ```bash
 sudo mkdir -p /etc/vsftpd/users
 
+```bash
 # first user for fourtimes.ml domain document root
 
 sudo mkdir -p /var/www/fourtimes
 sudo chown -R fourtimes:fourtimes /var/www/fourtimes
 sudo "local_root=/var/www/fourtimes" | tee  /etc/vsftpd/users/fourtimes
+```
 
+```bash
 # second user for dodofound.tk domain document root
 
 sudo mkdir -p /var/www/dodofound
