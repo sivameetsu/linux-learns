@@ -54,15 +54,6 @@ cp private.key          /etc/nginx/ssl/private.key
 ```
 
 
-
-```bash
-mkdir -p /etc/nginx/ssl
-**Note- In this example, the content of the certificate.crt and ca bundle.crt files is copied to a new file and named certificate.crt.***
-cat certificate.crt ca_bundle.crt >> certificate.crt
-cp certificate.crt      /etc/nginx/ssl/certificate.crt     
-cp private.key          /etc/nginx/ssl/private.key
-```
-
 _vhost configuration with http to https redirection_
 
 `/etc/nginx/sites-enabled/fourtimes.ml.conf`
@@ -149,17 +140,22 @@ We got the SSL from zerossl.com. These are the documents we have.
 download the file to the target machine and move to tager get location
 
 ```bash
-cat certficate.crt ca_bundle
+mkdir -p /etc/nginx/ssl
+**Note- In this example, the content of the certificate.crt and ca bundle.crt files is copied to a new file and named certificate.crt.***
+cat certificate.crt ca_bundle.crt >> certificate.crt
+cp certificate.crt      /etc/nginx/ssl/certificate.crt     
+cp private.key          /etc/nginx/ssl/private.key
+```
 
+_vhost configuration with http to https redirection_
 
 ```bash
 sudo vim /etc/nginx/sites-enabled/dodo-found.tk.conf
 ```
 
-_ssl and http to https redirection_
-
 `/etc/nginx/sites-enabled/dodo-found.tk.conf`
-```
+
+```bash
 server {
     listen       80;
     server_name  dodo-found.tk www.dodo-found.tk;
