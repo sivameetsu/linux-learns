@@ -278,7 +278,7 @@ root password
 
 Then create a user and a database, and assign privileges to the database.
 
-_Create User and Database_
+_Create fourtimes User and Database_
 
 ```bash
 
@@ -289,7 +289,7 @@ flush privileges;
 
 ```
 
-_Create User and Database_
+_Create dodofound User and Database_
 
 ```bash
 CREATE USER 'dodofound'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
