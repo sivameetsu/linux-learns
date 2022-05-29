@@ -101,7 +101,7 @@ cp private.key          /etc/apache2/ssl-fourtimes/private.key
 **_Enter the domain in hosts_**
 
 ```bash
-sudo /etc/hosts
+sudo vim /etc/hosts
 
 192.168.20.83 fourtimes.ml
 ```
@@ -206,7 +206,7 @@ add this content in config file:
 **Enter the domain in hosts**
 
 ```bash
-sudo /etc/hosts
+sudo vim /etc/hosts
 
 add this content:
 ----------------
@@ -265,7 +265,6 @@ CREATE USER 'fourtimes'@'localhost' IDENTIFIED BY 'Passwordchanged@123';
 CREATE DATABASE fourtimes;
 GRANT all ON fourtimes.* TO 'fourtimes'@'localhost';
 flush privileges;
-
 ```
 
 **_Create User and Database for dodofound_**
