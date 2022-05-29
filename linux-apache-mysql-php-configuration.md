@@ -1,6 +1,6 @@
 ## Configuration of apache2 with two domains:
 
-We have to check the apache2 packages
+**We have to check the apache2 packages**
 
 ```bash
 apt list apache2
@@ -9,10 +9,8 @@ apt list apache2
 **In case it is not installed, we can use this command.**
 
 ```bash
-
 sudo apt update
 sudo apt install apache2 -y
-
 ```
 
 ### We have to consider the `fourtimes.ml` domain. The below steps are followed in this domain.
@@ -24,19 +22,15 @@ sudo apt install apache2 -y
 **create the document root for this vhost configuration**
 
 ```bash
-
 sudo mkdir -p /var/www/fourtimes.ml
 sudo vim /var/www/fourtimes.ml/index.html
-
 ```
 
 **_remove the default configuration_**
 
 ```bash
-
 rm -rf /etc/apache2/sites-enabled/default
 rm -rf /etc/apache2/sites-available/default
-
 ```
 
 **_SSL Certificate Creation_**
@@ -162,11 +156,9 @@ cp private.key          /etc/apache2/ssl/private.key
 
 **_vhost configuration with `http` to `https` redirection_**
 
-```bash
-sudo vim /etc/apache2/sites-enabled/dodo-found.tk.conf
+`sudo vim /etc/apache2/sites-enabled/dodo-found.tk.conf`
 
-add this content in config file:
--------------------------------
+```bash
 <VirtualHost *:443>
 
         ServerAdmin  webmaster@dodo-found.tk
@@ -222,7 +214,7 @@ sudo apache2ctl -t
 ```bash
 sudo systemctl restart apache2
 ```
-**OutPut:
+**OutPut:**
 
 It will give your domain secure access. We can get to https://dodo-found.tk using a browser.
 
@@ -277,7 +269,7 @@ flush privileges;
 
 ```
 ---
-#### Create a VSFTPD account and give it a specific path to access the user.
+### Create a VSFTPD account and give it a specific path to access the user.
 
 
 **_user document root create_**
