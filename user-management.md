@@ -120,3 +120,22 @@ cat filename
 ![image](https://user-images.githubusercontent.com/91359308/166631218-3d6ef51f-5fc9-447e-bf2c-d9d09dd5ec10.png)
 
 
+_user permission management_
+
+|users|
+|---|
+|usera|
+|userb|
+
+
+create a user 
+
+```bash
+
+sudo adduser usera
+sudo adduser userb
+
+```
+
+While creating a user, it should automatically create a group in the username's name.
+ 
