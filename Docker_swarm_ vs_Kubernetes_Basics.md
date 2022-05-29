@@ -6,7 +6,7 @@ Docker swarm is container orchestration build by Docker.Docker swarm converts mu
 3) Load Balancers
 Nodes are individual instances of the Docker engine that control your cluster and manage the containers used to run your services and tasks. Docker Swarm clusters also include load balancing to route requests across nodes.
 
- **Advantages of Dockers Swarm **
+ **Advantages of Dockers Swarm**
  
 Docker Swam is straightforward to install, especially for those just jumping into the container orchestration world. It is lightweight and easy to use. Also, Docker Swarm takes less time to understand than more complex orchestration tools. It provides automated load balancing within the Docker containers, whereas other container orchestration tools require manual efforts.
 
