@@ -1,4 +1,4 @@
-## Configuration of apache2 with two domains:
+## Configuration of `apache2` with two domains:
 
 **We have to check the apache2 packages**
 
@@ -220,7 +220,7 @@ It will give your domain secure access. We can get to https://dodo-found.tk usin
 
 ---
 
-### Create a MySQL user and database, then assign privileges to the database.
+### Create a `MySQL` user and database, then assign privileges to the database.
 
 We can create a `fourtimes`, `dodofound` user and create the `fourtimes_db`, `dodofound_db` database.
 
@@ -269,7 +269,7 @@ flush privileges;
 
 ```
 ---
-### Create a VSFTPD account and give it a specific path to access the user.
+### Create a `VSFTPD` account and give it a specific path to access the user.
 
 
 **_user document root create_**
