@@ -81,13 +81,8 @@ cp private.key          /etc/apache2/ssl-fourtimes/private.key
         ServerAdmin webmaster@fourtimes.ml
         Servername fourtimes.ml
         DocumentRoot /var/www/fourtimes.ml
-        # Redirect permanent / https://fourtimes.ml/
-        RewriteEngine On
-        RewriteCond %{HTTPS} off
-        RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-
-        ErrorLog ${APACHE_LOG_DIR}/fourtimes.ml.error.log
-        CustomLog ${APACHE_LOG_DIR}/fourtimes.ml.access.log combined
+       return 301 https://$host$request_uri;
+       
 
 </VirtualHost>
 
