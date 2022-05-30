@@ -5,7 +5,9 @@ _Load Balancing Process_
 
  Load balancing is the process of distributing network traffic across multiple servers. This ensures no single server bears too much demand. By spreading the work evenly, load balancing improves application responsiveness. It also increases availability of applications and websites for users.
 
- file:///home/dodo/Downloads/multi-cloud-application-services-load-balancing-simple-diagram-1.svg
+
+ file:///home/dodo/Pictures/Screenshots/Screenshot%20from%202022-05-30%2018-33-53.png
+
 
 **_configuration_**
 
