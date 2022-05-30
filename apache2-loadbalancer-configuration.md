@@ -19,11 +19,10 @@ _create Apache DockerFile_
 
 **Note:** To create an Apache container, go to this post.
 
-```bash
 
 https://github.com/dodo-foundation/linux-learns/blob/main/dockercustom_https.md
 
-```
+
 Once you've created the Apache2 image, execute it to create two containers with different ports, as seen below.
 
 ```bash
