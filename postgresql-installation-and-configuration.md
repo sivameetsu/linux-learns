@@ -1,9 +1,13 @@
 postgresql-installation-and-configuration.md
 ---
 
-|server|service|
-|---|---|
-|ubuntu| postgresql|
+|server|service|port|
+|---|---|---|
+|ubuntu| postgresql|5432|
+
+* The default configuration file is located here
+
+`/etc/postgresql/14/main/postgresql.conf`
 
 
 _installation_
@@ -33,6 +37,8 @@ _To check running status_
 sudo systemctl status postgresql.service
 
 ```
+To check Port Listen
+
 ```bash
 
 sudo ss -tulpn | grep 5432
@@ -46,7 +52,8 @@ login Default user
 
 ```bash
 
-sudo -u postgres psql
+^
+$ sudo -u postgres psql
 
 ```
 
@@ -55,6 +62,7 @@ sudo -u postgres psql
 _Set Password_
 
 ```bash
+#inside the psql
 
 alter user postgres with password 'your_password';
 
@@ -74,9 +82,10 @@ _database creation_
 
 ```bash
 
-sudo -u postgres createdb dodo
+$ sudo -u postgres createdb dodo
 
 or
+#inside psql
 
 createdb dodo;
 
@@ -96,13 +105,14 @@ TO create the new user
 
 ```bash
 
-sudo -u postgres createuser --interactive
+$ sudo -u postgres createuser --interactive
 #Enter name of role to add: dodo
 #Shall the new role be a superuser? (y/n) n
 #Shall the new role be allowed to create databases? (y/n) n
 #Shall the new role be allowed to create more new roles? (y/n) n
 
 or 
+#insede psql
 
 CREATE ROLE username WITH PASSWORD 'very-strong-password' LOGIN;
 
@@ -111,7 +121,9 @@ CREATE ROLE username WITH PASSWORD 'very-strong-password' LOGIN;
 change superuser role
 
 ```bash
+
 ALTER USER dodo WITH SUPERUSER;
+
 ```
 * To delete user --> `drop user_name.`
 * To delete db --> `drop db_name`
@@ -129,7 +141,9 @@ _backup_
 _RemoteBackup_
 
 ```bash
+
 pg_dump -U tecmint -h <host> -p 5432 db1 > db1.sql
+
 ```
 ---
 
@@ -139,13 +153,14 @@ _restore_
 ```bash
 
  pg tecmintdb < tecmintdb.sql
+
 ```
 
 
 replication
 
 
-```back
+```bash
 
 
 ```
