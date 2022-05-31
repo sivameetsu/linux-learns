@@ -28,7 +28,7 @@ Once you've created the Apache2 image, execute it to create two containers with 
 ```bash
 
 docker run -d -p 8081:80 --name Apache1 imageid
-docker run -d -p 8082:80 --name Apache1 imageid
+docker run -d -p 8082:80 --name Apache2 imageid
 
 ```
 
