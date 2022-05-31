@@ -69,7 +69,9 @@ sudo -u postgres createuser --interactive
 #Shall the new role be a superuser? (y/n) n
 #Shall the new role be allowed to create databases? (y/n) n
 #Shall the new role be allowed to create more new roles? (y/n) n
+or 
 
+CREATE ROLE niceusername WITH PASSWORD 'very-strong-password' LOGIN;
 ```
 change superuser role
 
