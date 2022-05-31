@@ -58,6 +58,13 @@ _sample load balance file_
     ProxyPassReverse / balancer://mycluster/
 </VirtualHost>
 ```
+### Enable your load_balance.conf file ###
+```bash
+a2ensite load_balance.conf
+    OR
+ln -s /etc/apache2/sites-available/load_balance.conf /etc/apache2/sites-enabled/
+```
+
 _Check ur config_
 
 ```bash
