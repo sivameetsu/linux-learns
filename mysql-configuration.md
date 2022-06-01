@@ -133,15 +133,54 @@ CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );
 
 _Insert values to the tables_
 
+_Add row to the tables_
 
 ```bash
 
 insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);
 
 ```
+_Copy the row from One table to Another table_
+
+first create the same table with column of Source table
+
+```bash
+
+insert into destination_table select * from source_table;
+
+```
+
+To copy the specific row to use this command
+
+```bash
+
+insert into destination_table select * from source_table where city='New York';
+
+```
 
 * To view the value you insert the table ---> `select * from table name;`
-*To delete the table row ---> 'DELETE FROM Table_Name WHERE colum name=row;'
+*To delete the table row ---> 'DELETE FROM Table_Name WHERE Address='pmk';'
+
+
+_Add Column to the tables_
+
+```bash
+
+ALTER TABLE vendors
+ADD COLUMN phone VARCHAR(15) AFTER name;
+```
+
+```bash
+
+ALTER TABLE vendors
+ADD COLUMN phone VARCHAR(15) FIRST;
+
+```
+
+to refer for more ---> https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
+
+* To view the value you insert the table ---> `select * from table name;`
+*To delete the table column ---> 'ALTER TABLE table_name DROP COLUMN exisiting_column_name;'
 
  
 
