@@ -75,6 +75,7 @@ _Revoke Permmission_
 ```bash
 
 REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'localhost';
+or
 REVOKE permission ON *.*FROM 'user'@'localhost';
 FLUSH PRIVILEGES;
 ```
@@ -109,9 +110,7 @@ flush privileges;
 
 ```
 
-```bash
-show grants for user1@localhost;
-```
+* To view the users permission ---> `show grants for user1@localhost;`
 * To enter any database use this commant  ---> `use database name`
 * To view the current database name ---> `status;`
 * To exit the databse use this command ---> `exit` 
