@@ -47,6 +47,8 @@ sudo vim /var/www/fourtimes.ml/index.html
 
 _remove the default domain_
 
+Take a backup before deleting the default package.
+
 ```bash
 rm -rf etc/nginx/sites-enabled/default
 rm -rf etc/nginx/sites-available/default
@@ -64,13 +66,19 @@ server {
     access_log           /var/log/nginx/fourtimes.ml.access.log;
     error_log            /var/log/nginx/fourtimes.ml.error.log;
     
-    
+    sudo ln -s /etc/nginx/sites-available/kendanicrio.conf /etc/nginx/sites-enabled/
     location / {
         root   /var/www/fourtimes.ml;
         index  index.html index.htm;
     }
 }
 
+```
+
+_creation of a symlink_
+
+```bash
+sudo ln -s /etc/nginx/sites-available/fourtimes.ml.conf /etc/nginx/sites-enabled/
 ```
 
 _validation the nginx_
