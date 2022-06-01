@@ -52,7 +52,7 @@ mysql -u root -p
 
 ```
 
-_create the user on the server using this command
+_create the user_
 
 ```bash
 
@@ -113,7 +113,7 @@ show grants for user1@localhost;
 ```
 * To enter any database use this commant  ---> `use database name`
 * To view the current database name ---> `status;`
-To exit the databse use this command ---> `exit` 
+* To exit the databse use this command ---> `exit` 
 
 ---
 
@@ -121,31 +121,27 @@ To exit the databse use this command ---> `exit`
 
 in this section first you enter ur user account 
 
-then create table 
+_create table_ 
 
 ```bash
+
 CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );
+
 ```
 
-using this commant modify for ur changes
+* To view the table --> `describe table_name:`
 
-to view the table header name use below command
+_Insert values to the tables_
 
-```bash
-describe table_name;
-```
-
-then insert values to the Table using this commnad for ur values
 
 ```bash
+
 insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);
+
 ```
 
-to view the value you insert the table use below command
+* To view the value you insert the table ---> `select * from table name;`
 
-```bash
-select * from table name;
-```
  
 complete the section Next How to get backup database and table
  
