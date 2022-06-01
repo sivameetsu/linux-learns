@@ -141,12 +141,17 @@ exit;
 |table name|
 |---|
 |users|
+
 _create table_ 
 
 ```sql
 
 use apps;
-CREATE TABLE users ( NAME varchar(50) , age int , address varchar(50) );
+CREATE TABLE users ( 
+ name varchar(50), 
+ age int,
+ address varchar(50)
+);
 
 ```
  _view the table structure_
@@ -158,20 +163,18 @@ describe users:`
 ```
 _Insert values to the tables_
 
-_Add row to the tables_
+```sql
 
-```bash
-
-insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);
+INSERT INTO users (name,MemberName,MemeberAge) VALUES (3, 'deva1', 2);
 
 ```
 _Copy the row from One table to Another table_
 
 first create the same table with column of Source table
 
-```bash
+```sql
 
-insert into destination_table select * from source_table;
+INSERT INTO destination_table select * from source_table;
 
 ```
 
