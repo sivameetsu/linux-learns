@@ -90,9 +90,9 @@ SHOW GRANTS FOR developer@localhost;
 
 _list out the all mysql users_
 
-```bash
+```sql
 
-select user from mysql.user
+SELECT user FROM mysql.user
 
 ```
 
@@ -112,7 +112,8 @@ Create a database on the Root User account and grant specific permissions to thi
 ```bash
 
 create database apps;
-show databases
+show databases;
+
 ```
 _In the database, set user permissions_
 
@@ -123,7 +124,7 @@ flush privileges;
 
 ```
 
-_connected to particular databass_
+_connected to particular database_
 
 ```bash
 
@@ -137,17 +138,24 @@ exit;
 
 **Create table in the databases**
 
+|table name|
+|---|
+|users|
 _create table_ 
 
 ```sql
 
 use apps;
-CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );
+CREATE TABLE users ( NAME varchar(50) , age int , address varchar(50) );
 
 ```
+ _view the table structure_
+ 
+```sql
 
-* To view the table --> `describe table_name:`
+describe users:`
 
+```
 _Insert values to the tables_
 
 _Add row to the tables_
