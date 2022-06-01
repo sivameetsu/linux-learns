@@ -1,12 +1,12 @@
 ## MySQL Install And create user Process (Ubuntu OS)
+---
 
 _What is Mysql_
 
 MySQL creates a database for storing and manipulating data, defining the relationship of each table. Clients can make requests by typing specific SQL statements on MySQL. The server application will respond with the requested information and it will appear on the clients' side.
 
 
-_Install the MYsql_
-
+_Install Mysql Service_
 
 ```bash
 
@@ -22,10 +22,9 @@ check running status on the server using
 sudo systemctl status mysql.service
 
 ```
+---
 
-
-
-## MYSQL Config process
+**MYSQL Config process**
 
 First, use this command to run security processes such as passwords, privileges, and so on.
  
@@ -41,91 +40,83 @@ First, use this command to run security processes such as passwords, privileges,
 * #Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
  
 
-## Mysql user,datebase,table creation privileges
+_Mysql user,datebase,table creation & set privileges_
 
-In this section we will show how to create user datebase table and the privileges 
+We'll create a user, a database, a table, and permissions in this section.
 
 first of all enter with ur root user and password using this comment
 
 ```bash
+
 mysql -u root -p
+
 ```
-then enter ur Root Password
 
-then enter mysql server 
+_create the user on the server using this command
 
-first create the user on the server using this command
 ```bash
+
 CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
-```
-(corrctly enter user name and password)
 
-then check user is created or not using this command
+```
+
+* To see the user list --> `select user from mysql.user`
+
+_Grant ALL privileges to user_
 
 ```bash
-select user from mysql.user;
-```
-then grant ALL privileges to user for this command
 
-```bash
 GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
-```
 
-in this section give specific database permission for this command
+```
+_Revoke Permmission_
 
 ```bash
-GRANT all ON database_name.* TO 'sammy'@'localhost';
+
+REVOKE ALL PRIVILEGES *.* FROM 'username'@'localhost';
+
 ```
 
-then save ur privilege changes using this command
+To view the user privileges --> `SHOW GRANTS FOR username@localhost;`
+
+**Max Used privileges**
+
+* Select
+* Insert
+* Update
+
+---
+
+**Create database on Root user Set privilege to specify user**
+
+Create a database on the Root User account and grant specific permissions to this account's users.
 
 ```bash
-flush privileges;
-```
 
-and check ur privileges are assign or not using this commant
-
-```bash
-show grants for user1@localhost;
-```
-
-Next We will create database on Root user Set privilege to specify user
-
-first create database on Root User account and give specify permission to user this account
-
-```bash
 create database database_name;
-```
 
-and check database are create or niot using this commant
+```
+Check if the database has been created. ---> `show databases;`
+
+_In the database, set user permissions_
 
 ```bash
-show databases;
+
+GRANT all ON database_name.* TO 'sammy'@'localhost';
+flush privileges;
+
 ```
-
-then give permission to access the user
-
-```bash
-grant all on user_name.* to user'3@'localhost';
-```
-
-check ur privileges are assign or not using this commant
 
 ```bash
 show grants for user1@localhost;
 ```
-To enter any database use this commant
-```bash
-use database name
-```
-To view the current database name
-```bash
-status;
-```
+* To enter any database use this commant  ---> `use database name`
+* To view the current database name ---> `status;`
+To exit the databse use this command ---> `exit` 
 
-in this section complete then next table create
+---
 
-**Next create table for the databases**
+**Create table in the databases**
 
 in this section first you enter ur user account 
 
