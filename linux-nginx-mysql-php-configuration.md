@@ -387,7 +387,10 @@ chroot_list_file        =/etc/vsftpd.chroot_list
 _create vsftpd users list_
 
 ```bash
+
 sudo mkdir -p /etc/vsftpd/users
+
+```
 
 ```bash
 # first user for fourtimes.ml domain document root
