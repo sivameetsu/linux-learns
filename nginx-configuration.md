@@ -101,12 +101,13 @@ _ssl and http to https redirection_
 
 `/etc/nginx/sites-enabled/fourtimes.ml.conf`
 
-```conf
+```bash
 
 server {
     listen       80;
     server_name  fourtimes.ml www.fourtimes.ml;
-    return 301 https://$host$request_uri;
+    
+    `return 301 https://$host$request_uri;`
     
     location / {
         root   /var/www/fourtimes.ml;
