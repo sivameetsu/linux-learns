@@ -210,7 +210,11 @@ to refer for more ---> https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
 * To view the value you insert the table ---> `select * from table name;`
 *To delete the table column ---> 'ALTER TABLE table_name DROP COLUMN exisiting_column_name;'
 
+ _To update the Table_
  
+ 
+ ```bash
+ UPDATE employees SET email = 'mary.patterson@classicmodelcars.com' WHERE employeeNumber = 1056;
 
 
 ---
