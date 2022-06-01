@@ -33,18 +33,16 @@ First, use this command to run security processes such as passwords, privileges,
  sudo mysql_secure_installation
  
 ```
-* #Change the password for root ? ((Press y|Y for Yes, any other key for No) :
-* #Remove anonymous users? (Press y|Y for Yes, any other key for No) : 
-* #Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
-* #Remove test database and access to it? (Press y|Y for Yes, any other key for No) : 
-* #Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
+* # Change the password for root ? ((Press y|Y for Yes, any other key for No) :
+* # Remove anonymous users? (Press y|Y for Yes, any other key for No) : 
+* # Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
+* # Remove test database and access to it? (Press y|Y for Yes, any other key for No) : 
+* # Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
  
 
 **_Mysql user,datebase,table creation & set privileges_**
 
-We'll create a user, a database, a table, and permissions in this section.
-
-first of all enter with ur root user and password using this comment
+We'll create a user, a database, a table, and permissions in this section. first of all enter with ur root user and password using this comment
 
 ```bash
 
@@ -54,39 +52,56 @@ mysql -u root -p
 
 _create the user_
 
+|username|password|server address| database |
+|---|---|---|---|
+|developer|password|localhost| apps |
+
 ```bash
 
-CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'developer'@'localhost' IDENTIFIED BY 'password';
 
 ```
-
-* To see the user list --> `select user from mysql.user`
-
 
 _Grant ALL privileges to user_
 
 ```bash
 
-GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'developer'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
+
 ```
 _Revoke Permmission_
 
 ```bash
 
-REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'localhost';
+REVOKE ALL PRIVILEGES ON *.* FROM 'developer'@'localhost';
 or
-REVOKE permission ON *.*FROM 'user'@'localhost';
+REVOKE permission ON *.* FROM 'developer'@'localhost';
 FLUSH PRIVILEGES;
+
+```
+_view the user permissions_
+
+```bash
+
+SHOW GRANTS FOR developer@localhost;
+
 ```
 
-To view the user privileges --> `SHOW GRANTS FOR username@localhost;`
+_list out the all mysql users_
 
-**Max Used privileges**
+```bash
+
+select user from mysql.user
+
+```
+
+_Query statements_
 
 * Select
 * Insert
 * Update
+* delete
 
 ---
 
@@ -96,35 +111,37 @@ Create a database on the Root User account and grant specific permissions to thi
 
 ```bash
 
-create database database_name;
-
+create database apps;
+show databases
 ```
-Check if the database has been created. ---> `show databases;`
-
 _In the database, set user permissions_
 
 ```bash
 
-GRANT all ON database_name.* TO 'sammy'@'localhost';
+GRANT all ON apps.* TO 'developer'@'localhost';
 flush privileges;
 
 ```
 
-* To view the users permission ---> `show grants for user1@localhost;`
-* To enter any database use this commant  ---> `use database name`
-* To view the current database name ---> `status;`
-* To exit the databse use this command ---> `exit` 
-
----
-
-**Create table in the databases**
-
-in this section first you enter ur user account 
-
-_create table_ 
+_connected to particular databass_
 
 ```bash
 
+use apps;
+#  To view the current database name
+status;
+# exit the database
+exit;
+
+```
+
+**Create table in the databases**
+
+_create table_ 
+
+```sql
+
+use apps;
 CREATE TABLE TABLE NAME( NAME varchar(50) , age int , address varchar(50) );
 
 ```
