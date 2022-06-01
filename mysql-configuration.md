@@ -212,11 +212,11 @@ to refer for more ---> https://dev.mysql.com/doc/refman/8.0/en/alter-table.html
 
  _To update the Table_
  
+```bash
+
+UPDATE employees SET email = 'mary.patterson@classicmodelcars.com' WHERE employeeNumber = 1056;
  
- ```bash
- UPDATE employees SET email = 'mary.patterson@classicmodelcars.com' WHERE employeeNumber = 1056;
-
-
+```
 ---
 
 _Backup single database to Mysql_
@@ -225,7 +225,7 @@ _Backup single database to Mysql_
  mysqldump -u root -p user1data > /home/deva/Mysql_bak/user1data_bak.sql
  ```
 
-then create multiple databases backup in sinle comment
+then create multiple databases backup in single comment
 
 ```bash
  mysqldump -u root -p --databases user1data user2data user3data > /home/deva/Mysql_bak/alldatabase_bak.sql
