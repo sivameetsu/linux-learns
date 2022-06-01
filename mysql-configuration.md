@@ -68,7 +68,7 @@ _Grant ALL privileges to user_
 ```bash
 
 GRANT ALL PRIVILEGES ON *.* TO 'sammy'@'localhost' WITH GRANT OPTION;
-
+FLUSH PRIVILEGES;
 ```
 _Revoke Permmission_
 
@@ -76,7 +76,7 @@ _Revoke Permmission_
 
 REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'localhost';
 REVOKE permission ON *.*FROM 'user'@'localhost';
-
+FLUSH PRIVILEGES;
 ```
 
 To view the user privileges --> `SHOW GRANTS FOR username@localhost;`
