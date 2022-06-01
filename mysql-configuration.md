@@ -74,7 +74,8 @@ _Revoke Permmission_
 
 ```bash
 
-REVOKE ALL PRIVILEGES *.* FROM 'username'@'localhost';
+REVOKE ALL PRIVILEGES ON *.* FROM 'username'@'localhost';
+REVOKE permission ON *.*FROM 'user'@'localhost';
 
 ```
 
