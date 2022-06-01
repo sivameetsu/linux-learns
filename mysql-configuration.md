@@ -40,7 +40,7 @@ First, use this command to run security processes such as passwords, privileges,
 * #Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
  
 
-_Mysql user,datebase,table creation & set privileges_
+**_Mysql user,datebase,table creation & set privileges_**
 
 We'll create a user, a database, a table, and permissions in this section.
 
@@ -61,6 +61,7 @@ CREATE USER 'user_name'@'localhost' IDENTIFIED BY 'password';
 ```
 
 * To see the user list --> `select user from mysql.user`
+
 
 _Grant ALL privileges to user_
 
