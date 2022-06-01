@@ -33,11 +33,11 @@ First, use this command to run security processes such as passwords, privileges,
  sudo mysql_secure_installation
  
 ```
-* # Change the password for root ? ((Press y|Y for Yes, any other key for No) :
-* # Remove anonymous users? (Press y|Y for Yes, any other key for No) : 
-* # Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
-* # Remove test database and access to it? (Press y|Y for Yes, any other key for No) : 
-* # Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
+* Change the password for root ? ((Press y|Y for Yes, any other key for No) :
+* Remove anonymous users? (Press y|Y for Yes, any other key for No) : 
+* Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
+* Remove test database and access to it? (Press y|Y for Yes, any other key for No) : 
+* Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
  
 
 **_Mysql user,datebase,table creation & set privileges_**
