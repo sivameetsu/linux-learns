@@ -10,7 +10,7 @@ sudo apt update
 - update the previous files then 
 
 ```bash
-Sudo apt-get install mysql-server -y
+sudo apt-get install mysql-server -y
 ```
 after install the server
 
