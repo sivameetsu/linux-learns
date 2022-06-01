@@ -1,36 +1,45 @@
 ## MySQL Install And create user Process (Ubuntu OS)
 
-In this case first Update and install the MYsql USing this Command
+_What is Mysql_
 
-Ctrl +Alt+ t - open terminal and 
+MySQL creates a database for storing and manipulating data, defining the relationship of each table. Clients can make requests by typing specific SQL statements on MySQL. The server application will respond with the requested information and it will appear on the clients' side.
+
+
+_Install the MYsql_
+
 
 ```bash
+
 sudo apt update
-```
-- update the previous files then 
-
-```bash
 sudo apt-get install mysql-server -y
+
 ```
-after install the server
 
 check running status on the server using 
+
 ```bash
+
 sudo systemctl status mysql.service
+
 ```
-It complete status shown `Active` then going to coinfig process
+
+
 
 ## MYSQL Config process
 
- In this section first run secure Process Like Password, privilages set and etc... using this commant
+First, use this command to run security processes such as passwords, privileges, and so on.
  
  ```bash
- sudo mysql_secure_installation**
+ 
+ sudo mysql_secure_installation
+ 
 ```
-after enter the (yes or no) option 
-set ROOT password and remind or note the Root password on your dairy or Note
-then select your Password strenght (Low,medium,High) 
-complete this section then move user,datebase,table creation privileges 
+* #Change the password for root ? ((Press y|Y for Yes, any other key for No) :
+* #Remove anonymous users? (Press y|Y for Yes, any other key for No) : 
+* #Disallow root login remotely? (Press y|Y for Yes, any other key for No) : 
+* #Remove test database and access to it? (Press y|Y for Yes, any other key for No) : 
+* #Reload privilege tables now? (Press y|Y for Yes, any other key for No) : 
+ 
 
 ## Mysql user,datebase,table creation privileges
 
