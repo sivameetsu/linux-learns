@@ -141,11 +141,14 @@ insert into A(Memberid,MemberName,MemeberAge) values (3, 'deva1', 2);
 ```
 
 * To view the value you insert the table ---> `select * from table name;`
+*To delete the table row ---> 'DELETE FROM Table_Name WHERE colum name=row;'
 
  
-complete the section Next How to get backup database and table
- 
-In this Section first how to backup single database for Mysql in below commant
+
+
+---
+
+_Backup single database to Mysql_
  
  ```bash
  mysqldump -u root -p user1data > /home/deva/Mysql_bak/user1data_bak.sql
@@ -206,6 +209,7 @@ to check the restore database table record
 ```bash
 select count(*) from data_2;
 ```
+---
 
 ## MySql backup database file transfer one server to another server
 
