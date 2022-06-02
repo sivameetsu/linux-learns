@@ -50,8 +50,7 @@
     * _**MySQL**_
     * _**PostgreSQL**_
     * _**MariaDB**_
-    * _**Mongo
-    * DB**_
+    * _**MongoDB**_
   
 * _**FTP**_
 
